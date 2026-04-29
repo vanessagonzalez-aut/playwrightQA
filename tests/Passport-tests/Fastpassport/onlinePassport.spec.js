@@ -219,7 +219,7 @@ test('Fix Min', async({browser}) => {
   });
   const search_order = page.locator('//li[@onclick="searchOrderID();"]');
   await search_order.click()
-  //await page.locator("section").locator('[aria-labelledby="order-annotations-title"]').click()
+  await page.locator("section").locator('[aria-labelledby="order-annotations-title"]').click()
   await page.getByTestId("add_annotation_button").click()
   await page.getByTestId("annotation_type_select").selectOption("gov_confirmation_id")
   await page.locator("section").locator('[aria-labelledby="order-annotations-title"]').locator("input").fill("1234")

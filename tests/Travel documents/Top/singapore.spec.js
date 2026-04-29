@@ -27,6 +27,7 @@ test('Singapore Arrival Card', async ({ page }) => {
   await selectors.arrival_date(page)
   await selectors.booleanOptions(page, "general.flight_reservation", "option-No")
   await selectors.departure_date(page, "general.departure_date")
+  await selectors.booleanOptions(page, "general.hotel_info_us", "option-No")
   
   Order_num = page.url().split("/")[4] 
   const next_btn = page.locator('id=btnContinueUnderSection')
