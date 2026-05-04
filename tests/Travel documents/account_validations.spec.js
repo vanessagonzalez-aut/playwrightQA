@@ -8,7 +8,6 @@ test('Magic login link', async ({ browser }) => {
     const page = await context1.newPage();
 
     await page.goto(deploy_url + 'login')
-    await page.waitForURL('**/login')
     const email_input = page.locator('id=email_login_input')
     await expect(email_input).toBeVisible()
     await percySnapshot(page, 'Login page');
@@ -54,7 +53,6 @@ test('Password set and test', async ({ page }) => {
     await expect(btn_logout).toBeVisible()
     await btn_logout.click()
     await page.goto(deploy_url + 'login')
-    await page.waitForURL('**/login')
     const email = page.locator('id=email_login_input')
     await expect(email).toBeVisible()
     await email.fill(email_test)

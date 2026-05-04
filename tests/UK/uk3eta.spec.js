@@ -108,7 +108,7 @@ test.slow()
     await expect(next_btn).toBeEnabled()
     await next_btn.click()
 
-    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=residence_general")
+    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=residence_general")
     await page.locator('[name="general.home_address"]').fill('123')
     await page.waitForTimeout(2000)
     await page.keyboard.press("Space")
@@ -121,7 +121,7 @@ test.slow()
     await expect(next_btn).toBeEnabled()
     await next_btn.click()
     // Personal details
-    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_personal")    
+    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_personal")    
     await page.waitForTimeout(2000)
     
     //await page.getByTestId('option-Male').click()
@@ -132,7 +132,7 @@ test.slow()
     await next_btn.click()
    
     /*
-    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue#step=trav0_work")
+    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue/#step=trav0_work")
     
     await page.waitForTimeout(2000)
     await translations(page, page.locator('id=question-container'), "div")
@@ -143,13 +143,13 @@ test.slow()
     // Declarations
     await expect(next_btn).toBeEnabled()
     await next_btn.click()
-    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue#step=trav0_declarations")
+    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue/#step=trav0_declarations")
     await page.waitForTimeout(2000)
     await translations(page, page.locator('id=question-container'), "div")
     await expect(next_btn).toBeEnabled()
     await next_btn.click()
     */
-    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_documents")
+    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_documents")
     //File upload
     // Upload wrong file Applicant photo
     await page.locator('id=instructions-continue').click()
@@ -175,7 +175,7 @@ test.slow()
     await expect(page.locator("id=document-loading")).toBeHidden()
 
     await page.locator('id=review-continue').click()
-    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_ocr_review")
+    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_ocr_review")
     await page.getByText("Use selected details").click()
     const submit_post_payment = page.locator('id=btnSubmitApplication')
     await expect(submit_post_payment).toBeEnabled()

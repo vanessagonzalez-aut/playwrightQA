@@ -106,7 +106,7 @@ test('Check translations US ESTA korean', async ({ page }) => {
     await expect(next_btn).toBeEnabled()
     await next_btn.click()
 
-    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue#step=accommodation")
+    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue/#step=accommodation")
     await page.waitForTimeout(2000)
     await page.getByTestId("option-Yes").click()
     await page.waitForTimeout(2000)
@@ -125,7 +125,7 @@ test('Check translations US ESTA korean', async ({ page }) => {
     await expect(next_btn).toBeEnabled()
     await next_btn.click()
     //
-    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue#step=emergency_contact")
+    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue/#step=emergency_contact")
     await page.waitForTimeout(2000)
     await page.getByTestId("option-Yes").click()
     await page.waitForTimeout(2000)
@@ -145,7 +145,7 @@ test('Check translations US ESTA korean', async ({ page }) => {
 
     await expect(next_btn).toBeEnabled()
     await next_btn.click()
-    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue#step=trav0_personal")
+    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue/#step=trav0_personal")
     await page.waitForTimeout(2000)
     await page.getByTestId("option-Male").click()
     await page.waitForTimeout(2000)
@@ -153,7 +153,7 @@ test('Check translations US ESTA korean', async ({ page }) => {
     await expect(next_btn).toBeEnabled()
     await next_btn.click()
 
-    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue#step=trav0_residency_information_after_payment")
+    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue/#step=trav0_residency_information_after_payment")
     await page.waitForTimeout(2000)
     await translations(page.locator('id=question-container'), "div", "post_payment", us_esta_ko)
     await page.locator('[name="applicant.0.home_address"]').fill('123')
@@ -167,7 +167,7 @@ test('Check translations US ESTA korean', async ({ page }) => {
     await expect(next_btn).toBeEnabled()
     await next_btn.click()
     // 
-    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue#step=trav0_work")   
+    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue/#step=trav0_work")   
     await page.waitForTimeout(2000) 
     await page.locator('[name="applicant.0.employer_name"]').fill('Test')
     await page.getByTestId("option-Yes").click()
@@ -183,14 +183,14 @@ test('Check translations US ESTA korean', async ({ page }) => {
     await expect(next_btn).toBeEnabled()
     await next_btn.click()
 
-    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue#step=trav0_work")    
+    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue/#step=trav0_work")    
     await page.waitForTimeout(2000)
     await translations(page.locator('id=question-container'), "post_payment", us_esta_ko)
     await page.getByTestId("option-I don't have information about any of them").click()
     await expect(next_btn).toBeEnabled()
     await next_btn.click()
 
-    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue#step=trav0_declarations")  
+    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue/#step=trav0_declarations")  
     await page.waitForTimeout(2000)
     await page.getByTestId("option-Yes").click()
     await page.waitForTimeout(2000)
@@ -198,7 +198,7 @@ test('Check translations US ESTA korean', async ({ page }) => {
     await expect(next_btn).toBeEnabled()
     await next_btn.click()
 
-    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue#step=trav0_documents")
+    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue/#step=trav0_documents")
     await translations(page.locator('id=question-container'), "div", "post_payment", us_esta_ko)
     await page.locator('id=instructions-continue').click()
 
@@ -222,7 +222,7 @@ test('Check translations US ESTA korean', async ({ page }) => {
     await translations(page.locator('id=question-container'), "div", "post_payment", us_esta_ko)
 
     await page.locator('id=review-continue').click()
-    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue#step=trav0_ocr_review")
+    await page.waitForURL(deploy_url + "ko/order/" + Order_num + "/continue/#step=trav0_ocr_review")
     await translations(page.locator('main'), "div", "post_payment")
     await page.getByText("선택한 세부정보 사용").click()
     await translations(page.locator('id=question-container'), "div", "post_payment", us_esta_ko)

@@ -19,7 +19,7 @@ test.skip('FastPassport - USPS Emergency - Preparing for shipping', async({page,
   await page.goto(general_url + 'fastpassport.visachinaonline.com/passport-renewal/united-states')
   await page.reload()
   await page.getByRole('button').getByText('Start your renewal').click()
-  await page.waitForURL('**/passport-renewal/united-states/application#step=step_1')
+  await page.waitForURL('**/passport-renewal/united-states/application/#step=step_1')
   const continue_sidebar = page.locator('#btnContinueSidebar')
   await continue_sidebar.click()
   
@@ -34,7 +34,7 @@ test.skip('FastPassport - USPS Emergency - Preparing for shipping', async({page,
     await page.locator('id=btnDisclaimerNext').click()
   }
   await page.getByText("Emergency Service", {exact: true}).click()
-  await page.waitForURL('**/passport-renewal/united-states/application#step=review')
+  await page.waitForURL('**/passport-renewal/united-states/application/#step=review')
   await appFunctions.newPaymentCheckout(page,"4111111111111111", "123", false)
   const payment_btn = page.locator('id=btnSubmitPayment')
   await expect(payment_btn).toBeVisible()

@@ -11,7 +11,7 @@ test.skip('Emergency Passport', async({page}) =>{
     await percySnapshot(page, 'PassportStep1')
     await page.locator("id=btnContinueSidebar").click()
     
-    await page.waitForURL('**/passport-renewal/united-states/application#step=step_2')
+    await page.waitForURL('**/passport-renewal/united-states/application/#step=step_2')
 
     await expect(page.getByPlaceholder('John William')).toBeVisible()
 
@@ -69,7 +69,7 @@ test.skip('Emergency Passport', async({page}) =>{
     await page.getByText("Emergency Service", {exact: true}).click()
     await percySnapshot(page, 'PassportSpeedStep')
 
-    await page.waitForURL('**/passport-renewal/united-states/application#step=review')
+    await page.waitForURL('**/passport-renewal/united-states/application/#step=review')
     await appFunctions.newPaymentCheckout(page,"4111111111111111", "123", false)
 
     const payment_btn = page.locator('id=btnSubmitPayment')

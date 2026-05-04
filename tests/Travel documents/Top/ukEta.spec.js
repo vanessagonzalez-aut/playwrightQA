@@ -33,19 +33,19 @@ test('UK ETA', async({page}) => {
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
 
-  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_personal")    
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_personal")    
   await selectors.booleanOptions(page, "applicant.0.occupation", "option-Unemployed")
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
 
-  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_residency_information_after_payment")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_residency_information_after_payment")
   await selectors.addressApi(page, 'applicant.0.home_address')
   await page.waitForTimeout(1000)
     
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
 
-  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_documents")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_documents")
   
   await page.locator('id=instructions-continue').click()
   await page.getByTestId("try-another-way-button").click()
@@ -65,7 +65,7 @@ test('UK ETA', async({page}) => {
   await page.waitForTimeout(10000)
   await expect(page.locator("id=document-loading")).toBeHidden()
   await page.locator('id=review-continue').click()
-  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_ocr_review")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_ocr_review")
   await page.waitForTimeout(4000)
   const passportPostPaymentModal = await page.getByText("Use selected details").isVisible()
   if (passportPostPaymentModal){
