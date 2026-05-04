@@ -33,7 +33,6 @@ test('Israel ETA', async ({ page }) => {
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_personal")
-  await selectors.booleanOptions(page, "applicant.0.gender", "option-Male")
   await selectors.booleanOptions(page, "applicant.0.marital_status", "option-Single")
   await expect(next_btn).toBeEnabled()
   await next_btn.click()

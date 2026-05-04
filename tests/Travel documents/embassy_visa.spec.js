@@ -27,6 +27,7 @@ test('Embassy Visa', async({page}) => {
     await page.waitForTimeout(2000)
     await selectors.booleanOptions(page, "general.traveling_with_others", "option-No")
     await selectors.booleanOptions(page, "general.need_multiple_entry_visa", "option-No")
+    await selectors.dropdownOptions(page, "dropdown-general.travel_reason", "Tourism")
     await page.waitForTimeout(1000)
     await page.getByTestId("option-Me").click()
     await page.waitForTimeout(1000)

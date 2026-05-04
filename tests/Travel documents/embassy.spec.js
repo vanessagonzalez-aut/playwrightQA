@@ -49,7 +49,7 @@ test('Embassy reg', async({page}) => {
   await expect(continue_step1).toBeEnabled()
   await continue_step1.click()
 
-  await page.waitForURL('**/embassy-registration#step=step_2')
+  await page.waitForURL('**/embassy-registration/#step=step_2')
 
   const dob_day = page.locator('[name="applicant.0.dob.day"]')
   await dob_day.selectOption('11')
@@ -110,7 +110,7 @@ test('Embassy reg', async({page}) => {
   await page.waitForTimeout(1000)
   await expect(continue_step1).toBeEnabled()
   await continue_step1.click()
-  await page.waitForURL('**/embassy-registration#step=review')
+  await page.waitForURL('**/embassy-registration/#step=review')
 
   await appFunctions.newPaymentCheckout(page,"4111111111111111", "123", false)
 

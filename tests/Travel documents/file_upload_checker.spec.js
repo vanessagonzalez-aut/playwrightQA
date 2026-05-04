@@ -74,18 +74,7 @@ test('File upload checker', async({page}) => {
     await next_btn.click()
     await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_personal")    
     await page.waitForTimeout(2000)
-    await page.getByTestId('option-Male').click()
     await page.getByTestId('option-Married').click()
-    
-    await expect(next_btn).toBeEnabled()
-    await next_btn.click()
-    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_residency_information_after_payment")
-    
-    await selectors.addressApi(page, "applicant.0.home_address")
-
-    await page.waitForTimeout(1000)
-    await expect(next_btn).toBeEnabled()
-    await next_btn.click()
     await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_work")
 
     await page.waitForTimeout(2000)

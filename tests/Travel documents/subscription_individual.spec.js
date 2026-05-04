@@ -6,22 +6,22 @@ const {deploy_url} = require('../urls');
 
 let Order_num 
 test('Individual subscription purchase', async ({ page }) => {
-  await page.goto(deploy_url + 'thailand/apply-now')
+  await page.goto(deploy_url + 'malaysia/apply-now')
   await page.getByRole("button").getByText("Add New Traveler").click()
   await appFunctions.step_1(page, "individual")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
-  await page.waitForURL("**/thailand/apply-now/passport-details/0")
+  await page.waitForURL("**/malaysia/apply-now/passport-details/0")
   await appFunctions.step_2(page, continue_sidebar)
-  await page.waitForURL("**/thailand/apply-now/address-details/0")
+  await page.waitForURL("**/malaysia/apply-now/address-details/0")
   await appFunctions.step_3c(page, continue_sidebar)
-  await page.waitForURL("**/thailand/apply-now/additional-info/0")
+  await page.waitForURL("**/malaysia/apply-now/additional-info/0")
   await appFunctions.additionalInfo(page, continue_sidebar)
-  await page.waitForURL("**/thailand/apply-now/traveler-review")
+  await page.waitForURL("**/malaysia/apply-now/traveler-review")
   await continue_sidebar.click()
-  await page.waitForURL("**/thailand/apply-now/contact-details")
+  await page.waitForURL("**/malaysia/apply-now/contact-details")
   await continue_sidebar.click()
-  await page.waitForURL("**/thailand/apply-now/checkout")
+  await page.waitForURL("**/malaysia/apply-now/checkout")
   await page.waitForTimeout(2000)
   const duplicate = await page.isVisible('id=btnDisclaimerNext')
   if (duplicate){
@@ -50,6 +50,8 @@ test('Individual subscription purchase', async ({ page }) => {
   await page.getByTestId("transition-page-button").click()
   await selectors.phoneNumber(page)
   await selectors.arrival_date(page)
+  await selectors.departure_date(page, "general.departure_date")
+
   await selectors.booleanOptions(page, "general.flight_reservation", "option-No")
   await selectors.booleanOptions(page, "general.hotel_info_us", "option-No")
   Order_num = page.url().split("/")[4] 
@@ -58,7 +60,8 @@ test('Individual subscription purchase', async ({ page }) => {
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_passport_after_payment")
-
+  await selectors.inputText(page, "applicant.0.passport_num", "123456789")
+  await selectors.datePicker(page, "applicant.0.passport_expiration_date", "9", "5", "2040")
   await page.locator("id=btnSubmitApplication").click()
   await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
   await page.waitForTimeout(4000)
@@ -86,11 +89,11 @@ test('Individual subscription purchase', async ({ page }) => {
   await page.waitForURL(deploy_url + "order/" + Order_num + "?subscription=true")
 
   // Place free order 
- await page.goto(deploy_url + 'thailand/apply-now')
- await appFunctions.autofillExisting(page, "thailand/apply-now/edit-traveler/0", false, true)
- await page.waitForURL("**/thailand/apply-now/traveler-review")
+ await page.goto(deploy_url + 'malaysia/apply-now')
+ await appFunctions.autofillExisting(page, "malaysia/apply-now/edit-traveler/0", false, true)
+ await page.waitForURL("**/malaysia/apply-now/traveler-review")
  await continue_sidebar.click()
- await page.waitForURL("**/thailand/apply-now/contact-details")
+ await page.waitForURL("**/malaysia/apply-now/contact-details")
   await continue_sidebar.click() 
   await page.waitForTimeout(2000)
   if (duplicate){
@@ -113,6 +116,8 @@ test('Individual subscription purchase', async ({ page }) => {
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_passport_after_payment")
+  await selectors.inputText(page, "applicant.0.passport_num", "123456789")
+  await selectors.datePicker(page, "applicant.0.passport_expiration_date", "9", "5", "2040")
   await page.locator("id=btnSubmitApplication").click()
   await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
   await page.waitForTimeout(4000)

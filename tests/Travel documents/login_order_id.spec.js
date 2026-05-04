@@ -29,7 +29,6 @@ test('Log in with ID', async ({ page }) => {
   await expect(btn_logout).toBeVisible()
   await btn_logout.click()
   await page.goto(deploy_url + 'login')
-  await page.waitForURL('**/login')
   const email = page.locator('id=email_login_input')
   await expect(email).toBeVisible()
   

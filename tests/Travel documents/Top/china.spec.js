@@ -36,7 +36,6 @@ test('China Arrival card', async ({ page }) => {
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_personal")
-  await selectors.booleanOptions(page,'applicant.0.gender', 'option-Female')
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_documents")

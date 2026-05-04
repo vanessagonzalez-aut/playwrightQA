@@ -37,14 +37,6 @@ test('UK ETA', async({page}) => {
   await selectors.booleanOptions(page, "applicant.0.occupation", "option-Unemployed")
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
-
-  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_residency_information_after_payment")
-  await selectors.addressApi(page, 'applicant.0.home_address')
-  await page.waitForTimeout(1000)
-    
-  await expect(next_btn).toBeEnabled()
-  await next_btn.click()
-
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_documents")
   
   await page.locator('id=instructions-continue').click()
