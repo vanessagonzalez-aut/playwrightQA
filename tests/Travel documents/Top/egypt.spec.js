@@ -47,16 +47,6 @@ test('Egypt eVisa', async ({ page }) => {
   if (passportPostPaymentModal){
     await page.getByText("Use selected details").click()
   }
-  const passport_issue_day = page.locator('[name="applicant.0.passport_issued_date.day"]')
-  await expect(passport_issue_day).toBeVisible()
-  await passport_issue_day.selectOption('13')
-  await page.waitForTimeout(1000)  
-  const passport_issue_month = page.locator('[name="applicant.0.passport_issued_date.month"]')
-  await passport_issue_month.selectOption('7')
-  await page.waitForTimeout(1000)
-  const passport_issue_year = page.locator('[name="applicant.0.passport_issued_date.year"]')
-  await passport_issue_year.selectOption('2022')  
-  await page.waitForTimeout(1000)
 
   await page.locator("id=btnSubmitApplication").click()
   await page.waitForURL(deploy_url + "order-received-page/" + Order_num)

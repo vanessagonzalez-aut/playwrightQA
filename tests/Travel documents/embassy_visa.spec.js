@@ -38,8 +38,6 @@ test('Embassy Visa', async({page}) => {
     await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=travel_general")
     await selectors.arrival_date(page)
     await selectors.departure_date(page, "general.departure_date")
-    await selectors.dropdownOptions(page, "dropdown-general.travel_reason", "Tourism")
-    
 
     await expect(next_btn).toBeEnabled()
     await next_btn.click()

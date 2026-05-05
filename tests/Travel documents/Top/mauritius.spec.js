@@ -37,7 +37,6 @@ test('Mauritius Travel Digital Form', async ({ page }) => {
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_step_3c")
   await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_personal")
-  await selectors.booleanOptions(page, 'applicant.0.gender', 'option-Male')
   await page.locator("id=btnSubmitApplication").click()
   await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
   await page.waitForTimeout(4000)

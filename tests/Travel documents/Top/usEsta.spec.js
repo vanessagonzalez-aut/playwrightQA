@@ -91,7 +91,6 @@ test('United States ESTA', async ({ page, context }) => {
   if (passportPostPaymentModal){
     await page.getByText("Use selected details").click()
   }
-  await selectors.datePicker(page, "applicant.0.passport_issued_date", '1', '9', '2013')
   await page.locator("id=btnSubmitApplication").click()
   await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
   await page.waitForTimeout(4000)

@@ -35,7 +35,6 @@ test('Sri Lanka Tourist ETA', async ({ page }) => {
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_ocr_review")
-  await selectors.datePicker(page, "applicant.0.passport_issued_date", '1', '9', '2013')
   await page.locator("id=btnSubmitApplication").click()
   await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
   await page.waitForTimeout(4000)
