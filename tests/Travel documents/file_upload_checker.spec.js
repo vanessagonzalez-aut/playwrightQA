@@ -73,14 +73,9 @@ test('File upload checker', async({page}) => {
 
     await next_btn.click()
     await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_personal")    
-    await page.waitForTimeout(2000)
-    await page.getByTestId('option-Married').click()
+    await selectors.booleanOptions(page, "applicant.0.marital_status", "option-Single")
     await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_work")
-
-    await page.waitForTimeout(2000)
-    await page.getByTestId("option-Retired").click()
-    await page.waitForTimeout(1000)
-
+    await selectors.booleanOptions(page, "applicant.0.occupation", "option-Retired")
     await expect(next_btn).toBeEnabled()
     await next_btn.click()
     await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_family")
