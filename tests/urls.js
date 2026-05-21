@@ -1,6 +1,6 @@
 const deploy_url = "https://deploy-20260521--ebb235ab.visachinaonline.com/"
 const general_url = "https://deploy-20260521--ebb235ab."  
-const email_test = "test1@test.com"
+const email_test = "test12@test.com"
 const requester = "Maria"
 let Orders = [] 
 module.exports = {deploy_url,  email_test, Orders, general_url, requester}
