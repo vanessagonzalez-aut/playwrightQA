@@ -111,6 +111,7 @@ test('Individual subscription purchase', async ({ page }) => {
   await page.getByTestId("transition-page-button").click()
   await selectors.phoneNumber(page)
   await selectors.arrival_date(page)
+  await selectors.departure_date(page, "general.departure_date")
   await selectors.booleanOptions(page, "general.flight_reservation", "option-No")
   await selectors.booleanOptions(page, "general.hotel_info_us", "option-No")
   Order_num = page.url().split("/")[4] 

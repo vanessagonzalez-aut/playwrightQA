@@ -76,7 +76,7 @@ test('File upload checker', async({page}) => {
     await expect(next_btn).toBeEnabled()
     await next_btn.click()
     await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_family")
-    await page.getByTestId("option-No, I don’t know their names").click()
+    await selectors.booleanOptions(page, "applicant.0.applicable_statement", "option-No, I don’t know their names")
     await page.waitForTimeout(2000)
     await expect(next_btn).toBeEnabled()
     await next_btn.click()

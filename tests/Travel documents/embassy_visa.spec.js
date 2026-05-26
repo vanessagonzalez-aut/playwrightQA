@@ -62,6 +62,7 @@ test('Embassy Visa', async({page}) => {
     await next_btn.click()
 
     await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_work")
+    await page.waitForTimeout(2000) 
     await selectors.dropdownOptions(page, "dropdown-applicant.0.occupation_triage", "Retired")
     await selectors.datePicker(page, "applicant.0.last_work_activity_date", "15", "12", "2020")
     await page.waitForTimeout(2000) 
