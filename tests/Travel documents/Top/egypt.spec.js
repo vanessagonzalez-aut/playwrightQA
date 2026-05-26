@@ -33,15 +33,15 @@ test('Egypt eVisa', async ({ page }) => {
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
 
-  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_personal")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_personal")
   await selectors.booleanOptions(page, "applicant.0.marital_status", "option-Single")
   await selectors.booleanOptions(page, "applicant.0.occupation", "option-Unemployed")
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
-  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_documents")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_documents")
   await selectors.passportPhoto(page)
   
-  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_ocr_review")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_ocr_review")
   await page.waitForTimeout(4000)
   const passportPostPaymentModal = await page.getByText("Use selected details").isVisible()
   if (passportPostPaymentModal){

@@ -32,7 +32,7 @@ test('Jamaica C5-Form Application', async ({ page }) => {
   await page.waitForTimeout(1000)
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
-  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_step_3c")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_step_3c")
   await page.locator("id=btnSubmitApplication").click()
   await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
   await page.waitForTimeout(4000)

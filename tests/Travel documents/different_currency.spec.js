@@ -3,6 +3,7 @@ const {deploy_url, general_url} = require('../urls');
 const appFunctions = require('../functions')
 const percySnapshot = require('@percy/playwright');
 const path = require('path');
+const selectors = require('../selectors')
 
 test('Different currency', async ({ page }) => {
   test.slow()
@@ -58,6 +59,10 @@ test('Different currency', async ({ page }) => {
   await page.getByPlaceholder('111-222-3333').fill('11111111')
   await page.getByTestId('option-WhatsApp').click()
   
+  const next_btn = page.locator('id=btnContinueUnderSection')
+  await page.waitForTimeout(1000)
+  await expect(next_btn).toBeEnabled()
+  await next_btn.click()
   const arrival_date_visible = page.locator('[name="general.arrival_date"]')
   await expect(arrival_date_visible).toBeVisible()
   await arrival_date_visible.click()
@@ -65,15 +70,17 @@ test('Different currency', async ({ page }) => {
   await page.locator('[data-dp-element="action-next"]').click()
   await page.locator('.dp--future').filter({hasText: '2'}).first().click()
   
-  const next_btn = page.locator('id=btnContinueUnderSection')
   await page.waitForTimeout(1000)
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
+  await page.waitForNavigation({waitUntil: 'load'})
+  await selectors.inputText(page, "applicant.0.passport_num", "12345")
+  await selectors.datePicker(page, "applicant.0.passport_issued_date", "09", "10", "2020")
+  await selectors.datePicker(page, "applicant.0.passport_expiration_date", "09", "10", "2030")
   
   await page.waitForTimeout(3000)
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
-
   await page.waitForNavigation({waitUntil: 'load'})
 
   const submit_post_payment = page.locator('id=btnSubmitApplication')

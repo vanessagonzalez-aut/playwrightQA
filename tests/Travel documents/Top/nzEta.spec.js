@@ -33,13 +33,13 @@ test('New Zealand ETA', async ({ page }) => {
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
 
-  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_personal")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_personal")
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
-  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_passport_after_payment")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_passport_after_payment")
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
-  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_documents")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_documents")
   await page.locator('id=instructions-continue').click()
 
   await page.getByTestId("try-another-way-button").click()

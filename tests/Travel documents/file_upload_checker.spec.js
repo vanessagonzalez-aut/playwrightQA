@@ -37,17 +37,11 @@ test('File upload checker', async({page}) => {
     
     await expect(religion).toBeVisible();
     await religion.click()
-    const input_religion = page.getByTestId('dropdown-general.religion');
-    //await expect(input_religion).toBeVisible();
-    await input_religion.fill('bahai');
-    await page.getByRole("option", {name: 'Bahai'}).click()
-  
-    // File upload step
     const next_btn = page.locator('id=btnContinueUnderSection')
     await page.waitForTimeout(1000)
     await expect(next_btn).toBeEnabled()
     await next_btn.click()
-    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=travel_general")  
+    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=travel_general")  
     await page.waitForTimeout(2000) 
     
     const arrival_date_visible = page.locator('[name="general.arrival_date"]')
@@ -72,13 +66,19 @@ test('File upload checker', async({page}) => {
 
 
     await next_btn.click()
-    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_personal")    
+    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_personal")    
+    await page.waitForTimeout(3000)
+    const input_religion = page.getByTestId('applicant.0.religion');
+    await input_religion.fill('bahai');
+    await page.getByRole("option", {name: 'Bahai'}).click()
     await selectors.booleanOptions(page, "applicant.0.marital_status", "option-Single")
-    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_work")
+    await expect(next_btn).toBeEnabled()
+    await next_btn.click()
+    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_work")
     await selectors.booleanOptions(page, "applicant.0.occupation", "option-Retired")
     await expect(next_btn).toBeEnabled()
     await next_btn.click()
-    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_family")
+    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_family")
     await page.waitForTimeout(3000)
     await page.locator('[name="applicant.0.spouse_first_last_name"]').fill("test")
     await page.waitForTimeout(3000)
@@ -86,7 +86,7 @@ test('File upload checker', async({page}) => {
     await page.waitForTimeout(2000)
     await expect(next_btn).toBeEnabled()
     await next_btn.click()
-    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue/#step=trav0_documents")
+    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_documents")
 
     // Confirm instructions appear Applicant photo
     await expect(page.locator("id=document-step")).toContainText("Test Test", "Upload your photo", "Face the camera straight on with a plain background.", "No angles or head tilts ", "No glasses, hats, or scarves", "No glasses, hats, or scarves")

@@ -9,7 +9,7 @@ test('Online Passport', async({page}) =>{
   await page.goto(deploy_url + 'passport-renewal/united-states/application')
   await page.waitForTimeout(2000)
   await page.locator("id=btnContinueSidebar").click()
-  await page.waitForURL('**/passport-renewal/united-states/application/#step=step_2')
+  await page.waitForURL('**/passport-renewal/united-states/application#step=step_2')
   await passportSteps.step_1_passport(page)
   const continue_sidebar = page.locator('#btnContinueSidebar')
   await continue_sidebar.click()
@@ -24,7 +24,7 @@ test('Online Passport', async({page}) =>{
     await page.locator('id=btnDisclaimerNext').click()
   }
   await page.getByText('Standard Service', { exact: true }).click()
-  await page.waitForURL('**/passport-renewal/united-states/application/#step=review')
+  await page.waitForURL('**/passport-renewal/united-states/application#step=review')
   await appFunctions.newPaymentCheckout(page,"4111111111111111", "123", false)
   const payment_btn = page.locator('id=btnSubmitPayment')
   await expect(payment_btn).toBeVisible()

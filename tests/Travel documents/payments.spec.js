@@ -34,7 +34,7 @@ test('Payment with VISA and Cancelled order Status', async({page}) => {
   await page.locator('#log_in_button').click()
   await page.waitForURL('**/admin')
 
-  await page.goto(general_url + 'admin.visachinaonline.com/admin/users/1919083/edit')
+  await page.goto(general_url + 'admin.visachinaonline.com/admin/users/2231070/edit')
   await page.locator('[name="employee_role"]').selectOption("admin")
   await page.waitForTimeout(5000)
   await page.getByText("Update user").click()
