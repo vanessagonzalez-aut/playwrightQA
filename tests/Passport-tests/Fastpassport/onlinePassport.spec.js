@@ -205,7 +205,8 @@ test('Fix Min', async({browser}) => {
   await selectors.inputText(newTab, "applicant.0.birth_city", "Test")
   await newTab.locator("id=btnSubmitApplication").click()
   await newTab.waitForNavigation({waitUntil: 'load'})
-
+})
+test('wog passport', async({browser}) => {
   await page.goto(general_url + 'admin.visachinaonline.com/login')
   await page.getByPlaceholder('1234567 or you@email.com').fill('david@admin.com')
   await page.getByRole("button", {name: 'Continue'}).click()

@@ -57,6 +57,7 @@ test('Embassy Visa', async({page}) => {
 
     await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_residency_information_after_payment")
     await page.waitForTimeout(2000) 
+    await selectors.dropdownOptions(page, "dropdown-applicant.0.immigration_status", "Citizen")
     await expect(next_btn).toBeEnabled()
     await next_btn.click()
 

@@ -100,6 +100,7 @@ test('Individual subscription purchase', async ({ page }) => {
   if (duplicate){
     await page.locator('id=btnDisclaimerNext').click()
   }
+  await page.getByTestId("processing-standard").click()
 
   await expect(payment_btn).toBeVisible()
   await expect(payment_btn).toBeEnabled()

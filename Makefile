@@ -15,7 +15,7 @@ translations:
 	npx playwright test egypt.spec.js
 
 fastPassport:
-	npx playwright test onlinePassport.spec.js 
+	npx playwright test onlinePassport.spec.js --headed
 
 
 status:
