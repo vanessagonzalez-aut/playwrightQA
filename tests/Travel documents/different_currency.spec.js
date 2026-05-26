@@ -74,10 +74,6 @@ test('Different currency', async ({ page }) => {
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
   await page.waitForNavigation({waitUntil: 'load'})
-  await selectors.inputText(page, "applicant.0.passport_num", "12345")
-  await selectors.datePicker(page, "applicant.0.passport_issued_date", "09", "10", "2020")
-  await selectors.datePicker(page, "applicant.0.passport_expiration_date", "09", "10", "2030")
-  
   await page.waitForTimeout(3000)
   await expect(next_btn).toBeEnabled()
   await next_btn.click()

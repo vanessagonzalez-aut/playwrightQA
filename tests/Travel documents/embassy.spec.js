@@ -173,7 +173,7 @@ test('Send order to MIN', async ({page}) => {
 test('Fix Min', async ({page}) =>{
   await page.goto(deploy_url + "order/" + Order_num)
   await page.getByTestId("correct-application").click()
-  await page.waitForURL(deploy_url + "order/" + Order_num + '/min/')
+  await page.waitForURL(deploy_url + "order/" + Order_num + '/min#step=trav0_step_2')
   await page.getByTestId("min-splash-button").click()
   await page.locator('[name="applicant.0.first_name"]').fill("Test")
   await page.locator("id=btnSubmitApplication").click()

@@ -32,11 +32,7 @@ test('File upload checker', async({page}) => {
 
     await page.getByPlaceholder('111-222-3333').fill('11111111')
     await page.getByTestId('option-WhatsApp').click()
-    
-    const religion = page.locator('[name="general.religion"]');
-    
-    await expect(religion).toBeVisible();
-    await religion.click()
+
     const next_btn = page.locator('id=btnContinueUnderSection')
     await page.waitForTimeout(1000)
     await expect(next_btn).toBeEnabled()

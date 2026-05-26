@@ -36,7 +36,6 @@ test('Sint Maarten ED Card', async ({ page }) => {
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=accommodation")
   await page.waitForTimeout(2000)
   await selectors.booleanOptions(page, 'general.type_accommodation', 'option-Hotel/Guesthouse')
-  await selectors.inputText(page, "general.accommodation_name", 'Test')
   await page.waitForTimeout(2000)
   await expect(next_btn).toBeEnabled()
   await next_btn.click()

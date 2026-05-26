@@ -2,6 +2,7 @@ const { test, expect } = require('@playwright/test');
 const appFunctions = require('../functions')
 const path = require('path');
 const {general_url, deploy_url} = require('../urls');
+const selectors = require('../selectors')
 
 test('Extra Order', async ({ page, browser }) => {
   test.slow()
@@ -39,10 +40,6 @@ test('Extra Order', async ({ page, browser }) => {
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
   await page.waitForNavigation({waitUntil: 'load'})
-  await selectors.inputText(page, "applicant.0.passport_num", "12345")
-  await selectors.datePicker(page, "applicant.0.passport_issued_date", "09", "10", "2020")
-  await selectors.datePicker(page, "applicant.0.passport_expiration_date", "09", "10", "2030")
-  
   await page.waitForTimeout(3000)
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
