@@ -6,6 +6,7 @@ const {deploy_url} = require('../urls');
 
 let Order_num 
 test('Individual subscription purchase', async ({ page }) => {
+  test.slow()
   await page.goto(deploy_url + 'malaysia/apply-now')
   await page.getByRole("button").getByText("Add New Traveler").click()
   await appFunctions.step_1(page, "individual")

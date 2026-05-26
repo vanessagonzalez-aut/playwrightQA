@@ -86,6 +86,12 @@ test('Extra Order', async ({ page, browser }) => {
     iframe.getByText('Pay now').click(),
   ]);
   await newTab.waitForLoadState()
+  await newTab.locator('id=cardNumber').frameLocator('[title="Card number"]').locator('id=primer-hosted-input').fill('4111 1111 1111 1111')
+  await newTab.locator('id=expiry').frameLocator('[title="Expiry (MM/YY)"]').locator('id=primer-hosted-input').fill('10/26')
+  await newTab.locator('id=cvv').frameLocator('[title="CVV"]').locator('id=primer-hosted-input').fill('123')
+  await newTab.locator('id=cardFormName').frameLocator('[title="Name on card"]').locator('id=primer-hosted-input').fill('Jhon')
+  await newTab.locator('id=btnSubmitPayment').click()
+  await newTab.waitForNavigation()
   await expect(newTab.getByText("Additional charge approved.")).toBeVisible()
   await page.getByRole('button', { name: 'OK' }).click()
   await page.getByTestId('applicant-details').click()
