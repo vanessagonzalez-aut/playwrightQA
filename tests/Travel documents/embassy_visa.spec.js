@@ -115,8 +115,6 @@ test('Embassy Visa', async({page}) => {
     await page.waitForTimeout(3000)
     await page.getByText("Use selected details").click()
     await selectors.datePicker(page, "applicant.0.passport_issued_date", "13", "7", "2022")
-    await selectors.booleanOptions(page, "applicant.0.other_document", "option-No")
-    
     const submit_post_payment = page.locator('id=btnSubmitApplication')
     await expect(submit_post_payment).toBeEnabled()
     await submit_post_payment.click()
