@@ -90,7 +90,6 @@ test('Kenya Eta', async ({ page }) => {
   await page.waitForTimeout(1000)
   const passport_issue_year = page.locator('[name="applicant.0.passport_expiration_date.year"]')
   await passport_issue_year.selectOption('2028')  
-  await selectors.booleanOptions(page, "applicant.0.ordinary_passport", "option-Yes")
   await page.locator("id=btnSubmitApplication").click()
   await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
   await page.waitForTimeout(4000)

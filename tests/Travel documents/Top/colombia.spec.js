@@ -55,7 +55,7 @@ test('Colombia Check-MIG and MIN status', async ({ page }) => {
 test('Send order to MIN', async ({page}) => {
   await page.goto(general_url + 'admin.visachinaonline.com/login')
   await page.locator('#email_login_input').fill('david@admin.com')
-  await page.getByRole("button", {name: 'Continue'}).click()
+   
   
   await page.locator('#password_login_input').fill('testivisa5!')
   await page.locator('#log_in_button').click()

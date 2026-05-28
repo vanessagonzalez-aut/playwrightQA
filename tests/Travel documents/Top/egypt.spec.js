@@ -47,7 +47,6 @@ test('Egypt eVisa', async ({ page }) => {
   if (passportPostPaymentModal){
     await page.getByText("Use selected details").click()
   }
-  await selectors.booleanOptions(page, "applicant.0.ordinary_passport", "option-Yes")
   await page.locator("id=btnSubmitApplication").click()
   await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
   await page.waitForTimeout(4000)

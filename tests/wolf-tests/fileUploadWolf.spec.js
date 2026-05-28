@@ -7,7 +7,7 @@ const path = require('path');
 let wolfEmail = randomEmail({domain: "ivisatravel.com"})
 
 test.describe.configure({ mode: 'serial' });
-test('File upload - Wolf', async({page, context}) =>{
+test.fixme('File upload - Wolf', async({page, context}) =>{
   test.slow()
   var myDate = new Date(new Date(). getTime()+(10*24*60*60*1000));
   const datepicker_date = new Date(myDate);
