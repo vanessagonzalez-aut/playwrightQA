@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 4
     },
     "preserveOutput": "always",
     "projects": [
@@ -20,7 +20,7 @@
         "repeatEach": 1,
         "retries": 2,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 4
         },
         "id": "setup",
         "name": "setup",
@@ -36,7 +36,7 @@
         "repeatEach": 1,
         "retries": 2,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 4
         },
         "id": "chromium",
         "name": "chromium",
@@ -99,12 +99,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 551,
+                  "duration": 167,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-26T22:58:01.015Z",
+                  "startTime": "2026-05-27T21:13:29.563Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -120,263 +120,13 @@
       ]
     },
     {
-      "title": "Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-      "file": "Passport-tests/Fastpassport/onlinePassport.spec.js",
+      "title": "wolf-tests\\differentCurrencyWolf.spec.js",
+      "file": "wolf-tests/differentCurrencyWolf.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Fastpassport - Account creation, logging and password creation",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 270000,
-              "annotations": [
-                {
-                  "type": "slow",
-                  "location": {
-                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                    "line": 12,
-                    "column": 8
-                  }
-                }
-              ],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 20099,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "[\u001b[95mpercy\u001b[39m] Percy is not running, disabling snapshots\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-05-26T22:58:06.807Z",
-                  "annotations": [
-                    {
-                      "type": "slow",
-                      "location": {
-                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                        "line": 12,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Passport-tests-Fastpasspor-8f2b1-gging-and-password-creation-chromium\\video.webm"
-                    }
-                  ]
-                },
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 31909,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "[\u001b[95mpercy\u001b[39m] Percy is not running, disabling snapshots\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 1,
-                  "startTime": "2026-05-26T23:00:49.128Z",
-                  "annotations": [
-                    {
-                      "type": "slow",
-                      "location": {
-                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                        "line": 12,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Passport-tests-Fastpasspor-8f2b1-gging-and-password-creation-chromium-retry1\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Passport-tests-Fastpasspor-8f2b1-gging-and-password-creation-chromium-retry1\\trace.zip"
-                    }
-                  ]
-                },
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 20693,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "[\u001b[95mpercy\u001b[39m] Percy is not running, disabling snapshots\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 2,
-                  "startTime": "2026-05-26T23:05:46.587Z",
-                  "annotations": [
-                    {
-                      "type": "slow",
-                      "location": {
-                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                        "line": 12,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Passport-tests-Fastpasspor-8f2b1-gging-and-password-creation-chromium-retry2\\video.webm"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "164bc2ac5d876fb97bd4-8aaa42660af8a02cbc1b",
-          "file": "Passport-tests/Fastpassport/onlinePassport.spec.js",
-          "line": 11,
-          "column": 1
-        },
-        {
-          "title": "FastPassport - Online Passport and MIN status",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 270000,
-              "annotations": [
-                {
-                  "type": "slow",
-                  "location": {
-                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                    "line": 77,
-                    "column": 8
-                  }
-                }
-              ],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 120347,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-05-26T22:58:27.511Z",
-                  "annotations": [
-                    {
-                      "type": "slow",
-                      "location": {
-                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                        "line": 77,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Passport-tests-Fastpasspor-6e8d3-ine-Passport-and-MIN-status-chromium\\video.webm"
-                    }
-                  ]
-                },
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 168138,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "startTime": "2026-05-26T23:01:23.252Z",
-                  "annotations": [
-                    {
-                      "type": "slow",
-                      "location": {
-                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                        "line": 77,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Passport-tests-Fastpasspor-6e8d3-ine-Passport-and-MIN-status-chromium-retry1\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Passport-tests-Fastpasspor-6e8d3-ine-Passport-and-MIN-status-chromium-retry1\\trace.zip"
-                    }
-                  ]
-                },
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 119630,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 2,
-                  "startTime": "2026-05-26T23:06:07.842Z",
-                  "annotations": [
-                    {
-                      "type": "slow",
-                      "location": {
-                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                        "line": 77,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Passport-tests-Fastpasspor-6e8d3-ine-Passport-and-MIN-status-chromium-retry2\\video.webm"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "164bc2ac5d876fb97bd4-eda78010b9dbcab35072",
-          "file": "Passport-tests/Fastpassport/onlinePassport.spec.js",
-          "line": 76,
-          "column": 1
-        },
-        {
-          "title": "Fix Min",
+          "title": "Different currency payment - Wolf",
           "ok": false,
           "tags": [],
           "tests": [
@@ -386,8 +136,8 @@
                 {
                   "type": "slow",
                   "location": {
-                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                    "line": 182,
+                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\differentCurrencyWolf.spec.js",
+                    "line": 11,
                     "column": 8
                   }
                 }
@@ -399,169 +149,166 @@
                 {
                   "workerIndex": 1,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 14437,
+                  "status": "timedOut",
+                  "duration": 287155,
                   "error": {
-                    "message": "Error: page.waitForNavigation: net::ERR_ABORTED; maybe frame was detached?\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================",
-                    "stack": "Error: page.waitForNavigation: net::ERR_ABORTED; maybe frame was detached?\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js:207:16",
-                    "location": {
-                      "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                      "column": 16,
-                      "line": 207
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 205 |\u001b[39m   \u001b[36mawait\u001b[39m selectors\u001b[33m.\u001b[39minputText(newTab\u001b[33m,\u001b[39m \u001b[32m\"applicant.0.birth_city\"\u001b[39m\u001b[33m,\u001b[39m \u001b[32m\"Test\"\u001b[39m)\n \u001b[90m 206 |\u001b[39m   \u001b[36mawait\u001b[39m newTab\u001b[33m.\u001b[39mlocator(\u001b[32m\"id=btnSubmitApplication\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 207 |\u001b[39m   \u001b[36mawait\u001b[39m newTab\u001b[33m.\u001b[39mwaitForNavigation({waitUntil\u001b[33m:\u001b[39m \u001b[32m'load'\u001b[39m})\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 208 |\u001b[39m\n \u001b[90m 209 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(general_url \u001b[33m+\u001b[39m \u001b[32m'admin.visachinaonline.com/login'\u001b[39m)\n \u001b[90m 210 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m'1234567 or you@email.com'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'david@admin.com'\u001b[39m)\u001b[0m"
+                    "message": "\u001b[31mTest timeout of 270000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 270000ms exceeded.\u001b[39m"
                   },
                   "errors": [
                     {
+                      "message": "\u001b[31mTest timeout of 270000ms exceeded.\u001b[39m"
+                    },
+                    {
                       "location": {
-                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                        "column": 16,
-                        "line": 207
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\differentCurrencyWolf.spec.js",
+                        "column": 14,
+                        "line": 71
                       },
-                      "message": "Error: page.waitForNavigation: net::ERR_ABORTED; maybe frame was detached?\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n\n\u001b[0m \u001b[90m 205 |\u001b[39m   \u001b[36mawait\u001b[39m selectors\u001b[33m.\u001b[39minputText(newTab\u001b[33m,\u001b[39m \u001b[32m\"applicant.0.birth_city\"\u001b[39m\u001b[33m,\u001b[39m \u001b[32m\"Test\"\u001b[39m)\n \u001b[90m 206 |\u001b[39m   \u001b[36mawait\u001b[39m newTab\u001b[33m.\u001b[39mlocator(\u001b[32m\"id=btnSubmitApplication\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 207 |\u001b[39m   \u001b[36mawait\u001b[39m newTab\u001b[33m.\u001b[39mwaitForNavigation({waitUntil\u001b[33m:\u001b[39m \u001b[32m'load'\u001b[39m})\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 208 |\u001b[39m\n \u001b[90m 209 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(general_url \u001b[33m+\u001b[39m \u001b[32m'admin.visachinaonline.com/login'\u001b[39m)\n \u001b[90m 210 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m'1234567 or you@email.com'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'david@admin.com'\u001b[39m)\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js:207:16\u001b[22m"
+                      "message": "Error: page.waitForNavigation: Test timeout of 270000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n\n\u001b[0m \u001b[90m 69 |\u001b[39m   }\n \u001b[90m 70 |\u001b[39m   \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 71 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForNavigation({waitUntil\u001b[33m:\u001b[39m \u001b[32m'load'\u001b[39m})\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 72 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"transition-page-button\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 73 |\u001b[39m   \u001b[36mlet\u001b[39m \u001b[33mOrder_num\u001b[39m \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39msplit(\u001b[32m\"/\"\u001b[39m)[\u001b[35m4\u001b[39m]\u001b[33m;\u001b[39m\n \u001b[90m 74 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\differentCurrencyWolf.spec.js:71:14\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-26T23:00:27.893Z",
+                  "startTime": "2026-05-27T21:13:32.595Z",
                   "annotations": [
                     {
                       "type": "slow",
                       "location": {
-                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                        "line": 182,
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\differentCurrencyWolf.spec.js",
+                        "line": 11,
                         "column": 8
                       }
                     }
                   ],
                   "attachments": [
                     {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-differentCurren-ec7ad-ent-currency-payment---Wolf-chromium\\video.webm"
+                    },
+                    {
                       "name": "error-context",
                       "contentType": "text/markdown",
-                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Passport-tests-Fastpassport-onlinePassport-Fix-Min-chromium\\error-context.md"
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-differentCurren-ec7ad-ent-currency-payment---Wolf-chromium\\error-context.md"
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                    "column": 16,
-                    "line": 207
-                  }
+                  ]
                 },
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 9,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 72415,
+                  "status": "timedOut",
+                  "duration": 279131,
                   "error": {
-                    "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByTestId('add_annotation_button')\u001b[22m\n\u001b[2m    - waiting for\" https://deploy-20260526--cbaf324c.admin.visachinaonline.com/admin\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://deploy-20260526--cbaf324c.admin.visachinaonline.com/admin\"\u001b[22m\n",
-                    "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByTestId('add_annotation_button')\u001b[22m\n\u001b[2m    - waiting for\" https://deploy-20260526--cbaf324c.admin.visachinaonline.com/admin\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://deploy-20260526--cbaf324c.admin.visachinaonline.com/admin\"\u001b[22m\n\n    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js:223:51",
-                    "location": {
-                      "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                      "column": 51,
-                      "line": 223
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 221 |\u001b[39m   \u001b[36mawait\u001b[39m search_order\u001b[33m.\u001b[39mclick()\n \u001b[90m 222 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 223 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"add_annotation_button\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m     |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 224 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"annotation_type_select\"\u001b[39m)\u001b[33m.\u001b[39mselectOption(\u001b[32m\"gov_confirmation_id\"\u001b[39m)\n \u001b[90m 225 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"section\"\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m'[aria-labelledby=\"order-annotations-title\"]'\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m\"input\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m\"1234\"\u001b[39m)\n \u001b[90m 226 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"save_annotation_button\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m"
+                    "message": "\u001b[31mTest timeout of 270000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 270000ms exceeded.\u001b[39m"
                   },
                   "errors": [
                     {
+                      "message": "\u001b[31mTest timeout of 270000ms exceeded.\u001b[39m"
+                    },
+                    {
                       "location": {
-                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                        "column": 51,
-                        "line": 223
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\differentCurrencyWolf.spec.js",
+                        "column": 14,
+                        "line": 71
                       },
-                      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByTestId('add_annotation_button')\u001b[22m\n\u001b[2m    - waiting for\" https://deploy-20260526--cbaf324c.admin.visachinaonline.com/admin\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://deploy-20260526--cbaf324c.admin.visachinaonline.com/admin\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 221 |\u001b[39m   \u001b[36mawait\u001b[39m search_order\u001b[33m.\u001b[39mclick()\n \u001b[90m 222 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 223 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"add_annotation_button\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m     |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 224 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"annotation_type_select\"\u001b[39m)\u001b[33m.\u001b[39mselectOption(\u001b[32m\"gov_confirmation_id\"\u001b[39m)\n \u001b[90m 225 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"section\"\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m'[aria-labelledby=\"order-annotations-title\"]'\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m\"input\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m\"1234\"\u001b[39m)\n \u001b[90m 226 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"save_annotation_button\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js:223:51\u001b[22m"
+                      "message": "Error: page.waitForNavigation: Test timeout of 270000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n\n\u001b[0m \u001b[90m 69 |\u001b[39m   }\n \u001b[90m 70 |\u001b[39m   \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 71 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForNavigation({waitUntil\u001b[33m:\u001b[39m \u001b[32m'load'\u001b[39m})\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 72 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"transition-page-button\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 73 |\u001b[39m   \u001b[36mlet\u001b[39m \u001b[33mOrder_num\u001b[39m \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39msplit(\u001b[32m\"/\"\u001b[39m)[\u001b[35m4\u001b[39m]\u001b[33m;\u001b[39m\n \u001b[90m 74 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\differentCurrencyWolf.spec.js:71:14\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-05-26T23:04:21.449Z",
+                  "startTime": "2026-05-27T21:18:22.557Z",
                   "annotations": [
                     {
                       "type": "slow",
                       "location": {
-                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                        "line": 182,
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\differentCurrencyWolf.spec.js",
+                        "line": 11,
                         "column": 8
                       }
                     }
                   ],
                   "attachments": [
                     {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-differentCurren-ec7ad-ent-currency-payment---Wolf-chromium-retry1\\video.webm"
+                    },
+                    {
                       "name": "error-context",
                       "contentType": "text/markdown",
-                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Passport-tests-Fastpassport-onlinePassport-Fix-Min-chromium-retry1\\error-context.md"
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-differentCurren-ec7ad-ent-currency-payment---Wolf-chromium-retry1\\error-context.md"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Passport-tests-Fastpassport-onlinePassport-Fix-Min-chromium-retry1\\trace.zip"
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-differentCurren-ec7ad-ent-currency-payment---Wolf-chromium-retry1\\trace.zip"
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                    "column": 51,
-                    "line": 223
-                  }
+                  ]
                 },
                 {
-                  "workerIndex": 3,
+                  "workerIndex": 11,
                   "parallelIndex": 0,
-                  "status": "interrupted",
-                  "duration": 87789,
+                  "status": "timedOut",
+                  "duration": 276066,
                   "error": {
-                    "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByTestId('add_annotation_button')\u001b[22m\n",
-                    "stack": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByTestId('add_annotation_button')\u001b[22m\n\n    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js:223:51",
-                    "location": {
-                      "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                      "column": 51,
-                      "line": 223
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 221 |\u001b[39m   \u001b[36mawait\u001b[39m search_order\u001b[33m.\u001b[39mclick()\n \u001b[90m 222 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 223 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"add_annotation_button\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m     |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 224 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"annotation_type_select\"\u001b[39m)\u001b[33m.\u001b[39mselectOption(\u001b[32m\"gov_confirmation_id\"\u001b[39m)\n \u001b[90m 225 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"section\"\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m'[aria-labelledby=\"order-annotations-title\"]'\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m\"input\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m\"1234\"\u001b[39m)\n \u001b[90m 226 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"save_annotation_button\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m"
+                    "message": "\u001b[31mTest timeout of 270000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 270000ms exceeded.\u001b[39m"
                   },
                   "errors": [
                     {
+                      "message": "\u001b[31mTest timeout of 270000ms exceeded.\u001b[39m"
+                    },
+                    {
                       "location": {
-                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                        "column": 51,
-                        "line": 223
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\differentCurrencyWolf.spec.js",
+                        "column": 14,
+                        "line": 71
                       },
-                      "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByTestId('add_annotation_button')\u001b[22m\n\n\n\u001b[0m \u001b[90m 221 |\u001b[39m   \u001b[36mawait\u001b[39m search_order\u001b[33m.\u001b[39mclick()\n \u001b[90m 222 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 223 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"add_annotation_button\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m     |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 224 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"annotation_type_select\"\u001b[39m)\u001b[33m.\u001b[39mselectOption(\u001b[32m\"gov_confirmation_id\"\u001b[39m)\n \u001b[90m 225 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"section\"\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m'[aria-labelledby=\"order-annotations-title\"]'\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m\"input\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m\"1234\"\u001b[39m)\n \u001b[90m 226 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"save_annotation_button\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js:223:51\u001b[22m"
+                      "message": "Error: page.waitForNavigation: Test timeout of 270000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n============================================================\n\n\u001b[0m \u001b[90m 69 |\u001b[39m   }\n \u001b[90m 70 |\u001b[39m   \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 71 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForNavigation({waitUntil\u001b[33m:\u001b[39m \u001b[32m'load'\u001b[39m})\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 72 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"transition-page-button\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m 73 |\u001b[39m   \u001b[36mlet\u001b[39m \u001b[33mOrder_num\u001b[39m \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39msplit(\u001b[32m\"/\"\u001b[39m)[\u001b[35m4\u001b[39m]\u001b[33m;\u001b[39m\n \u001b[90m 74 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\differentCurrencyWolf.spec.js:71:14\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 2,
-                  "startTime": "2026-05-26T23:08:07.488Z",
+                  "startTime": "2026-05-27T21:23:08.573Z",
                   "annotations": [
                     {
                       "type": "slow",
                       "location": {
-                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                        "line": 182,
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\differentCurrencyWolf.spec.js",
+                        "line": 11,
                         "column": 8
                       }
                     }
                   ],
-                  "attachments": [],
-                  "errorLocation": {
-                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Passport-tests\\Fastpassport\\onlinePassport.spec.js",
-                    "column": 51,
-                    "line": 223
-                  }
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-differentCurren-ec7ad-ent-currency-payment---Wolf-chromium-retry2\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-differentCurren-ec7ad-ent-currency-payment---Wolf-chromium-retry2\\error-context.md"
+                    }
+                  ]
                 }
               ],
               "status": "unexpected"
             }
           ],
-          "id": "164bc2ac5d876fb97bd4-0b61cbe959b058d8469c",
-          "file": "Passport-tests/Fastpassport/onlinePassport.spec.js",
-          "line": 181,
+          "id": "ff7a6c0c6ae64298920b-38ddd832c2cd621b4d9a",
+          "file": "wolf-tests/differentCurrencyWolf.spec.js",
+          "line": 10,
           "column": 1
         },
         {
-          "title": "Check complete orders",
+          "title": "CC Update - Wolf",
           "ok": true,
           "tags": [],
           "tests": [
@@ -581,7 +328,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-26T23:00:45.619Z",
+                  "startTime": "2026-05-27T21:18:20.193Z",
                   "annotations": [],
                   "attachments": []
                 },
@@ -594,7 +341,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-05-26T23:05:40.763Z",
+                  "startTime": "2026-05-27T21:23:05.521Z",
                   "annotations": [],
                   "attachments": []
                 },
@@ -607,7 +354,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 2,
-                  "startTime": "2026-05-26T23:09:36.311Z",
+                  "startTime": "2026-05-27T21:27:44.875Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -615,9 +362,627 @@
               "status": "skipped"
             }
           ],
-          "id": "164bc2ac5d876fb97bd4-c95d64cbcd4779d1a934",
-          "file": "Passport-tests/Fastpassport/onlinePassport.spec.js",
-          "line": 230,
+          "id": "ff7a6c0c6ae64298920b-205730584e363312bf90",
+          "file": "wolf-tests/differentCurrencyWolf.spec.js",
+          "line": 105,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "wolf-tests\\fileUploadWolf.spec.js",
+      "file": "wolf-tests/fileUploadWolf.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "File upload - Wolf",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 270000,
+              "annotations": [
+                {
+                  "type": "slow",
+                  "location": {
+                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\fileUploadWolf.spec.js",
+                    "line": 10,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 82461,
+                  "error": {
+                    "message": "ReferenceError: path is not defined",
+                    "stack": "ReferenceError: path is not defined\n    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\fileUploadWolf.spec.js:107:52",
+                    "location": {
+                      "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\fileUploadWolf.spec.js",
+                      "column": 52,
+                      "line": 107
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 105 |\u001b[39m     \u001b[90m// Upload Correct Photo\u001b[39m\n \u001b[90m 106 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"try-another-way-button\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 107 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39msetInputFiles(\u001b[32m'input[type=\"file\"]'\u001b[39m\u001b[33m,\u001b[39m path\u001b[33m.\u001b[39mjoin(__dirname\u001b[33m,\u001b[39m \u001b[32m'uploads_passport/Applicant-Photo.jpg'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 108 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"id=document-loading\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m 109 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m14000\u001b[39m)\n \u001b[90m 110 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"id=document-loading\"\u001b[39m))\u001b[33m.\u001b[39mtoBeHidden()\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\fileUploadWolf.spec.js",
+                        "column": 52,
+                        "line": 107
+                      },
+                      "message": "ReferenceError: path is not defined\n\n\u001b[0m \u001b[90m 105 |\u001b[39m     \u001b[90m// Upload Correct Photo\u001b[39m\n \u001b[90m 106 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"try-another-way-button\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 107 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39msetInputFiles(\u001b[32m'input[type=\"file\"]'\u001b[39m\u001b[33m,\u001b[39m path\u001b[33m.\u001b[39mjoin(__dirname\u001b[33m,\u001b[39m \u001b[32m'uploads_passport/Applicant-Photo.jpg'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 108 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"id=document-loading\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m 109 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m14000\u001b[39m)\n \u001b[90m 110 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"id=document-loading\"\u001b[39m))\u001b[33m.\u001b[39mtoBeHidden()\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\fileUploadWolf.spec.js:107:52\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-27T21:13:32.656Z",
+                  "annotations": [
+                    {
+                      "type": "slow",
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\fileUploadWolf.spec.js",
+                        "line": 10,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-fileUploadWolf-File-upload---Wolf-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-fileUploadWolf-File-upload---Wolf-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\fileUploadWolf.spec.js",
+                    "column": 52,
+                    "line": 107
+                  }
+                },
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 91154,
+                  "error": {
+                    "message": "ReferenceError: path is not defined",
+                    "stack": "ReferenceError: path is not defined\n    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\fileUploadWolf.spec.js:107:52",
+                    "location": {
+                      "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\fileUploadWolf.spec.js",
+                      "column": 52,
+                      "line": 107
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 105 |\u001b[39m     \u001b[90m// Upload Correct Photo\u001b[39m\n \u001b[90m 106 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"try-another-way-button\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 107 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39msetInputFiles(\u001b[32m'input[type=\"file\"]'\u001b[39m\u001b[33m,\u001b[39m path\u001b[33m.\u001b[39mjoin(__dirname\u001b[33m,\u001b[39m \u001b[32m'uploads_passport/Applicant-Photo.jpg'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 108 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"id=document-loading\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m 109 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m14000\u001b[39m)\n \u001b[90m 110 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"id=document-loading\"\u001b[39m))\u001b[33m.\u001b[39mtoBeHidden()\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\fileUploadWolf.spec.js",
+                        "column": 52,
+                        "line": 107
+                      },
+                      "message": "ReferenceError: path is not defined\n\n\u001b[0m \u001b[90m 105 |\u001b[39m     \u001b[90m// Upload Correct Photo\u001b[39m\n \u001b[90m 106 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"try-another-way-button\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 107 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39msetInputFiles(\u001b[32m'input[type=\"file\"]'\u001b[39m\u001b[33m,\u001b[39m path\u001b[33m.\u001b[39mjoin(__dirname\u001b[33m,\u001b[39m \u001b[32m'uploads_passport/Applicant-Photo.jpg'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 108 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"id=document-loading\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m 109 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m14000\u001b[39m)\n \u001b[90m 110 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"id=document-loading\"\u001b[39m))\u001b[33m.\u001b[39mtoBeHidden()\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\fileUploadWolf.spec.js:107:52\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-05-27T21:14:58.127Z",
+                  "annotations": [
+                    {
+                      "type": "slow",
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\fileUploadWolf.spec.js",
+                        "line": 10,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-fileUploadWolf-File-upload---Wolf-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-fileUploadWolf-File-upload---Wolf-chromium-retry1\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-fileUploadWolf-File-upload---Wolf-chromium-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\fileUploadWolf.spec.js",
+                    "column": 52,
+                    "line": 107
+                  }
+                },
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 86523,
+                  "error": {
+                    "message": "ReferenceError: path is not defined",
+                    "stack": "ReferenceError: path is not defined\n    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\fileUploadWolf.spec.js:107:52",
+                    "location": {
+                      "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\fileUploadWolf.spec.js",
+                      "column": 52,
+                      "line": 107
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 105 |\u001b[39m     \u001b[90m// Upload Correct Photo\u001b[39m\n \u001b[90m 106 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"try-another-way-button\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 107 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39msetInputFiles(\u001b[32m'input[type=\"file\"]'\u001b[39m\u001b[33m,\u001b[39m path\u001b[33m.\u001b[39mjoin(__dirname\u001b[33m,\u001b[39m \u001b[32m'uploads_passport/Applicant-Photo.jpg'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 108 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"id=document-loading\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m 109 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m14000\u001b[39m)\n \u001b[90m 110 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"id=document-loading\"\u001b[39m))\u001b[33m.\u001b[39mtoBeHidden()\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\fileUploadWolf.spec.js",
+                        "column": 52,
+                        "line": 107
+                      },
+                      "message": "ReferenceError: path is not defined\n\n\u001b[0m \u001b[90m 105 |\u001b[39m     \u001b[90m// Upload Correct Photo\u001b[39m\n \u001b[90m 106 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"try-another-way-button\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 107 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39msetInputFiles(\u001b[32m'input[type=\"file\"]'\u001b[39m\u001b[33m,\u001b[39m path\u001b[33m.\u001b[39mjoin(__dirname\u001b[33m,\u001b[39m \u001b[32m'uploads_passport/Applicant-Photo.jpg'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 108 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"id=document-loading\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m 109 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m14000\u001b[39m)\n \u001b[90m 110 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"id=document-loading\"\u001b[39m))\u001b[33m.\u001b[39mtoBeHidden()\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\fileUploadWolf.spec.js:107:52\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2026-05-27T21:16:36.682Z",
+                  "annotations": [
+                    {
+                      "type": "slow",
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\fileUploadWolf.spec.js",
+                        "line": 10,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-fileUploadWolf-File-upload---Wolf-chromium-retry2\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-fileUploadWolf-File-upload---Wolf-chromium-retry2\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\fileUploadWolf.spec.js",
+                    "column": 52,
+                    "line": 107
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "77ec0eab2c742886dd35-a0db35bbad8760ffbf3b",
+          "file": "wolf-tests/fileUploadWolf.spec.js",
+          "line": 9,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "wolf-tests\\individualSubscription.spec.js",
+      "file": "wolf-tests/individualSubscription.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Individual subscription purchase - Wolf",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 270000,
+              "annotations": [
+                {
+                  "type": "slow",
+                  "location": {
+                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\individualSubscription.spec.js",
+                    "line": 9,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 2,
+                  "status": "timedOut",
+                  "duration": 292100,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 270000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 270000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 270000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\individualSubscription.spec.js",
+                        "column": 64,
+                        "line": 18
+                      },
+                      "message": "Error: locator.click: Test timeout of 270000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button').getByText('Add New Traveler')\u001b[22m\n\n\n\u001b[0m \u001b[90m 16 |\u001b[39m   ])\n \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(general_url \u001b[33m+\u001b[39m \u001b[32m'ivisatravel.visachinaonline.com/a/malaysia/apply-now'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m)\u001b[33m.\u001b[39mgetByText(\u001b[32m\"Add New Traveler\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m    |\u001b[39m                                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39mstep_1(page\u001b[33m,\u001b[39m \u001b[32m\"individual\"\u001b[39m)\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m continue_sidebar \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m)\u001b[33m.\u001b[39mgetByText(\u001b[32m\"Continue\"\u001b[39m)\n \u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m continue_sidebar\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\individualSubscription.spec.js:18:64\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-27T21:13:32.404Z",
+                  "annotations": [
+                    {
+                      "type": "slow",
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\individualSubscription.spec.js",
+                        "line": 9,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-individualSubsc-08406-ubscription-purchase---Wolf-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-individualSubsc-08406-ubscription-purchase---Wolf-chromium\\error-context.md"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 1,
+                  "status": "timedOut",
+                  "duration": 288859,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 270000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 270000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 270000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\individualSubscription.spec.js",
+                        "column": 64,
+                        "line": 18
+                      },
+                      "message": "Error: locator.click: Test timeout of 270000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button').getByText('Add New Traveler')\u001b[22m\n\n\n\u001b[0m \u001b[90m 16 |\u001b[39m   ])\n \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(general_url \u001b[33m+\u001b[39m \u001b[32m'ivisatravel.visachinaonline.com/a/malaysia/apply-now'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m)\u001b[33m.\u001b[39mgetByText(\u001b[32m\"Add New Traveler\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m    |\u001b[39m                                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39mstep_1(page\u001b[33m,\u001b[39m \u001b[32m\"individual\"\u001b[39m)\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m continue_sidebar \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m)\u001b[33m.\u001b[39mgetByText(\u001b[32m\"Continue\"\u001b[39m)\n \u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m continue_sidebar\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\individualSubscription.spec.js:18:64\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-05-27T21:18:26.930Z",
+                  "annotations": [
+                    {
+                      "type": "slow",
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\individualSubscription.spec.js",
+                        "line": 9,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-individualSubsc-08406-ubscription-purchase---Wolf-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-individualSubsc-08406-ubscription-purchase---Wolf-chromium-retry1\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-individualSubsc-08406-ubscription-purchase---Wolf-chromium-retry1\\trace.zip"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 1,
+                  "status": "timedOut",
+                  "duration": 282994,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 270000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 270000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 270000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\individualSubscription.spec.js",
+                        "column": 64,
+                        "line": 18
+                      },
+                      "message": "Error: locator.click: Test timeout of 270000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button').getByText('Add New Traveler')\u001b[22m\n\n\n\u001b[0m \u001b[90m 16 |\u001b[39m   ])\n \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(general_url \u001b[33m+\u001b[39m \u001b[32m'ivisatravel.visachinaonline.com/a/malaysia/apply-now'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m)\u001b[33m.\u001b[39mgetByText(\u001b[32m\"Add New Traveler\"\u001b[39m)\u001b[33m.\u001b[39mclick()\n \u001b[90m    |\u001b[39m                                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39mstep_1(page\u001b[33m,\u001b[39m \u001b[32m\"individual\"\u001b[39m)\n \u001b[90m 20 |\u001b[39m   \u001b[36mconst\u001b[39m continue_sidebar \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m)\u001b[33m.\u001b[39mgetByText(\u001b[32m\"Continue\"\u001b[39m)\n \u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m continue_sidebar\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\individualSubscription.spec.js:18:64\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2026-05-27T21:23:18.966Z",
+                  "annotations": [
+                    {
+                      "type": "slow",
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\individualSubscription.spec.js",
+                        "line": 9,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-individualSubsc-08406-ubscription-purchase---Wolf-chromium-retry2\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-individualSubsc-08406-ubscription-purchase---Wolf-chromium-retry2\\error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f430faf524dea75d05c8-6f3fa6c787ecccdd63c0",
+          "file": "wolf-tests/individualSubscription.spec.js",
+          "line": 8,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "wolf-tests\\passwordWolf.spec.js",
+      "file": "wolf-tests/passwordWolf.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Password Creation and login - Wolf",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 270000,
+              "annotations": [
+                {
+                  "type": "slow",
+                  "location": {
+                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\passwordWolf.spec.js",
+                    "line": 10,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 59188,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('id=email_login_input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('id=email_login_input')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('id=email_login_input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('id=email_login_input')\u001b[22m\n\n    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\passwordWolf.spec.js:53:25",
+                    "location": {
+                      "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\passwordWolf.spec.js",
+                      "column": 25,
+                      "line": 53
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 51 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(general_url \u001b[33m+\u001b[39m \u001b[32m'ivisatravel.visachinaonline.com/account/login'\u001b[39m)\n \u001b[90m 52 |\u001b[39m     \u001b[36mconst\u001b[39m email \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=email_login_input'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 53 |\u001b[39m     \u001b[36mawait\u001b[39m expect(email)\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 54 |\u001b[39m     \u001b[36mawait\u001b[39m email\u001b[33m.\u001b[39mfill(wolfEmail)\n \u001b[90m 55 |\u001b[39m     \u001b[36mconst\u001b[39m continue_login \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=continue_button'\u001b[39m)\n \u001b[90m 56 |\u001b[39m     \u001b[36mawait\u001b[39m expect(continue_login)\u001b[33m.\u001b[39mtoBeEnabled()\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\passwordWolf.spec.js",
+                        "column": 25,
+                        "line": 53
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('id=email_login_input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('id=email_login_input')\u001b[22m\n\n\n\u001b[0m \u001b[90m 51 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(general_url \u001b[33m+\u001b[39m \u001b[32m'ivisatravel.visachinaonline.com/account/login'\u001b[39m)\n \u001b[90m 52 |\u001b[39m     \u001b[36mconst\u001b[39m email \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=email_login_input'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 53 |\u001b[39m     \u001b[36mawait\u001b[39m expect(email)\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 54 |\u001b[39m     \u001b[36mawait\u001b[39m email\u001b[33m.\u001b[39mfill(wolfEmail)\n \u001b[90m 55 |\u001b[39m     \u001b[36mconst\u001b[39m continue_login \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=continue_button'\u001b[39m)\n \u001b[90m 56 |\u001b[39m     \u001b[36mawait\u001b[39m expect(continue_login)\u001b[33m.\u001b[39mtoBeEnabled()\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\passwordWolf.spec.js:53:25\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-27T21:13:32.576Z",
+                  "annotations": [
+                    {
+                      "type": "slow",
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\passwordWolf.spec.js",
+                        "line": 10,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-passwordWolf-Password-Creation-and-login---Wolf-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-passwordWolf-Password-Creation-and-login---Wolf-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\passwordWolf.spec.js",
+                    "column": 25,
+                    "line": 53
+                  }
+                },
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 60506,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('id=email_login_input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('id=email_login_input')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('id=email_login_input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('id=email_login_input')\u001b[22m\n\n    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\passwordWolf.spec.js:53:25",
+                    "location": {
+                      "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\passwordWolf.spec.js",
+                      "column": 25,
+                      "line": 53
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 51 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(general_url \u001b[33m+\u001b[39m \u001b[32m'ivisatravel.visachinaonline.com/account/login'\u001b[39m)\n \u001b[90m 52 |\u001b[39m     \u001b[36mconst\u001b[39m email \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=email_login_input'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 53 |\u001b[39m     \u001b[36mawait\u001b[39m expect(email)\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 54 |\u001b[39m     \u001b[36mawait\u001b[39m email\u001b[33m.\u001b[39mfill(wolfEmail)\n \u001b[90m 55 |\u001b[39m     \u001b[36mconst\u001b[39m continue_login \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=continue_button'\u001b[39m)\n \u001b[90m 56 |\u001b[39m     \u001b[36mawait\u001b[39m expect(continue_login)\u001b[33m.\u001b[39mtoBeEnabled()\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\passwordWolf.spec.js",
+                        "column": 25,
+                        "line": 53
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('id=email_login_input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('id=email_login_input')\u001b[22m\n\n\n\u001b[0m \u001b[90m 51 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(general_url \u001b[33m+\u001b[39m \u001b[32m'ivisatravel.visachinaonline.com/account/login'\u001b[39m)\n \u001b[90m 52 |\u001b[39m     \u001b[36mconst\u001b[39m email \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=email_login_input'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 53 |\u001b[39m     \u001b[36mawait\u001b[39m expect(email)\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 54 |\u001b[39m     \u001b[36mawait\u001b[39m email\u001b[33m.\u001b[39mfill(wolfEmail)\n \u001b[90m 55 |\u001b[39m     \u001b[36mconst\u001b[39m continue_login \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=continue_button'\u001b[39m)\n \u001b[90m 56 |\u001b[39m     \u001b[36mawait\u001b[39m expect(continue_login)\u001b[33m.\u001b[39mtoBeEnabled()\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\passwordWolf.spec.js:53:25\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-05-27T21:14:33.339Z",
+                  "annotations": [
+                    {
+                      "type": "slow",
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\passwordWolf.spec.js",
+                        "line": 10,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-passwordWolf-Password-Creation-and-login---Wolf-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-passwordWolf-Password-Creation-and-login---Wolf-chromium-retry1\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-passwordWolf-Password-Creation-and-login---Wolf-chromium-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\passwordWolf.spec.js",
+                    "column": 25,
+                    "line": 53
+                  }
+                },
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 60370,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('id=email_login_input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('id=email_login_input')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('id=email_login_input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('id=email_login_input')\u001b[22m\n\n    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\passwordWolf.spec.js:53:25",
+                    "location": {
+                      "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\passwordWolf.spec.js",
+                      "column": 25,
+                      "line": 53
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 51 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(general_url \u001b[33m+\u001b[39m \u001b[32m'ivisatravel.visachinaonline.com/account/login'\u001b[39m)\n \u001b[90m 52 |\u001b[39m     \u001b[36mconst\u001b[39m email \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=email_login_input'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 53 |\u001b[39m     \u001b[36mawait\u001b[39m expect(email)\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 54 |\u001b[39m     \u001b[36mawait\u001b[39m email\u001b[33m.\u001b[39mfill(wolfEmail)\n \u001b[90m 55 |\u001b[39m     \u001b[36mconst\u001b[39m continue_login \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=continue_button'\u001b[39m)\n \u001b[90m 56 |\u001b[39m     \u001b[36mawait\u001b[39m expect(continue_login)\u001b[33m.\u001b[39mtoBeEnabled()\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\passwordWolf.spec.js",
+                        "column": 25,
+                        "line": 53
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('id=email_login_input')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('id=email_login_input')\u001b[22m\n\n\n\u001b[0m \u001b[90m 51 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(general_url \u001b[33m+\u001b[39m \u001b[32m'ivisatravel.visachinaonline.com/account/login'\u001b[39m)\n \u001b[90m 52 |\u001b[39m     \u001b[36mconst\u001b[39m email \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=email_login_input'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 53 |\u001b[39m     \u001b[36mawait\u001b[39m expect(email)\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 54 |\u001b[39m     \u001b[36mawait\u001b[39m email\u001b[33m.\u001b[39mfill(wolfEmail)\n \u001b[90m 55 |\u001b[39m     \u001b[36mconst\u001b[39m continue_login \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=continue_button'\u001b[39m)\n \u001b[90m 56 |\u001b[39m     \u001b[36mawait\u001b[39m expect(continue_login)\u001b[33m.\u001b[39mtoBeEnabled()\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\passwordWolf.spec.js:53:25\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2026-05-27T21:15:40.772Z",
+                  "annotations": [
+                    {
+                      "type": "slow",
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\passwordWolf.spec.js",
+                        "line": 10,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-passwordWolf-Password-Creation-and-login---Wolf-chromium-retry2\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\wolf-tests-passwordWolf-Password-Creation-and-login---Wolf-chromium-retry2\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\wolf-tests\\passwordWolf.spec.js",
+                    "column": 25,
+                    "line": 53
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "246ec87d5e74e468a0aa-9d42dabe8e38d7884464",
+          "file": "wolf-tests/passwordWolf.spec.js",
+          "line": 9,
           "column": 1
         }
       ]
@@ -625,11 +990,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-26T22:57:57.212Z",
-    "duration": 699131.2440000001,
-    "expected": 3,
+    "startTime": "2026-05-27T21:13:27.763Z",
+    "duration": 874590.765,
+    "expected": 1,
     "skipped": 1,
-    "unexpected": 1,
+    "unexpected": 4,
     "flaky": 0
   }
 }

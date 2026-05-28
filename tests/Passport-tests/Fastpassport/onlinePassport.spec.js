@@ -150,7 +150,7 @@ test('FastPassport - Online Passport and MIN status', async({page, context}) =>{
   await expect(track_application).toBeVisible()
   // Admin portal MIN 
   await page.goto(general_url + 'admin.visachinaonline.com/login')
-  await page.getByPlaceholder('1234567 or you@email.com').fill('david@admin.com')
+  await page.locator('#email_login_input').fill('david@admin.com')
   await page.getByRole("button", {name: 'Continue'}).click()
   
   await page.locator('#password_login_input').fill('testivisa5!')
@@ -208,7 +208,7 @@ test('Fix Min', async({browser}) => {
 })
 test('wog passport', async({page}) => {
   await page.goto(general_url + 'admin.visachinaonline.com/login')
-  await page.getByPlaceholder('1234567 or you@email.com').fill('sergio@admin.com')
+  await page.locator('#email_login_input').fill('sergio@admin.com')
   await page.getByRole("button", {name: 'Continue'}).click()
   
   await page.locator('#password_login_input').fill('testivisa5!')

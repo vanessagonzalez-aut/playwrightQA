@@ -57,7 +57,7 @@ test('Different currency payment - Wolf', async({page, context}) =>{
   await continue_sidebar.click()
 
   await page.waitForURL("**/a/turkey/checkout")
-  await appFunctions.newPaymentCheckout(page, '6011 1111 1111 1117', '123')
+  await appFunctions.newPaymentCheckout(page, '4111 1111 1111 1111', '123')
   const payment_btn = page.locator('id=btnSubmitPayment')
   await expect(payment_btn).toBeVisible()
   await expect(payment_btn).toBeEnabled()

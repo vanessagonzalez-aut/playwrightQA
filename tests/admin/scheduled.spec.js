@@ -16,7 +16,7 @@ test.fixme('Scheduled', async({browser}) => {
     });
 
     await page.goto(deploy_url + 'login')
-    await page.getByPlaceholder('1234567 or you@email.com').fill('david@admin.com')
+    await page.locator('#email_login_input').fill('david@admin.com')
     await page.getByRole("button", {name: 'Continue'}).click()
 
     await page.locator('#password_login_input').fill('testivisa5!')

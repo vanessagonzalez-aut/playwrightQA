@@ -10,7 +10,7 @@ test:
 	npx playwright test /tests/Travel documents/ /tests/Passport-tests/ /tests/Mobile/ 
 
 refactor: 
-	npx /tests/Travel documents/Top
+	npx playwright test /tests/wolf-tests
 translations:
 	npx playwright test egypt.spec.js
 
