@@ -8,7 +8,7 @@ let Order_num
 test('Mauritius Travel Digital Form', async ({ page }) => {
   await page.goto(deploy_url + 'mauritius/apply-now')
   await appFunctions.autofillExisting(page, "mauritius/apply-now/edit-traveler/0")
-  await page.waitForURL("**/mauritius/apply-now/traveler-review")
+  await page.waitForURL("**/mauritius/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/mauritius/apply-now/contact-details")

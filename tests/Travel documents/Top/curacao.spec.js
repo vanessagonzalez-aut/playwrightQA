@@ -9,7 +9,7 @@ test('Curacao Immigration Card + Passenger Locator Card', async ({ page }) => {
   test.slow()
   await page.goto(deploy_url + 'curacao/apply-now')
   await appFunctions.autofillExisting(page, "curacao/apply-now/edit-traveler/0")
-  await page.waitForURL("**/curacao/apply-now/traveler-review")
+  await page.waitForURL("**/curacao/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/curacao/apply-now/contact-details")

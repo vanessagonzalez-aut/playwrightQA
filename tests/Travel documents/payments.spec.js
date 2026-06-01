@@ -7,7 +7,7 @@ test('Payment with VISA and Cancelled order Status', async({page}) => {
   test.slow()
   await page.goto(deploy_url + 'thailand/apply-now')
   await appFunctions.autofillExisting(page, "thailand/apply-now/edit-traveler/0")
-  await page.waitForURL("**/thailand/apply-now/traveler-review")
+  await page.waitForURL("**/thailand/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/thailand/apply-now/contact-details")
@@ -65,7 +65,7 @@ test('Payment with VISA and Cancelled order Status', async({page}) => {
 test('Payment with Master Card', async({page}) => {
   await page.goto(deploy_url + 'thailand/apply-now')
   await appFunctions.autofillExisting(page, "thailand/apply-now/edit-traveler/0")
-  await page.waitForURL("**/thailand/apply-now/traveler-review")
+  await page.waitForURL("**/thailand/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/thailand/apply-now/contact-details")
@@ -85,7 +85,7 @@ test('Payment with Master Card', async({page}) => {
 test('Payment with Amex', async({page}) => {
   await page.goto(deploy_url + 'thailand/apply-now')
   await appFunctions.autofillExisting(page, "thailand/apply-now/edit-traveler/0")
-  await page.waitForURL("**/thailand/apply-now/traveler-review")
+  await page.waitForURL("**/thailand/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/thailand/apply-now/contact-details")
@@ -106,7 +106,7 @@ test('Payment with Amex', async({page}) => {
 test('Payment with Discover', async({page}) => {
   await page.goto(deploy_url + 'thailand/apply-now')
   await appFunctions.autofillExisting(page, "thailand/apply-now/edit-traveler/0")
-  await page.waitForURL("**/thailand/apply-now/traveler-review")
+  await page.waitForURL("**/thailand/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/thailand/apply-now/contact-details")

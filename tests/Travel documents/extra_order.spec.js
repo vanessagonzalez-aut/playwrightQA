@@ -8,7 +8,7 @@ test('Extra Order', async ({ page, browser }) => {
   test.slow()
   await page.goto(deploy_url + 'turkey/apply-now')
   await appFunctions.autofillExisting(page, "turkey/apply-now/edit-traveler/0")
-  await page.waitForURL("**/turkey/apply-now/traveler-review")
+  await page.waitForURL("**/turkey/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/turkey/apply-now/contact-details")

@@ -13,7 +13,7 @@ test('Colombia Check-MIG and MIN status', async ({ page }) => {
   await page.waitForTimeout(2000)
   await percySnapshot(page, 'autofillModal')
   await appFunctions.autofillExisting(page, "colombia/apply-now/edit-traveler/0")
-  await page.waitForURL("**/colombia/apply-now/traveler-review")
+  await page.waitForURL("**/colombia/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/colombia/apply-now/contact-details")

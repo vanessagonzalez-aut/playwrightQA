@@ -10,7 +10,7 @@ test('UK ETA', async({page}) => {
   test.slow()
   await page.goto(deploy_url + 'united-kingdom/apply-now')
   await appFunctions.autofillExisting(page, "united-kingdom/apply-now/edit-traveler/0")
-  await page.waitForURL("**/united-kingdom/apply-now/traveler-review")
+  await page.waitForURL("**/united-kingdom/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/united-kingdom/apply-now/contact-details")

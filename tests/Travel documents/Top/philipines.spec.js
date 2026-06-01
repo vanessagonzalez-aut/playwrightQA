@@ -9,7 +9,7 @@ test('Philippines eArrival Card', async ({ page }) => {
   test.slow()
   await page.goto(deploy_url + 'philippines/apply-now')
   await appFunctions.autofillExisting(page, "philippines/apply-now/edit-traveler/0")
-  await page.waitForURL("**/philippines/apply-now/traveler-review")
+  await page.waitForURL("**/philippines/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/philippines/apply-now/contact-details")

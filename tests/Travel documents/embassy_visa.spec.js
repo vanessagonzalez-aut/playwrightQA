@@ -8,7 +8,7 @@ test('Embassy Visa', async({page}) => {
     test.slow()
     await page.goto(deploy_url + 'australia/apply-now')
     await appFunctions.autofillExisting(page, "australia/apply-now/edit-traveler/0")
-    await page.waitForURL("**/australia/apply-now/traveler-review")
+    await page.waitForURL("**/australia/apply-now/traveler-review**")
     const continue_sidebar = page.getByRole("button").getByText("Continue")
     await continue_sidebar.click()
     await page.waitForURL("**/australia/apply-now/contact-details")
@@ -88,12 +88,14 @@ test('Embassy Visa', async({page}) => {
 
     await page.locator('id=instructions-continue').click()
     await page.locator('input[type="file"]').nth(1).setInputFiles(path.join(__dirname, 'uploads_passport/Applicant-Photo.jpg'))
-    await page.waitForTimeout(8000)
+    await page.getByTestId("thumbnailPreview").waitFor({state: 'visible'})
+    await page.locator('input[type="file"]').nth(1).setInputFiles(path.join(__dirname, 'uploads_passport/Applicant-Photo.jpg'))
+    await page.getByTestId("thumbnailPreview").waitFor({state: 'visible'})
     await page.locator('id=add-file-multiple-continue').click()
 
     await page.locator('id=instructions-continue').click()
     await page.locator('input[type="file"]').nth(1).setInputFiles(path.join(__dirname, 'uploads_passport/Applicant-Photo.jpg'))
-    await page.waitForTimeout(8000)
+    await page.getByTestId("thumbnailPreview").waitFor({state: 'visible'})
     await page.locator('id=add-file-multiple-continue').click()
 
     await page.locator('id=instructions-continue').click()

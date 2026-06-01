@@ -7,7 +7,7 @@ const randomEmail = require('random-email')
 let wolfEmail = randomEmail({domain: "ivisatravel.com"})
 
 test.describe.configure({ mode: 'serial' });
-test('Different currency payment - Wolf', async({page, context}) =>{
+test('Different currency payment - Wolf and CC update', async({page, context}) =>{
   test.slow()
   await context.addCookies([
     {
@@ -62,11 +62,7 @@ test('Different currency payment - Wolf', async({page, context}) =>{
   await expect(payment_btn).toBeVisible()
   await expect(payment_btn).toBeEnabled()
   await payment_btn.click()
-  await page.waitForTimeout(5000)
-  const dsModal = await page.locator('primer-portal-dialog').isVisible()
-  if(dsModal){
-    await page.frameLocator(".challenge-iframe").getByText('Pass challenge').click()
-  }
+  await page.frameLocator(".challenge-iframe").getByText('Pass challenge').click()
   
   await page.waitForNavigation({waitUntil: 'load'})
   await page.getByTestId("transition-page-button").click()
@@ -100,9 +96,8 @@ test('Different currency payment - Wolf', async({page, context}) =>{
   await expect(submit_post_payment).toBeEnabled()
   await submit_post_payment.click()
   await page.waitForNavigation({waitUntil: 'load'})
-})
 
-test('CC Update - Wolf', async({page, context}) =>{
+  // CC TEST
   await page.goto(general_url + 'ivisatravel.visachinaonline.com/account/payment-method');
   await expect(page.getByTestId("addPaymentMethodBtn")).toBeEnabled()
   

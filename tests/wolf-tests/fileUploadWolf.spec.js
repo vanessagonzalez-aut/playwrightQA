@@ -7,7 +7,7 @@ const path = require('path');
 let wolfEmail = randomEmail({domain: "ivisatravel.com"})
 
 test.describe.configure({ mode: 'serial' });
-test.fixme('File upload - Wolf', async({page, context}) =>{
+test('File upload - Wolf', async({page, context}) =>{
   test.slow()
   var myDate = new Date(new Date(). getTime()+(10*24*60*60*1000));
   const datepicker_date = new Date(myDate);
@@ -105,7 +105,7 @@ test.fixme('File upload - Wolf', async({page, context}) =>{
     
     // Upload Correct Photo
     await page.getByTestId("try-another-way-button").click()
-    await page.setInputFiles('input[type="file"]', path.join(__dirname, 'uploads_passport/Applicant-Photo.jpg'));
+    await selectors.applicantPhoto(page)
     await expect(page.locator("id=document-loading")).toBeVisible()
     await page.waitForTimeout(14000)
     await expect(page.locator("id=document-loading")).toBeHidden()
@@ -119,7 +119,7 @@ test.fixme('File upload - Wolf', async({page, context}) =>{
     
     // Upload Correct Photo
     await page.getByTestId("try-another-way-button").click()
-    await page.setInputFiles('input[type="file"]', path.join(__dirname, 'uploads_passport/passport.jpg'));
+    await selectors.passportPhoto(page)
     await expect(page.locator("id=document-loading")).toBeVisible()
     await page.waitForTimeout(10000)
     await expect(page.locator("id=document-loading")).toBeHidden()

@@ -9,7 +9,7 @@ test.fixme('Saint Kitts and Nevis ETA ', async ({ page }) => {
   test.slow()
   await page.goto(deploy_url + 'saint-kitts-and-nevis/apply-now')
   await appFunctions.autofillExisting(page, "saint-kitts-and-nevis/apply-now/edit-traveler/0")
-  await page.waitForURL("**/saint-kitts-and-nevis/apply-now/traveler-review")
+  await page.waitForURL("**/saint-kitts-and-nevis/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/saint-kitts-and-nevis/apply-now/contact-details")

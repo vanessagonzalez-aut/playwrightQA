@@ -9,7 +9,7 @@ test('Belize Travel Declaration', async ({ page }) => {
   test.slow()
   await page.goto(deploy_url + 'belize/apply-now')
   await appFunctions.autofillExisting(page, "belize/apply-now/edit-traveler/0")
-  await page.waitForURL("**/belize/apply-now/traveler-review")
+  await page.waitForURL("**/belize/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/belize/apply-now/contact-details")

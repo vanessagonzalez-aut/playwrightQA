@@ -9,7 +9,7 @@ let Order_num
 test('New Zealand ETA', async ({ page }) => {
   await page.goto(deploy_url + 'new-zealand/apply-now')
   await appFunctions.autofillExisting(page, "new-zealand/apply-now/edit-traveler/0")
-  await page.waitForURL("**/new-zealand/apply-now/traveler-review")
+  await page.waitForURL("**/new-zealand/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/new-zealand/apply-now/contact-details")

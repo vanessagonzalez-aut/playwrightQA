@@ -17,7 +17,7 @@ test.skip('British Virgin Islands ED Card', async ({ page }) => {
 
   await page.goto(deploy_url + 'british-virgin-islands/apply-now')
   await appFunctions.autofillExisting(page, "british-virgin-islands/apply-now/edit-traveler/0")
-  await page.waitForURL("**/british-virgin-islands/apply-now/traveler-review")
+  await page.waitForURL("**/british-virgin-islands/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/british-virgin-islands/apply-now/contact-details")

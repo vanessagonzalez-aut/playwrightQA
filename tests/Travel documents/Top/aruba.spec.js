@@ -15,7 +15,7 @@ test.fixme('Aruba ED Card', async ({ page }) => {
 
   await page.goto(deploy_url + 'aruba/apply-now')
   await appFunctions.autofillExisting(page, "aruba/apply-now/edit-traveler/0")
-  await page.waitForURL("**/aruba/apply-now/traveler-review")
+  await page.waitForURL("**/aruba/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/aruba/apply-now/contact-details")

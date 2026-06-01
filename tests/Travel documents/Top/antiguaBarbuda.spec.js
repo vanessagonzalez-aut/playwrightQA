@@ -9,7 +9,7 @@ test.skip('Antigua & Barbuda Entry Form', async ({ page }) => {
   test.slow()
   await page.goto(deploy_url + 'antigua-barbuda/apply-now')
   await appFunctions.autofillExisting(page, "antigua-barbuda/apply-now/edit-traveler/0")
-  await page.waitForURL("**/antigua-barbuda/apply-now/traveler-review")
+  await page.waitForURL("**/antigua-barbuda/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/antigua-barbuda/apply-now/contact-details")

@@ -9,7 +9,7 @@ test('Dominican Republic eTicket', async ({ page }) => {
   test.slow()
   await page.goto(deploy_url + 'dominican-republic/apply-now')
   await appFunctions.autofillExisting(page, "dominican-republic/apply-now/edit-traveler/0")
-  await page.waitForURL("**/dominican-republic/apply-now/traveler-review")
+  await page.waitForURL("**/dominican-republic/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/dominican-republic/apply-now/contact-details")

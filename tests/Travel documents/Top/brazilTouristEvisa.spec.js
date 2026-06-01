@@ -9,7 +9,7 @@ test.fixme('Brazil Tourist eVisa', async ({ page }) => {
   test.slow()
   await page.goto(deploy_url + 'brazil/apply-now')
   await appFunctions.autofillExisting(page, "brazil/apply-now/edit-traveler/0")
-  await page.waitForURL("**/brazil/apply-now/traveler-review")
+  await page.waitForURL("**/brazil/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/brazil/apply-now/contact-details")

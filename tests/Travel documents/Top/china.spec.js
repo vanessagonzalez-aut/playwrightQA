@@ -9,7 +9,7 @@ test('China Arrival card', async ({ page }) => {
   test.slow()
   await page.goto(deploy_url + 'china/apply-now')
   await appFunctions.autofillExisting(page, "china/apply-now/edit-traveler/0")
-  await page.waitForURL("**/china/apply-now/traveler-review")
+  await page.waitForURL("**/china/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/china/apply-now/contact-details")

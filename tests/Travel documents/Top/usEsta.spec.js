@@ -30,7 +30,7 @@ test('United States ESTA', async ({ page, context }) => {
   await appFunctions.step_3c(page, continue_sidebar)
   await page.waitForURL("**/usa/apply-now/additional-info/0")
   await appFunctions.additionalInfo(page, continue_sidebar)
-  await page.waitForURL("**/usa/apply-now/traveler-review")
+  await page.waitForURL("**/usa/apply-now/traveler-review**")
   await continue_sidebar.click()
   await page.waitForURL("**/usa/apply-now/contact-details")
   await continue_sidebar.click()

@@ -9,7 +9,7 @@ test('Egypt eVisa', async ({ page }) => {
   test.slow()
   await page.goto(deploy_url + 'egypt/apply-now')
   await appFunctions.autofillExisting(page, "egypt/apply-now/edit-traveler/0")
-  await page.waitForURL("**/egypt/apply-now/traveler-review")
+  await page.waitForURL("**/egypt/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/egypt/apply-now/contact-details")

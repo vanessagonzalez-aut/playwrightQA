@@ -14,8 +14,7 @@ test('Individual subscription purchase - Wolf', async ({ page, context }) => {
       url: general_url + 'ivisatravel.visachinaonline.com'
     }
   ])
-  await page.goto(general_url + 'ivisatravel.visachinaonline.com/a/malaysia/apply-now')
-  await page.getByRole("button").getByText("Add New Traveler").click()
+  await page.goto(general_url + 'ivisatravel.visachinaonline.com/a/malaysia')
   await appFunctions.step_1(page, "individual")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
@@ -25,7 +24,7 @@ test('Individual subscription purchase - Wolf', async ({ page, context }) => {
   await appFunctions.step_3c(page, continue_sidebar)
   await page.waitForURL("**/a/malaysia/apply-now/additional-info/0")
   await appFunctions.additionalInfo(page, continue_sidebar)
-  await page.waitForURL("**/a/malaysia/apply-now/traveler-review")
+  await page.waitForURL("**/a/malaysia/apply-now/traveler-review**")
   await continue_sidebar.click()
   await page.waitForURL("**/a/malaysia/apply-now/contact-details")
   await continue_sidebar.click()
@@ -93,13 +92,14 @@ test('Individual subscription purchase - Wolf', async ({ page, context }) => {
   await page.locator('id=expiry').frameLocator('[title="Expiry (MM/YY)"]').locator('id=primer-hosted-input').fill('10/26')
   await page.locator('id=cvv').frameLocator('[title="CVV"]').locator('id=primer-hosted-input').fill('123')
   await page.locator('id=cardFormName').frameLocator('[title="Name on card"]').locator('id=primer-hosted-input').fill('Jhon')
+  await page.locator('.billing-address-form').locator("input").fill('12345')
   await page.locator('id=btnSubmitPayment').click()
   await page.waitForURL(general_url + 'ivisatravel.visachinaonline.com/order/' + Order_num + "?subscription=true")
 
   // Place free order 
  await page.goto(deploy_url + 'malaysia/apply-now')
  await appFunctions.autofillExisting(page, "malaysia/apply-now/edit-traveler/0", false, true)
- await page.waitForURL("**/a/malaysia/apply-now/traveler-review")
+ await page.waitForURL("**/a/malaysia/apply-now/traveler-review**")
  await continue_sidebar.click()
  await page.waitForURL("**/a/malaysia/apply-now/contact-details")
   await continue_sidebar.click() 

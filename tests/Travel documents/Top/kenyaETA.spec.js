@@ -9,7 +9,7 @@ test('Kenya Eta', async ({ page }) => {
   test.slow()
   await page.goto(deploy_url + 'kenya/apply-now')
   await appFunctions.autofillExisting(page, "kenya/apply-now/edit-traveler/0")
-  await page.waitForURL("**/kenya/apply-now/traveler-review")
+  await page.waitForURL("**/kenya/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/kenya/apply-now/contact-details")

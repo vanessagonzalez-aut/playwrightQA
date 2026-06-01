@@ -9,7 +9,7 @@ test('Different currency', async ({ page }) => {
   test.slow()
   await page.goto(deploy_url + 'turkey/apply-now');
   await appFunctions.autofillExisting(page, "turkey/apply-now/edit-traveler/0")
-  await page.waitForURL("**/turkey/apply-now/traveler-review")
+  await page.waitForURL("**/turkey/apply-now/traveler-review**")
   const currency = page.locator('id=currencyHeader');
   await expect(currency).toBeVisible()
   await currency.click()

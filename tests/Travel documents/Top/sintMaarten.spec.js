@@ -9,7 +9,7 @@ test('Sint Maarten ED Card', async ({ page }) => {
   test.slow()
   await page.goto(deploy_url + 'sint-maarten/apply-now')
   await appFunctions.autofillExisting(page, "sint-maarten/apply-now/edit-traveler/0")
-  await page.waitForURL("**/sint-maarten/apply-now/traveler-review")
+  await page.waitForURL("**/sint-maarten/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/sint-maarten/apply-now/contact-details")

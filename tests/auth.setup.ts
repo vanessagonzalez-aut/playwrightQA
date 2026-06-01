@@ -47,7 +47,7 @@ setup('authenticate', async ({ page, context }) => {
     await page.waitForTimeout(2000)
     await percySnapshot(page, 'Step4Application')
     await appFunctions.additionalInfo(page, continue_sidebar)
-    await page.waitForURL("**/turkey/apply-now/traveler-review")
+    await page.waitForURL("**/turkey/apply-now/traveler-review**")
     await page.waitForTimeout(2000)
     await percySnapshot(page, 'Step5Application')
     await continue_sidebar.click()

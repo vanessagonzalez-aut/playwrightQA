@@ -12,7 +12,7 @@ test:
 refactor: 
 	npx playwright test /tests/wolf-tests
 translations:
-	npx playwright test egypt.spec.js
+	npx playwright test payments.spec.js
 
 fastPassport:
 	npx playwright test onlinePassport.spec.js --headed

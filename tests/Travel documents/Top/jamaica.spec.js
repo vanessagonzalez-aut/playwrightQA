@@ -9,7 +9,7 @@ test('Jamaica C5-Form Application', async ({ page }) => {
   test.slow()
   await page.goto(deploy_url + 'jamaica/apply-now')
   await appFunctions.autofillExisting(page, "jamaica/apply-now/edit-traveler/0")
-  await page.waitForURL("**/jamaica/apply-now/traveler-review")
+  await page.waitForURL("**/jamaica/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/jamaica/apply-now/contact-details")

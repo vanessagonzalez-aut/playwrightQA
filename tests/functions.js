@@ -58,7 +58,7 @@ async function newPaymentCheckout(page,creditCard, cvvNum,continuebtn){
     
     const primer = await page.locator('[name="number"]').isVisible()
     if(!primer){
-        await page.waitForTimeout(2000)
+        await page.waitForTimeout(3000)
         await page.locator('id=cardNumber').frameLocator('[title="Card number"]').locator('id=primer-hosted-input').fill(creditCard)
         await page.locator('id=expiry').frameLocator('[title="Expiry (MM/YY)"]').locator('id=primer-hosted-input').fill('10/26')
         await page.locator('id=cvv').frameLocator('[title="CVV"]').locator('id=primer-hosted-input').fill(cvvNum)
