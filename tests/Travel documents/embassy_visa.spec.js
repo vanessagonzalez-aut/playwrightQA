@@ -39,6 +39,7 @@ test('Embassy Visa', async({page}) => {
 
     await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_personal")
     await page.waitForTimeout(3000)
+    await selectors.dropdownSelector(page, "applicant.0.birth_country", "dropdown-applicant.0.birth_country", "mexico", "MX")
     await page.locator('[name="applicant.0.birth_city"]').fill("test")
     await page.locator('[name="applicant.0.state_of_birth"]').fill("test")
     await selectors.dropdownOptions(page, "dropdown-applicant.0.marital_status", "Single / Never Married")

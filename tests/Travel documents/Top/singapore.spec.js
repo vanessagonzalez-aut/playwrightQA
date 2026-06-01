@@ -38,6 +38,7 @@ test('Singapore Arrival Card', async ({ page }) => {
   await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_personal")
   await selectors.dropdownSelector(page, "applicant.0.shipping_state", "dropdown-applicant.0.shipping_state", "Alabama", "Alabama")
+  await selectors.dropdownSelector(page, "applicant.0.birth_country", "dropdown-applicant.0.birth_country", "mexico", "MX")
   const submit_post_payment = page.locator('id=btnSubmitApplication')
   await submit_post_payment.click()
   await page.waitForURL(deploy_url + "order-received-page/" + Order_num)

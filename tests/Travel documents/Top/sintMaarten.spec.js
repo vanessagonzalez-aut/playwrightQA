@@ -49,7 +49,7 @@ test('Sint Maarten ED Card', async ({ page }) => {
   await page.waitForTimeout(2000)
   await selectors.inputText(page, "applicant.0.birth_city", "Test")
   await selectors.booleanOptions(page, 'applicant.0.marital_status', 'option-Single')
-
+  await selectors.dropdownSelector(page, "applicant.0.birth_country", "dropdown-applicant.0.birth_country", "mexico", "MX")
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_work")

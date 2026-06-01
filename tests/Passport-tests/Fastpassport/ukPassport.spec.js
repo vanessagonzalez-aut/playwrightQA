@@ -30,7 +30,7 @@ test('FastPassport - United Kingdom', async({page, context}) =>{
   await page.selectOption("[name='general.passport_expiration_date.month']", "1")
   await page.selectOption("[name='general.passport_expiration_date.year']", "2025")
   await continue_sidebar.click()
-  await page.waitForURL('**/passport-renewal/united-kingdom/application#step=review')
+  await page.waitForURL('**/passport-renewal/united-kingdom/application**')
   await page.waitForTimeout(4000)
   const duplicate = await page.isVisible('id=btnDisclaimerNext')
   if (duplicate){

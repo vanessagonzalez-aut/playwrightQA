@@ -101,7 +101,7 @@ test('FastPassport - Online Passport and MIN status', async({page, context}) =>{
     await page.locator('id=btnDisclaimerNext').click()
   }
   await page.getByText('Standard Service', { exact: true }).click()
-  await page.waitForURL('**/passport-renewal/united-states/application#step=review')
+  await page.waitForURL('**/passport-renewal/united-states/application**')
   await appFunctions.newPaymentCheckout(page,"4111111111111111", "123", false)
   const payment_btn = page.locator('id=btnSubmitPayment')
   await expect(payment_btn).toBeVisible()

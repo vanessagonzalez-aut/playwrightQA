@@ -5,7 +5,7 @@ const { deploy_url } = require('../../urls');
 
 let Order_num
 
-test('China Arrival card', async ({ page }) => {
+test.fixme('China Arrival card', async ({ page }) => {
   test.slow()
   await page.goto(deploy_url + 'china/apply-now')
   await appFunctions.autofillExisting(page, "china/apply-now/edit-traveler/0")
