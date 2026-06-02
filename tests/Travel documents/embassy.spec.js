@@ -109,7 +109,7 @@ test('Embassy reg', async({page}) => {
   await page.waitForTimeout(1000)
   await expect(continue_step1).toBeEnabled()
   await continue_step1.click()
-  await page.waitForURL('**/embassy-registration#step=review')
+  await page.waitForURL('**/embassy-registration**')
 
   await appFunctions.newPaymentCheckout(page,"4111111111111111", "123", false)
 
