@@ -46,7 +46,6 @@ test.skip('FastPassport - USPS Emergency - Complete', async({page, context}) => 
   // Post Payment
   await page.waitForNavigation({waitUntil: 'load'})
   await page.getByTestId("transition-page-button").click()
-  await selectors.phoneNumber(page)
   let Order_num = page.url().split("/")[4] 
   const next_btn = page.locator('id=btnContinueUnderSection')
   await page.waitForTimeout(1000)
@@ -87,6 +86,9 @@ test.skip('FastPassport - USPS Emergency - Complete', async({page, context}) => 
   await selectors.datePicker(page, "applicant.0.passport_expiration_date", "13", "7", "2023")
   await page.locator('[name="applicant.0.passport_num"]').fill('111111111')
   const submit_post_payment = page.locator("id=btnSubmitApplication")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await selectors.phoneNumber(page)
   await submit_post_payment.click()
   await page.waitForNavigation({waitUntil: 'load'})
   const track_application = page.locator('#trackApplication')

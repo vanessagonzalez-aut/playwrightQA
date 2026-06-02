@@ -100,8 +100,6 @@ test.slow()
 
     await page.getByTestId("transition-page-button").click()
     Order_num = page.url().split("/")[4] 
-    await page.getByPlaceholder('111-222-3333').fill('11111111')
-    await page.getByTestId('option-WhatsApp').click()
 
     const next_btn = page.locator('id=btnContinueUnderSection')
     await page.waitForTimeout(1000)
@@ -179,6 +177,9 @@ test.slow()
     await page.getByText("Use selected details").click()
     const submit_post_payment = page.locator('id=btnSubmitApplication')
     await expect(submit_post_payment).toBeEnabled()
+    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+    await selectors.phoneNumber(page)
     await submit_post_payment.click()
     await page.waitForNavigation({waitUntil: 'load'})
     await page.locator("skip-recommendation-button").click()

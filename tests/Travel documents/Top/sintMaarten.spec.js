@@ -24,7 +24,6 @@ test('Sint Maarten ED Card', async ({ page }) => {
   await page.waitForNavigation({waitUntil: 'load'})
   await page.getByTestId("transition-page-button").click()
   
-  await selectors.phoneNumber(page)
   await selectors.arrival_date(page)
   await selectors.departure_date(page, "general.departure_date")
   
@@ -60,7 +59,13 @@ test('Sint Maarten ED Card', async ({ page }) => {
   await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_travel")
   await selectors.booleanOptions(page, "applicant.0.flight_reservation", "option-No")
-  await page.locator("id=btnSubmitApplication").click()
+  await expect(next_btn).toBeEnabled()
+  await next_btn.click()
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await selectors.phoneNumber(page)
+  const submit_post_payment = page.locator('id=btnSubmitApplication')
+  await expect(submit_post_payment).toBeEnabled()
+  await submit_post_payment.click()
   await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
   await page.waitForTimeout(4000)
   const skip_recomendation = await page.locator('id=skip-recommendation-button').isVisible()

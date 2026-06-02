@@ -22,7 +22,6 @@ test('Barbados ED Card', async ({ page }) => {
   
   await page.waitForNavigation({waitUntil: 'load'})
   await page.getByTestId("transition-page-button").click()
-  await selectors.phoneNumber(page)
   await selectors.arrival_date(page)
   Order_num = page.url().split("/")[4] 
   const next_btn = page.locator('id=btnContinueUnderSection')
@@ -41,6 +40,9 @@ test('Barbados ED Card', async ({ page }) => {
   await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_personal")
   await selectors.dropdownSelector(page, "applicant.0.birth_country", "dropdown-applicant.0.birth_country", "mexico", "MX")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await selectors.phoneNumber(page)
   await page.locator("id=btnSubmitApplication").click()
   await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
   await page.waitForTimeout(4000)

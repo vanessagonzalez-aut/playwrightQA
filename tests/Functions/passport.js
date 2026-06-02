@@ -27,7 +27,7 @@ async function step_1_passport(page, email){
 }
 
 async function step_2_passport(page, passportType){
-    await page.waitForURL('**/passport-renewal/united-states/application#step=step_4')
+    await page.waitForURL('**/passport-renewal/united-states/application**')
     await page.waitForTimeout(2000)
     if(passportType === "Online"){
         await page.locator('#question-container').getByText('Standard Service', { exact: true }).click()

@@ -45,8 +45,6 @@ test('File upload - Wolf', async({page, context}) =>{
   await page.getByTestId("transition-page-button").click()
   let Order_num = page.url().split("/")[4];
 
-  await page.getByPlaceholder('111-222-3333').fill('11111111')
-    await page.getByTestId('option-WhatsApp').click()
 
     const next_btn = page.locator('id=btnContinueUnderSection')
     await page.waitForTimeout(1000)

@@ -23,7 +23,6 @@ test('Kenya Eta', async ({ page }) => {
   await page.waitForNavigation({waitUntil: 'load'})
   await page.getByTestId("transition-page-button").click()
   
-  await selectors.phoneNumber(page)
   Order_num = page.url().split("/")[4] 
   const next_btn = page.locator('id=btnContinueUnderSection')
   await page.waitForTimeout(1000)
@@ -91,7 +90,13 @@ test('Kenya Eta', async ({ page }) => {
   await page.waitForTimeout(1000)
   const passport_issue_year = page.locator('[name="applicant.0.passport_expiration_date.year"]')
   await passport_issue_year.selectOption('2028')  
-  await page.locator("id=btnSubmitApplication").click()
+  await expect(next_btn).toBeEnabled()
+  await next_btn.click()
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await selectors.phoneNumber(page)
+  const submit_post_payment = page.locator('id=btnSubmitApplication')
+  await expect(submit_post_payment).toBeEnabled()
+  await submit_post_payment.click()
   await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
   await page.waitForTimeout(4000)
   const skip_recomendation = await page.locator('id=skip-recommendation-button').isVisible()

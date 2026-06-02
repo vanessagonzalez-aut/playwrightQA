@@ -22,8 +22,6 @@ test('Extra Order', async ({ page, browser }) => {
   await page.getByTestId("transition-page-button").click()
   let Order_num = page.url().split("/")[4];
 
-  await page.getByPlaceholder('111-222-3333').fill('11111111')
-  await page.getByTestId('option-WhatsApp').click()
   
   const next_btn = page.locator('id=btnContinueUnderSection')
   await page.waitForTimeout(1000)
@@ -46,6 +44,10 @@ test('Extra Order', async ({ page, browser }) => {
   await page.waitForNavigation({waitUntil: 'load'})
   await selectors.dropdownSelector(page, "applicant.0.birth_country", "dropdown-applicant.0.birth_country", "mexico", "MX")
 
+  await expect(next_btn).toBeEnabled()
+  await next_btn.click()
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await selectors.phoneNumber(page)
   const submit_post_payment = page.locator('id=btnSubmitApplication')
   await expect(submit_post_payment).toBeEnabled()
   await submit_post_payment.click()

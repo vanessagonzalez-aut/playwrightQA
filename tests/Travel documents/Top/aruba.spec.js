@@ -30,7 +30,6 @@ test.fixme('Aruba ED Card', async ({ page }) => {
   await page.getByTestId("transition-page-button").click()
   
   
-  await selectors.phoneNumber(page)
   await selectors.arrival_date(page)
   await selectors.booleanOptions(page, 'general.flight_reservation', 'option-Yes')
 
@@ -55,6 +54,9 @@ test.fixme('Aruba ED Card', async ({ page }) => {
 
   const submit_post_payment = page.locator('id=btnSubmitApplication')
   await expect(submit_post_payment).toBeEnabled()
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await selectors.phoneNumber(page)
   await submit_post_payment.click()
   await page.waitForNavigation({waitUntil: 'load'})
 })

@@ -55,7 +55,6 @@ test('Individual subscription purchase - Wolf', async ({ page, context }) => {
   
   await page.waitForNavigation({waitUntil: 'load'})
   await page.getByTestId("transition-page-button").click()
-  await selectors.phoneNumber(page)
   await selectors.arrival_date(page)
   await selectors.departure_date(page, "general.departure_date")
 
@@ -69,6 +68,9 @@ test('Individual subscription purchase - Wolf', async ({ page, context }) => {
   await page.waitForURL(general_url + 'ivisatravel.visachinaonline.com/order/' + Order_num + "/continue#step=trav0_passport_after_payment")
   await selectors.inputText(page, "applicant.0.passport_num", "123456789")
   await selectors.datePicker(page, "applicant.0.passport_expiration_date", "9", "5", "2040")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await selectors.phoneNumber(page)
   await page.locator("id=btnSubmitApplication").click()
   await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
   await page.waitForTimeout(4000)
@@ -116,7 +118,6 @@ test('Individual subscription purchase - Wolf', async ({ page, context }) => {
   await page.waitForNavigation({waitUntil: 'load'})
 
   await page.getByTestId("transition-page-button").click()
-  await selectors.phoneNumber(page)
   await selectors.arrival_date(page)
   await selectors.departure_date(page, "general.departure_date")
   await selectors.booleanOptions(page, "general.flight_reservation", "option-No")
@@ -128,6 +129,9 @@ test('Individual subscription purchase - Wolf', async ({ page, context }) => {
   await page.waitForURL(general_url + 'ivisatravel.visachinaonline.com/order/' + Order_num + "/continue#step=trav0_passport_after_payment")
   await selectors.inputText(page, "applicant.0.passport_num", "123456789")
   await selectors.datePicker(page, "applicant.0.passport_expiration_date", "9", "5", "2040")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await selectors.phoneNumber(page)
   await page.locator("id=btnSubmitApplication").click()
   await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
   await page.waitForTimeout(4000)

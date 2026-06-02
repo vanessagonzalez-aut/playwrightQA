@@ -34,10 +34,8 @@ test('Online Passport', async({page}) =>{
   // Post Payment
   await page.waitForNavigation({waitUntil: 'load'})
   await page.getByTestId("transition-page-button").click()
-  await page.getByTestId('option-WhatsApp').dispatchEvent('click')
   
   await page.getByTestId('option-Standard — 28 pages').dispatchEvent('click')
-  await page.getByPlaceholder('111-222-3333').click()
   await page.waitForTimeout(1000)
   await page.keyboard.type("11111111", {delay: 100})
   const next_btn = page.locator('id=btnContinueUnderSection')
@@ -123,6 +121,9 @@ test('Online Passport', async({page}) =>{
   await passport_expiration_year.selectOption('2023')  
   await page.locator('[name="applicant.0.passport_num"]').fill('111111111')
   const submit_post_payment = page.locator("id=btnSubmitApplication")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await selectors.phoneNumber(page)
   await submit_post_payment.click()
   await page.waitForNavigation({waitUntil: 'load'})
   const track_application = page.locator('#trackApplication')

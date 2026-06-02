@@ -1,6 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const appFunctions = require('../../functions');
 const { deploy_url } = require('../../urls');
+const selectors = require('../../selectors')
 const path = require('path');
 
 
@@ -24,8 +25,6 @@ test('New Zealand ETA', async ({ page }) => {
   await page.getByTestId("transition-page-button").click()
   
   
-  await page.getByPlaceholder('111-222-3333').fill('11111111')
-  await page.getByTestId('option-WhatsApp').click()
   
   Order_num = page.url().split("/")[4] 
   const next_btn = page.locator('id=btnContinueUnderSection')
@@ -51,6 +50,11 @@ test('New Zealand ETA', async ({ page }) => {
   await expect(page.locator("id=document-step")).toContainText("Your upload passed our initial review!", "One of our experts will do a final review to ensure it meets all requirements. If it doesn't, we’ll contact you. ", "Don't like it? ", "You can take a new one")
   
   await page.locator('id=review-continue').click()
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await selectors.phoneNumber(page)
+  const submit_post_payment = page.locator('id=btnSubmitApplication')
+  await expect(submit_post_payment).toBeEnabled()
+  await submit_post_payment.click()
   await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
   await page.waitForTimeout(4000)
   const skip_recomendation = await page.locator('id=skip-recommendation-button').isVisible()

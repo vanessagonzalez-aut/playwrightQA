@@ -98,7 +98,6 @@ test('Check translations US ESTA korean', async ({ page }) => {
     await page.getByTestId("transition-page-button").click()
     Order_num = page.url().split("/")[5] 
     await page.getByPlaceholder('202 555 0173').fill('11111111')
-    await page.getByTestId('option-WhatsApp').click()
 
     await translations(page.locator('id=question-container'), "div", "post_payment", us_esta_ko)
     const next_btn = page.locator('id=btnContinueUnderSection')

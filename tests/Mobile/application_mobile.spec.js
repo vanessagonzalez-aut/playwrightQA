@@ -81,9 +81,7 @@ test.fixme('Travel Doc application pre and post payment are working Mobile', asy
     await page.waitForNavigation({waitUntil: 'load'})
     await page.getByTestId("transition-page-button").click()
     // Post payment
-    await page.getByPlaceholder('111-222-3333').fill('11111111')
     
-    await page.getByTestId('option-WhatsApp').click()
     
     //await page.locator('[name="general.city_current_residence"]').fill("Test")
     const next_btn = page.locator('id=btnContinueUnderSection')
@@ -135,6 +133,9 @@ test.fixme('Travel Doc application pre and post payment are working Mobile', asy
     */
     const submit_post_payment = page.locator('id=btnSubmitApplication')
     await expect(submit_post_payment).toBeEnabled()
+    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+    await selectors.phoneNumber(page)
     await submit_post_payment.click()
     await page.waitForNavigation({waitUntil: 'load'})
     await page.waitForTimeout(2000)

@@ -31,7 +31,6 @@ test.skip('British Virgin Islands ED Card', async ({ page }) => {
   await page.waitForNavigation({waitUntil: 'load'})
   await page.getByTestId("transition-page-button").click()
   
-  await selectors.phoneNumber(page)
   await selectors.arrival_date(page)
   await selectors.booleanOptions(page, "general.traveling_with_others", "option-No")
   Order_num = page.url().split("/")[4] 
@@ -74,6 +73,9 @@ test.skip('British Virgin Islands ED Card', async ({ page }) => {
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_ocr_review")
   await page.getByText("Use selected details").click()
   await selectors.datePicker(page, "applicant.0.passport_issued_date", '1', '9', '2013')
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await selectors.phoneNumber(page)
   await page.locator("id=btnSubmitApplication").click()
   await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
   await page.waitForTimeout(4000)

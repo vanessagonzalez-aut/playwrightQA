@@ -23,7 +23,6 @@ test.fixme('Brazil Tourist eVisa', async ({ page }) => {
   await page.waitForNavigation({waitUntil: 'load'})
   await page.getByTestId("transition-page-button").click()
   
-  await selectors.phoneNumber(page)
   await selectors.arrival_date(page)
   await selectors.departure_date(page, "general.departure_date")
   
@@ -68,6 +67,9 @@ test.fixme('Brazil Tourist eVisa', async ({ page }) => {
   await passport_issue_year.selectOption('2022')  
   await page.waitForTimeout(1000)
 
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await selectors.phoneNumber(page)
   await page.locator("id=btnSubmitApplication").click()
   await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
   await page.waitForTimeout(4000)

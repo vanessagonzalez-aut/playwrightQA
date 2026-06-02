@@ -22,8 +22,6 @@ test('Embassy Visa', async({page}) => {
     await page.waitForNavigation({waitUntil: 'load'})
     await page.getByTestId("transition-page-button").click()
     let Order_num = page.url().split("/")[4] 
-    await page.getByPlaceholder('111-222-3333').fill('11111111')
-    await page.getByTestId('option-WhatsApp').click()
     const next_btn = page.locator('id=btnContinueUnderSection')
     await page.waitForTimeout(1000)
     await expect(next_btn).toBeEnabled()
@@ -120,6 +118,9 @@ test('Embassy Visa', async({page}) => {
     await selectors.datePicker(page, "applicant.0.passport_issued_date", "13", "7", "2022")
     const submit_post_payment = page.locator('id=btnSubmitApplication')
     await expect(submit_post_payment).toBeEnabled()
+    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+    await selectors.phoneNumber(page)
     await submit_post_payment.click()
     await page.waitForNavigation({waitUntil: 'load'})
   })
