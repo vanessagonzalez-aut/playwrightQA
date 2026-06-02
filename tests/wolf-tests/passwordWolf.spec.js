@@ -47,10 +47,9 @@ test('Password Creation and login - Wolf', async({page, context}) =>{
   const password_set_confirm = page.locator('id=password_repeat')
   await password_set_confirm.fill('testivisa5!')
   await page.getByTestId('updatePasswordBtn').click()
-  const confirmation_modal = page.locator('.swal-overlay--show-modal')
-  await expect.soft(confirmation_modal).toBeVisible()
-
   await page.goto(general_url + 'ivisatravel.visachinaonline.com/account/settings')
+  await page.locator('.swal-button--confirm').waitFor({state:'visible', timeout: 5000})
+  await page.locator('.swal-button--confirm').click()
   const user = page.locator('id=loggedInUserContainer')
   await expect(user).toBeVisible()
   await user.click()

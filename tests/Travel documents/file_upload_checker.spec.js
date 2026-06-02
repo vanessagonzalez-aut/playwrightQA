@@ -85,16 +85,13 @@ test('File upload checker', async({page}) => {
 
     // Confirm instructions appear Applicant photo
     await expect(page.locator("id=document-step")).toContainText("Test Test", "Upload your photo", "Face the camera straight on with a plain background.", "No angles or head tilts ", "No glasses, hats, or scarves", "No glasses, hats, or scarves")
-    
-    // Upload wrong file Applicant photo
     await page.locator('id=instructions-continue').click()
     
     // Upload Correct Photo
     await page.getByTestId("try-another-way-button").click()
     await page.setInputFiles('input[type="file"]', path.join(__dirname, 'uploads_passport/Applicant-Photo.jpg'));
-    await expect(page.locator("id=document-loading")).toBeVisible()
-    await page.waitForTimeout(14000)
-    await expect(page.locator("id=document-loading")).toBeHidden()
+    await page.locator("id=document-loading").waitFor({state: 'visible'})
+    await page.locator("id=document-loading").waitFor({state: 'hidden', timeout: 15000})
     await expect(page.locator("id=document-step")).toContainText("Your upload passed our initial review!", "One of our experts will do a final review to ensure it meets all requirements. If it doesn't, we’ll contact you. ", "Don't like it? ", "You can take a new one")
     await percySnapshot(page, 'Ap Correct');
     await page.locator('id=review-continue').click()
@@ -107,9 +104,8 @@ test('File upload checker', async({page}) => {
     // Upload Correct Photo
     await page.getByTestId("try-another-way-button").click()
     await page.setInputFiles('input[type="file"]', path.join(__dirname, 'uploads_passport/passport.jpg'));
-    await expect(page.locator("id=document-loading")).toBeVisible()
-    await page.waitForTimeout(10000)
-    await expect(page.locator("id=document-loading")).toBeHidden()
+    await page.locator("id=document-loading").waitFor({state: 'visible'})
+    await page.locator("id=document-loading").waitFor({state: 'hidden', timeout: 15000})
     await expect(page.locator("id=document-step")).toContainText("Your upload passed our initial review!", "One of our experts will do a final review to ensure it meets all requirements. If it doesn't, we’ll contact you. ", "Don't like it? ", "You can take a new one")
     await percySnapshot(page, 'Good photo Psprt');
     await page.locator('id=review-continue').click()

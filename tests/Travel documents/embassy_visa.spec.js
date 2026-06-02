@@ -111,7 +111,8 @@ test('Embassy Visa', async({page}) => {
     await page.locator('id=instructions-continue').click()
     await page.getByTestId("try-another-way-button").click()
     await page.setInputFiles('input[type="file"]', path.join(__dirname, 'uploads_passport/passport.jpg'));
-    await page.waitForTimeout(8000)
+    await page.locator("id=document-loading").waitFor({state: 'visible'})
+    await page.locator("id=document-loading").waitFor({state: 'hidden', timeout: 15000})
     await page.locator('id=review-continue').click()
 
     await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_ocr_review")

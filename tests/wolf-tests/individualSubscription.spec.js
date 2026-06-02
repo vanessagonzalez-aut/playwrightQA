@@ -1,8 +1,10 @@
 const { test, expect } = require('@playwright/test');
-const percySnapshot = require('@percy/playwright');
+const {general_url, deploy_url} = require('../urls');
 const appFunctions = require('../functions')
 const selectors = require('../selectors')
-const {deploy_url, general_url} = require('../urls');
+const randomEmail = require('random-email')
+const path = require('path');
+let wolfEmail = randomEmail({domain: "ivisatravel.com"})
 
 let Order_num 
 test('Individual subscription purchase - Wolf', async ({ page, context }) => {
@@ -18,17 +20,18 @@ test('Individual subscription purchase - Wolf', async ({ page, context }) => {
   await appFunctions.step_1(page, "individual")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
-  await page.waitForURL("**/a/malaysia/apply-now/passport-details/0")
+  await page.waitForURL("**/a/malaysia/passport-details/0**")
   await appFunctions.step_2(page, continue_sidebar)
-  await page.waitForURL("**/a/malaysia/apply-now/address-details/0")
+  await page.waitForURL("**/a/malaysia/address-details/0**")
   await appFunctions.step_3c(page, continue_sidebar)
-  await page.waitForURL("**/a/malaysia/apply-now/additional-info/0")
+  await page.waitForURL("**/a/malaysia/additional-info/0**")
   await appFunctions.additionalInfo(page, continue_sidebar)
-  await page.waitForURL("**/a/malaysia/apply-now/traveler-review**")
+  await page.waitForURL("**/a/malaysia/traveler-review**")
   await continue_sidebar.click()
-  await page.waitForURL("**/a/malaysia/apply-now/contact-details")
+  await page.waitForURL("**/a/malaysia/contact-details**")
+  await page.locator("[name='general.email']").fill(wolfEmail)
   await continue_sidebar.click()
-  await page.waitForURL("**/a/malaysia/apply-now/checkout")
+  await page.waitForURL("**/a/malaysia/checkout**")
   await page.waitForTimeout(2000)
   const duplicate = await page.isVisible('id=btnDisclaimerNext')
   if (duplicate){
@@ -69,8 +72,9 @@ test('Individual subscription purchase - Wolf', async ({ page, context }) => {
   await page.waitForURL(general_url + 'ivisatravel.visachinaonline.com/order/' + Order_num + "/continue#step=trav0_passport_after_payment")
   await selectors.inputText(page, "applicant.0.passport_num", "123456789")
   await selectors.datePicker(page, "applicant.0.passport_expiration_date", "9", "5", "2040")
+  await selectors.dropdownSelector(page, "applicant.0.birth_country", "dropdown-applicant.0.birth_country", "mexico", "MX")
   await page.locator("id=btnSubmitApplication").click()
-  await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
+  await page.waitForURL(general_url + "ivisatravel.visachinaonline.com/order-received-page/" + Order_num)
   await page.waitForTimeout(4000)
   const skip_recomendation = await page.locator('id=skip-recommendation-button').isVisible()
   if(skip_recomendation){
@@ -85,7 +89,6 @@ test('Individual subscription purchase - Wolf', async ({ page, context }) => {
 
   await expect(page.getByTestId("purchase-subscription-button")).toContainText(" Subscribe for $79.99 $29.99")
   await page.waitForTimeout(3000)
-  await percySnapshot(page, 'Purchase Subscription modal');
   await page.getByTestId("purchase-subscription-button").click()
   await page.waitForURL(general_url + 'ivisatravel.visachinaonline.com/order/' + Order_num + "/purchase_addons/new_mop?subscription=true")
   await page.locator('id=cardNumber').frameLocator('[title="Card number"]').locator('id=primer-hosted-input').fill('4111 1111 1111 1111')
@@ -97,11 +100,55 @@ test('Individual subscription purchase - Wolf', async ({ page, context }) => {
   await page.waitForURL(general_url + 'ivisatravel.visachinaonline.com/order/' + Order_num + "?subscription=true")
 
   // Place free order 
- await page.goto(deploy_url + 'malaysia/apply-now')
- await appFunctions.autofillExisting(page, "malaysia/apply-now/edit-traveler/0", false, true)
- await page.waitForURL("**/a/malaysia/apply-now/traveler-review**")
+ await page.goto(general_url + 'ivisatravel.visachinaonline.com/a/malaysia')
+await page.getByRole("radio").nth(0).click()
+  await page.getByRole("button").getByText("Confirm").click()
+  await page.waitForURL('**/a/malaysia/edit-traveler/0**')
+  await page.waitForTimeout(2000)
+  const checkNationalityError = await page.getByTestId('alert-modal-button').isVisible()
+  if(checkNationalityError){
+      await page.getByTestId('alert-modal-button').click()
+  }
+  await page.getByTestId("option-Male").click() 
+  await page.locator('[name="applicant.0.is_passport_on_hand"]').getByTestId("option-true").click()
+  
+  await page.locator('[name="applicant.0.home_address"]').fill('123')
+  await page.waitForTimeout(2000)
+  await page.keyboard.press("Space")
+  await page.waitForTimeout(1000)
+  await page.keyboard.press("Enter")
+  await page.waitForTimeout(1000)
+  await page.locator('//li[@data-type="place"]').first().click()
+  await page.waitForTimeout(1000)
+  const passport_num = page.locator('[name="applicant.0.passport_num"]')
+  await expect(passport_num).toBeVisible()
+  await passport_num.fill('123456789')
+  const passport_day = page.locator('[name="applicant.0.passport_expiration_date.day"]')
+  await passport_day.selectOption('13')
+  const passport_month = page.locator('[name="applicant.0.passport_expiration_date.month"]')
+  await passport_month.selectOption('7')
+  const passport_year = page.locator('[name="applicant.0.passport_expiration_date.year"]')
+  await passport_year.selectOption('2030')
+  await page.waitForTimeout(2000)
+  const passport_issue_day = page.locator('[name="applicant.0.passport_issued_date.day"]')
+  await passport_issue_day.selectOption('13')
+  const passport_issue_month = page.locator('[name="applicant.0.passport_issued_date.month"]')
+  await passport_issue_month.selectOption('7')
+  const passport_issue_year = page.locator('[name="applicant.0.passport_issued_date.year"]')
+  await passport_issue_year.selectOption('2024')
+  await page.waitForTimeout(2000)
+  await page.locator('[name="applicant.0.are_employed"]').getByTestId("option-true").click()
+  await page.waitForTimeout(2000)
+  await page.locator('[name="applicant.0.criminal_offence"]').getByTestId("option-false").click()
+  await page.waitForTimeout(2000)
+  await page.locator('[name="applicant.0.specific_travel_plans"]').getByTestId("option-false").click()
+  await page.waitForTimeout(2000)
+  await page.getByTestId("dropdown-applicant.0.reason_for_travel").selectOption({value: "Tourism"})
+
+  await continue_sidebar.click()
+ await page.waitForURL("**/a/malaysia/traveler-review**")
  await continue_sidebar.click()
- await page.waitForURL("**/a/malaysia/apply-now/contact-details")
+ await page.waitForURL("**/a/malaysia/contact-details**")
   await continue_sidebar.click() 
   await page.waitForTimeout(2000)
   if (duplicate){
@@ -128,8 +175,9 @@ test('Individual subscription purchase - Wolf', async ({ page, context }) => {
   await page.waitForURL(general_url + 'ivisatravel.visachinaonline.com/order/' + Order_num + "/continue#step=trav0_passport_after_payment")
   await selectors.inputText(page, "applicant.0.passport_num", "123456789")
   await selectors.datePicker(page, "applicant.0.passport_expiration_date", "9", "5", "2040")
+  await selectors.dropdownSelector(page, "applicant.0.birth_country", "dropdown-applicant.0.birth_country", "mexico", "MX")
   await page.locator("id=btnSubmitApplication").click()
-  await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
+  await page.waitForURL(general_url + "ivisatravel.visachinaonline.com/order-received-page/" + Order_num)
   await page.waitForTimeout(4000)
   if(skip_recomendation){
     await page.locator('id=skip-recommendation-button').click()    

@@ -92,6 +92,7 @@ test('Different currency payment - Wolf and CC update', async({page, context}) =
   await next_btn.click()
 
   await page.waitForNavigation({waitUntil: 'load'})
+  await selectors.dropdownSelector(page, "applicant.0.birth_country", "dropdown-applicant.0.birth_country", "mexico", "MX")
   const submit_post_payment = page.locator('id=btnSubmitApplication')
   await expect(submit_post_payment).toBeEnabled()
   await submit_post_payment.click()

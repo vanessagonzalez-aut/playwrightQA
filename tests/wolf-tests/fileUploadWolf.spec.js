@@ -83,6 +83,7 @@ test('File upload - Wolf', async({page, context}) =>{
     const input_religion = page.getByTestId('dropdown-applicant.0.religion');
     await input_religion.fill('bahai');
     await page.getByRole("option", {name: 'Bahai'}).click()
+    await selectors.dropdownSelector(page, "applicant.0.birth_country", "dropdown-applicant.0.birth_country", "mexico", "MX")
     await selectors.booleanOptions(page, "applicant.0.marital_status", "option-Single")
     await expect(next_btn).toBeEnabled()
     await next_btn.click()
@@ -99,30 +100,8 @@ test('File upload - Wolf', async({page, context}) =>{
 
     // Confirm instructions appear Applicant photo
     await expect(page.locator("id=document-step")).toContainText("Test Test", "Upload your photo", "Face the camera straight on with a plain background.", "No angles or head tilts ", "No glasses, hats, or scarves", "No glasses, hats, or scarves")
-    
-    // Upload wrong file Applicant photo
-    await page.locator('id=instructions-continue').click()
-    
-    // Upload Correct Photo
-    await page.getByTestId("try-another-way-button").click()
     await selectors.applicantPhoto(page)
-    await expect(page.locator("id=document-loading")).toBeVisible()
-    await page.waitForTimeout(14000)
-    await expect(page.locator("id=document-loading")).toBeHidden()
-    await expect(page.locator("id=document-step")).toContainText("Your upload passed our initial review!", "One of our experts will do a final review to ensure it meets all requirements. If it doesn't, we’ll contact you. ", "Don't like it? ", "You can take a new one")
-    await page.locator('id=review-continue').click()
-
     // Confirm instructions appear Passport photo
     await expect(page.locator("id=document-step")).toContainText("Show the full page, including the code at the bottom", "Keep the page flat, not bent or at an angle", "All text must be clear, with no glare, shadows, or fingers")
-    
-    await page.locator('id=instructions-continue').click()
-    
-    // Upload Correct Photo
-    await page.getByTestId("try-another-way-button").click()
     await selectors.passportPhoto(page)
-    await expect(page.locator("id=document-loading")).toBeVisible()
-    await page.waitForTimeout(10000)
-    await expect(page.locator("id=document-loading")).toBeHidden()
-    await expect(page.locator("id=document-step")).toContainText("Your upload passed our initial review!", "One of our experts will do a final review to ensure it meets all requirements. If it doesn't, we’ll contact you. ", "Don't like it? ", "You can take a new one")
-    await page.locator('id=review-continue').click()
 })

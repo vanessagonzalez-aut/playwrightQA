@@ -2,7 +2,7 @@ const { expect } = require('@playwright/test');
 const path = require('path');
 
 async function arrival_date(page){
-    await page.waitForTimeout(1000)
+  await page.waitForTimeout(1000)
   const arrival_date_visible = page.locator('[name="general.arrival_date"]')
   await expect(arrival_date_visible).toBeVisible()
   await arrival_date_visible.click()
@@ -54,9 +54,8 @@ const applicantPhoto = async (page) => {
     await page.locator('id=instructions-continue').click()
     await page.getByTestId("try-another-way-button").click()
     await page.setInputFiles('input[type="file"]', path.join(__dirname ,'Travel documents/uploads_passport/Applicant-Photo.jpg'));
-    await expect(page.locator("id=document-loading")).toBeVisible()
-    await page.waitForTimeout(14000)
-    await expect(page.locator("id=document-loading")).toBeHidden()
+    await page.locator("id=document-loading").waitFor({state: 'visible'})
+    await page.locator("id=document-loading").waitFor({state: 'hidden', timeout: 15000})
     await expect(page.locator("id=document-step")).toContainText("Your upload passed our initial review!", "One of our experts will do a final review to ensure it meets all requirements. If it doesn't, we’ll contact you. ", "Don't like it? ", "You can take a new one")
     await page.locator('id=review-continue').click()
 }
@@ -64,16 +63,15 @@ const passportPhoto = async (page) => {
     await page.locator('id=instructions-continue').click()
     await page.getByTestId("try-another-way-button").click()
     await page.setInputFiles('input[type="file"]', path.join(__dirname ,'Travel documents/uploads_passport/passport.jpg'));
-    await expect(page.locator("id=document-loading")).toBeVisible()
-    await page.waitForTimeout(14000)
-    await expect(page.locator("id=document-loading")).toBeHidden()
+    await page.locator("id=document-loading").waitFor({state: 'visible'})
+    await page.locator("id=document-loading").waitFor({state: 'hidden', timeout: 15000})
     await expect(page.locator("id=document-step")).toContainText("Your upload passed our initial review!", "One of our experts will do a final review to ensure it meets all requirements. If it doesn't, we’ll contact you. ", "Don't like it? ", "You can take a new one")
     await page.locator('id=review-continue').click()
 }
 
 const dropdownSelector = async (page, name, dataHandle, text, value) => {
     await page.locator('[name="' + name + '"]').click()
-    await page.waitForTimeout(2000)
+    await page.getByTestId(dataHandle).waitFor({state: 'visible'})
     await page.getByTestId(dataHandle).fill(text)
     await page.locator('[name="' + name + '"]').getByRole('option', {value: value}).click()
     await page.waitForTimeout(2000)
@@ -90,7 +88,7 @@ const datePicker = async (page, name, day, month, year) =>{
 
 const flightDropdown = async (page, name, dataHandle, text) => {
     await page.locator('[name="' + name + '"]').click()
-    await page.waitForTimeout(2000)
+    await page.getByTestId(dataHandle).waitFor({state: 'visible'})
     await page.getByTestId(dataHandle).fill(text)
     await page.waitForTimeout(2000)
     await page.keyboard.press('Enter')
