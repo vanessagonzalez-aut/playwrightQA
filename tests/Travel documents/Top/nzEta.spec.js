@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 const appFunctions = require('../../functions');
 const { deploy_url } = require('../../urls');
 const path = require('path');
-
+const selectors = require('../../selectors')
 
 let Order_num
 

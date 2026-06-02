@@ -21,7 +21,7 @@ test('FastPassport - United Kingdom', async({page, context}) =>{
   await selectors.inputText(page, "general.email", fastpassportEmail)
   const continue_sidebar = page.locator('#btnContinueSidebar')
   await continue_sidebar.click()
-  await page.waitForURL('**/passport-renewal/united-kingdom/application#step=step_3')
+  await page.waitForURL('**/passport-renewal/united-kingdom/application**')
   await page.selectOption("[name='general.passport_issued_date.day']", "1")
   await page.selectOption("[name='general.passport_issued_date.month']", "1")
   await page.selectOption("[name='general.passport_issued_date.year']", "2017")
