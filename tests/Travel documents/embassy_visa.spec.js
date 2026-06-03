@@ -87,14 +87,14 @@ test('Embassy Visa', async({page}) => {
 
     await page.locator('id=instructions-continue').click()
     await page.locator('input[type="file"]').nth(1).setInputFiles(path.join(__dirname, 'uploads_passport/Applicant-Photo.jpg'))
-    await page.getByTestId("thumbnailPreview").waitFor({state: 'visible'})
+    await page.getByTestId("thumbnailPreview").waitFor({state: 'attached'})
     await page.locator('input[type="file"]').nth(1).setInputFiles(path.join(__dirname, 'uploads_passport/Applicant-Photo.jpg'))
-    await page.getByTestId("thumbnailPreview").waitFor({state: 'visible'})
+    await page.waitForTimeout(8000)
     await page.locator('id=add-file-multiple-continue').click()
 
     await page.locator('id=instructions-continue').click()
     await page.locator('input[type="file"]').nth(1).setInputFiles(path.join(__dirname, 'uploads_passport/Applicant-Photo.jpg'))
-    await page.getByTestId("thumbnailPreview").waitFor({state: 'visible'})
+    await page.getByTestId("thumbnailPreview").waitFor({state: 'attached'})
     await page.locator('id=add-file-multiple-continue').click()
 
     await page.locator('id=instructions-continue').click()

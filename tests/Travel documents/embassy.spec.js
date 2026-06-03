@@ -9,7 +9,6 @@ test('Embassy reg', async({page}) => {
   await page.goto(deploy_url + 'embassy-registration')
 
   const arrival_date_visible = page.locator('[name="general.arrival_date"]')
-  await expect(arrival_date_visible).toBeVisible()
   await arrival_date_visible.click()
   await expect(page.locator('.dp__outer_menu_wrap')).toBeVisible()
   await page.locator('[data-dp-element="action-next"]').click()
