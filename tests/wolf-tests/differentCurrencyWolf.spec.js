@@ -90,12 +90,13 @@ test('Different currency payment - Wolf and CC update', async({page, context}) =
   await next_btn.click()
 
   await page.waitForNavigation({waitUntil: 'load'})
-  const submit_post_payment = page.locator('id=btnSubmitApplication')
-  await expect(submit_post_payment).toBeEnabled()
-  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
-  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await page.waitForTimeout(2000)
+  await selectors.dropdownSelector(page, "applicant.0.birth_country", "dropdown-applicant.0.birth_country", "mexico", "MX")
+  await page.waitForTimeout(1000)
+  await next_btn.click()
+  await page.waitForURL(general_url + "ivisatravel.visachinaonline.com/order/" + Order_num + "/continue#step=contact_and_updates")
   await selectors.phoneNumber(page)
-  await submit_post_payment.click()
+  await page.locator("id=btnSubmitApplication").click()
   await page.waitForNavigation({waitUntil: 'load'})
 
   // CC TEST

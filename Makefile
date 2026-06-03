@@ -7,7 +7,7 @@ all:
 admin: 
 	npx playwright test /tests/admin/
 test: 
-	npx playwright test /tests/Travel documents/ /tests/Passport-tests/ /tests/Mobile/ 
+	npx playwright test /tests/Travel documents/ /tests/Passport-tests/ /tests/Mobile/ /tests/wolf-tests
 
 refactor: 
 	npx playwright test /tests/wolf-tests

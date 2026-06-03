@@ -2,6 +2,7 @@ const { test, expect } = require('@playwright/test');
 const appFunctions = require('../functions')
 const passportSteps = require("../Functions/passport")
 const {deploy_url} = require('../urls');
+const selectors = require('../selectors')
 const path = require('path');
 
 test('Online Passport', async({page}) =>{
@@ -35,17 +36,8 @@ test('Online Passport', async({page}) =>{
   await page.waitForNavigation({waitUntil: 'load'})
   await page.getByTestId("transition-page-button").click()
   
-  await page.getByTestId('option-Standard — 28 pages').dispatchEvent('click')
-  await page.waitForTimeout(1000)
-  await page.keyboard.type("11111111", {delay: 100})
-  const next_btn = page.locator('id=btnContinueUnderSection')
-  await page.waitForTimeout(1000)
-  await expect(next_btn).toBeEnabled()
-  await next_btn.click()
-  
-  await page.waitForNavigation({waitUntil: 'load'})
-  
   await page.waitForTimeout(2000)
+  let Order_num = page.url().split("/")[4] 
   const birth_country = page.locator('[name="applicant.0.state_of_birth"]');
   await expect(birth_country).toBeVisible();
   await birth_country.click()
@@ -71,6 +63,8 @@ test('Online Passport', async({page}) =>{
   await page.locator("id=feet-applicant.0.height_fsr").fill('5')
   await page.locator("id=inches-applicant.0.height_fsr").fill('5')
   await page.getByTestId('dropdown-applicant.0.occupation').selectOption('self-employed')
+  await page.waitForTimeout(1000)
+  const next_btn = page.locator('id=btnContinueUnderSection')
   await page.waitForTimeout(1000)
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
@@ -120,10 +114,10 @@ test('Online Passport', async({page}) =>{
   const passport_expiration_year = page.locator('[name="applicant.0.passport_expiration_date.year"]')
   await passport_expiration_year.selectOption('2023')  
   await page.locator('[name="applicant.0.passport_num"]').fill('111111111')
-  const submit_post_payment = page.locator("id=btnSubmitApplication")
-  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
   await selectors.phoneNumber(page)
+  const submit_post_payment = page.locator("id=btnSubmitApplication")
   await submit_post_payment.click()
   await page.waitForNavigation({waitUntil: 'load'})
   const track_application = page.locator('#trackApplication')

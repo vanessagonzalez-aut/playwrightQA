@@ -42,8 +42,9 @@ test('Extra Order', async ({ page, browser }) => {
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
   await page.waitForNavigation({waitUntil: 'load'})
+  await page.waitForTimeout(2000)
   await selectors.dropdownSelector(page, "applicant.0.birth_country", "dropdown-applicant.0.birth_country", "mexico", "MX")
-
+  await page.waitForTimeout(1000)
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")

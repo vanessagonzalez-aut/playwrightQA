@@ -62,7 +62,9 @@ test('Individual subscription purchase', async ({ page }) => {
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_passport_after_payment")
   await selectors.inputText(page, "applicant.0.passport_num", "123456789")
   await selectors.datePicker(page, "applicant.0.passport_expiration_date", "9", "5", "2040")
+  await page.waitForTimeout(2000)
   await selectors.dropdownSelector(page, "applicant.0.birth_country", "dropdown-applicant.0.birth_country", "mexico", "MX")
+  await page.waitForTimeout(1000)
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
@@ -92,7 +94,7 @@ test('Individual subscription purchase', async ({ page }) => {
   await page.locator('id=expiry').frameLocator('[title="Expiry (MM/YY)"]').locator('id=primer-hosted-input').fill('10/26')
   await page.locator('id=cvv').frameLocator('[title="CVV"]').locator('id=primer-hosted-input').fill('123')
   await page.locator('id=cardFormName').frameLocator('[title="Name on card"]').locator('id=primer-hosted-input').fill('Jhon')
-  await page.locator('.billing-address-form').locator("input").fill('12345')
+  //await page.locator('.billing-address-form').locator("input").fill('12345')
   await page.locator('id=btnSubmitPayment').click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "?subscription=true")
 
@@ -101,7 +103,7 @@ test('Individual subscription purchase', async ({ page }) => {
  await appFunctions.autofillExisting(page, "malaysia/apply-now/edit-traveler/0", false, true)
  await page.waitForURL("**/malaysia/apply-now/traveler-review**")
  await continue_sidebar.click()
- await page.waitForURL("**/malaysia/apply-now/contact-details")
+ await page.waitForURL("**/malaysia/apply-now/contact-details**")
   await continue_sidebar.click() 
   await page.waitForTimeout(2000)
   if (duplicate){
@@ -132,10 +134,8 @@ test('Individual subscription purchase', async ({ page }) => {
   await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
   await selectors.phoneNumber(page)
-  const submit_post_payment = page.locator('id=btnSubmitApplication')
   await expect(submit_post_payment).toBeEnabled()
   await submit_post_payment.click()
-  await page.locator("id=btnSubmitApplication").click()
   await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
   await page.waitForTimeout(4000)
   if(skip_recomendation){

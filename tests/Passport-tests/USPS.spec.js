@@ -198,10 +198,10 @@ test.skip('USPS Passport', async({page}) =>{
     await page.locator('[name="applicant.0.passport_num"]').fill('111111111')
 
 
-    const submit_post_payment = page.locator("id=btnSubmitApplication")
-    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+    await next_btn.click()
     await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
     await selectors.phoneNumber(page)
+    const submit_post_payment = page.locator("id=btnSubmitApplication")
     await submit_post_payment.click()
     await page.waitForNavigation({waitUntil: 'load'})
     const track_application = page.locator('#trackApplication')

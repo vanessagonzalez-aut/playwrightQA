@@ -42,15 +42,13 @@ test('Different currency', async ({ page }) => {
   await page.waitForURL("**/turkey/apply-now/contact-details")
   await continue_sidebar.click() 
   await appFunctions.newPaymentCheckout(page, '4111 1111 1111 1111', '123')
+
   const payment_btn = page.locator('id=btnSubmitPayment')
   await expect(payment_btn).toBeVisible()
   await expect(payment_btn).toBeEnabled()
   await payment_btn.click()
-  await page.waitForTimeout(5000)
-  const dsModal = await page.locator('primer-portal-dialog').isVisible()
-  if(dsModal){
-    await page.frameLocator(".challenge-iframe").getByText('Pass challenge').click()
-  }
+  await page.frameLocator(".challenge-iframe").getByText('Pass challenge').click()
+  
 
   
   await page.waitForNavigation({waitUntil: 'load'})
@@ -73,11 +71,13 @@ test('Different currency', async ({ page }) => {
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
   await page.waitForNavigation({waitUntil: 'load'})
-  await page.waitForTimeout(3000)
+  await page.waitForTimeout(2000)
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
   await page.waitForNavigation({waitUntil: 'load'})
+  await page.waitForTimeout(2000)
   await selectors.dropdownSelector(page, "applicant.0.birth_country", "dropdown-applicant.0.birth_country", "mexico", "MX")
+  await page.waitForTimeout(1000)
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")

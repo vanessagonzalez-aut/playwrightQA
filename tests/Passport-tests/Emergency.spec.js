@@ -236,10 +236,10 @@ test.skip('Emergency Passport', async({page}) =>{
 
 
     const submit_post_payment = page.locator("id=btnSubmitApplication")
-    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
-    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
-    await selectors.phoneNumber(page)
-    await submit_post_payment.click()
+    await next_btn.click()
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await selectors.phoneNumber(page)
+  await submit_post_payment.click()
     await page.waitForNavigation({waitUntil: 'load'})
     const track_application = page.locator('#trackApplication')
     await expect(track_application).toBeVisible()

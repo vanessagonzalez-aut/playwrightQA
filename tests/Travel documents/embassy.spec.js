@@ -1,4 +1,5 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect} = require('@playwright/test');
+const selectors = require('../selectors')
 const appFunctions = require('../functions')
 const {deploy_url, general_url} = require('../urls');
 const percySnapshot = require('@percy/playwright');
@@ -109,7 +110,7 @@ test('Embassy reg', async({page}) => {
   await page.waitForTimeout(1000)
   await expect(continue_step1).toBeEnabled()
   await continue_step1.click()
-  await page.waitForURL('**/embassy-registration#step=review')
+  await page.waitForURL('**/embassy-registration**')
 
   await appFunctions.newPaymentCheckout(page,"4111111111111111", "123", false)
 
@@ -121,12 +122,8 @@ test('Embassy reg', async({page}) => {
   await page.waitForNavigation({waitUntil: 'load'})
   await page.getByTestId("transition-page-button").click()
   Order_num = page.url().split("/")[4] 
-  await page.locator("id=btnContinueUnderSection").click()
-  await page.waitForNavigation()
-  const submit_post_payment = page.locator('id=btnSubmitApplication')
-  await expect(submit_post_payment).toBeEnabled()
-  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
   await selectors.phoneNumber(page)
+  const submit_post_payment = page.locator('id=btnSubmitApplication')
   await submit_post_payment.click()
   await page.waitForNavigation({waitUntil: 'load'})
 

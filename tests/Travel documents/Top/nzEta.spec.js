@@ -3,7 +3,6 @@ const appFunctions = require('../../functions');
 const { deploy_url } = require('../../urls');
 const selectors = require('../../selectors')
 const path = require('path');
-const selectors = require('../../selectors')
 
 let Order_num
 
@@ -51,12 +50,13 @@ test('New Zealand ETA', async ({ page }) => {
   
   await page.locator('id=review-continue').click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await page.waitForTimeout(2000)
   await selectors.phoneNumber(page)
+  
   const submit_post_payment = page.locator('id=btnSubmitApplication')
   await expect(submit_post_payment).toBeEnabled()
   await submit_post_payment.click()
   await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
-  await page.waitForTimeout(4000)
   const skip_recomendation = await page.locator('id=skip-recommendation-button').isVisible()
   if(skip_recomendation){
     await page.locator('id=skip-recommendation-button').click()    

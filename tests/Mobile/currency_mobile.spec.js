@@ -111,11 +111,12 @@ test.fixme('Different currency Mobile', async ({ page }) => {
     await passport_issue_year.selectOption('2020')
     await page.waitForTimeout(1000)
   
-    const submit_post_payment = page.locator('id=btnSubmitApplication')
+    
     await expect(submit_post_payment).toBeEnabled()
-    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
-    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
-    await selectors.phoneNumber(page)
-    await submit_post_payment.click()
+    await next_btn.click()
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+  await selectors.phoneNumber(page)
+  const submit_post_payment = page.locator("id=btnSubmitApplication")
+  await submit_post_payment.click()
     await page.waitForNavigation({waitUntil: 'load'})
 })

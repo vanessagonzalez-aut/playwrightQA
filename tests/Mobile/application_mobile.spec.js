@@ -133,7 +133,7 @@ test.fixme('Travel Doc application pre and post payment are working Mobile', asy
     */
     const submit_post_payment = page.locator('id=btnSubmitApplication')
     await expect(submit_post_payment).toBeEnabled()
-    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
+    
     await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
     await selectors.phoneNumber(page)
     await submit_post_payment.click()
