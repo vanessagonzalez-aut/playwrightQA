@@ -10,12 +10,12 @@ test:
 	npx playwright test /tests/Travel documents/ /tests/Passport-tests/ /tests/Mobile/ /tests/wolf-tests
 
 refactor: 
-	npx playwright test /tests/wolf-tests
+	npx playwright test aruba.spec.js
 translations:
 	npx playwright test payments.spec.js
 
 fastPassport:
-	npx playwright test onlinePassport.spec.js --headed
+	npx playwright test onlinePassport.spec.js 
 
 
 status:

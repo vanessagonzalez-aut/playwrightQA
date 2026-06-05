@@ -13,6 +13,7 @@ test('Individual subscription purchase', async ({ page }) => {
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
   await page.waitForURL("**/malaysia/apply-now/passport-details/0")
+  await selectors.dropdownSelector(page, "applicant.0.nationality_country", "down-applicant.0.nationality_country", "australia", "AU")
   await appFunctions.step_2(page, continue_sidebar)
   await page.waitForURL("**/malaysia/apply-now/address-details/0")
   await appFunctions.step_3c(page, continue_sidebar)

@@ -73,6 +73,7 @@ const passportPhoto = async (page) => {
 }
 
 const dropdownSelector = async (page, name, dataHandle, text, value) => {
+    await page.locator('[name="' + name + '"]').waitFor({state: 'attached'})
     await page.locator('[name="' + name + '"]').click()
     await page.getByTestId(dataHandle).waitFor({state: 'visible'})
     await page.getByTestId(dataHandle).fill(text)

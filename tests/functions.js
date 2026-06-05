@@ -56,28 +56,28 @@ async function newPaymentCheckout(page,creditCard, cvvNum,continuebtn){
       await page.locator('id=btnDisclaimerNext').click()
     }
     
-    const primer = await page.locator('[name="number"]').isVisible()
-    if(!primer){
-        await page.waitForTimeout(3000)
-        await page.locator('id=cardNumber').frameLocator('[title="Card number"]').locator('id=primer-hosted-input').fill(creditCard)
-        await page.locator('id=expiry').frameLocator('[title="Expiry (MM/YY)"]').locator('id=primer-hosted-input').fill('10/26')
-        await page.locator('id=cvv').frameLocator('[title="CVV"]').locator('id=primer-hosted-input').fill(cvvNum)
-        await page.locator('id=cardFormName').frameLocator('[title="Name on card"]').locator('id=primer-hosted-input').fill('Jhon')
-        const zip_code = await page.locator('.billing-address-form').isVisible()
-        if(zip_code){
-            await page.locator('.billing-address-form').locator("input").fill('12345')
-        }
-        
-    }else{
-        await page.locator('[name="number"]').fill(creditCard);
-        const expiration_month = page.locator('[name="mmyy"]')
-        await expiration_month.fill('10/26')
-
-        const cvv = page.locator('[name="cvv"]')
-        await cvv.fill(cvvNum)
-        const cardholder_name = page.locator('[name="full_name"]')
-        await cardholder_name.fill('John Smith')
+    await page.locator('id=cardNumber').frameLocator('[title="Card number"]').locator('id=primer-hosted-input').waitFor({state: 'attached'})
+    await page.locator('id=expiry').frameLocator('[title="Expiry (MM/YY)"]').locator('id=primer-hosted-input').waitFor({state: 'attached'})
+    await page.locator('id=cvv').frameLocator('[title="CVV"]').locator('id=primer-hosted-input').waitFor({state: 'attached'})
+    await page.locator('id=cardFormName').frameLocator('[title="Name on card"]').locator('id=primer-hosted-input').waitFor({state: 'attached'})
+    await page.waitForTimeout(3000)
+    await page.locator('id=cardNumber').frameLocator('[title="Card number"]').locator('id=primer-hosted-input').fill(creditCard)
+    await page.locator('id=expiry').frameLocator('[title="Expiry (MM/YY)"]').locator('id=primer-hosted-input').fill('10/26')
+    await page.locator('id=cvv').frameLocator('[title="CVV"]').locator('id=primer-hosted-input').fill(cvvNum)
+    await page.locator('id=cardFormName').frameLocator('[title="Name on card"]').locator('id=primer-hosted-input').fill('Jhon')
+    const zip_code = await page.locator('.billing-address-form').isVisible()
+    if(zip_code){
+        await page.locator('.billing-address-form').locator("input").fill('12345')
     }
+    /*
+    await page.locator('[name="number"]').fill(creditCard);
+    const expiration_month = page.locator('[name="mmyy"]')
+    await expiration_month.fill('10/26')
+    const cvv = page.locator('[name="cvv"]')
+    await cvv.fill(cvvNum)
+    const cardholder_name = page.locator('[name="full_name"]')
+    await cardholder_name.fill('John Smith')
+    */
 }
 async function oldPaymentCheckout(page, url, creditCard, cvvNum){
     await page.waitForURL(url + 'step=review')
@@ -115,8 +115,8 @@ async function autofillExisting(page, url, nationality, subscription) {
         await page.getByRole("radio").nth(0).click()
     }
     await page.getByRole("button").getByText("Confirm").click()
-    await page.waitForURL(deploy_url + url)
-    await page.waitForTimeout(2000)
+    await page.waitForURL(deploy_url + url, {waitUntil: 'domcontentloaded'})
+
     const checkNationalityError = await page.getByTestId('alert-modal-button').isVisible()
     if(checkNationalityError){
         await page.getByTestId('alert-modal-button').click()
@@ -133,11 +133,9 @@ async function autofillExisting(page, url, nationality, subscription) {
         }
     }
     await page.locator('[name="applicant.0.home_address"]').fill('123')
-    await page.waitForTimeout(2000)
+    await page.waitForTimeout(1000)
     await page.keyboard.press("Space")
-    await page.waitForTimeout(1000)
-    await page.keyboard.press("Enter")
-    await page.waitForTimeout(1000)
+    await page.locator('id=autocomplete_results').waitFor({state: 'visible'})
     await page.locator('//li[@data-type="place"]').first().click()
     await page.waitForTimeout(1000)
 

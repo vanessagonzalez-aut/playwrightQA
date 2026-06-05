@@ -7,6 +7,7 @@ const percySnapshot = require('@percy/playwright');
 let fastpassportEmail = "automations93@fastpassport.com"
 
 let Order_num
+let urlOrder
 test.describe.configure({ mode: 'serial' });
 test('Fastpassport - Account creation, logging and password creation', async ({page, context}) => {
   test.slow()
@@ -162,6 +163,7 @@ test('FastPassport - Online Passport and MIN status', async({page, context}) =>{
   const search_order = page.locator('//li[@onclick="searchOrderID();"]');
   await search_order.click()
   await page.getByTestId('applicant-details').click()
+  urlOrder = page.url()
   await page.getByTestId('min_checkbox_birth_city').first().click()
   await expect(page.locator('.popup-inner')).toBeVisible()
   await page.getByTestId('Non-English characters').click()
@@ -214,11 +216,7 @@ test('wog passport', async({page}) => {
   await page.locator('#log_in_button').click()
   await page.waitForURL('**/admin')
   await page.waitForTimeout(3000)
-  page.on('dialog', async (dialog) => {
-      await dialog.accept(Order_num);
-  });
-  const search_order = page.locator('//li[@onclick="searchOrderID();"]');
-  await search_order.click()
+  await page.goto(urlOrder)
   await page.waitForTimeout(3000)
   await page.getByTestId("add_annotation_button").click()
   await page.getByTestId("annotation_type_select").selectOption("gov_confirmation_id")
