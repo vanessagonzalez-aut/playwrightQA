@@ -10,7 +10,7 @@ test:
 	npx playwright test /tests/Travel documents/ /tests/Passport-tests/ /tests/Mobile/ /tests/wolf-tests
 
 refactor: 
-	npx playwright test aruba.spec.js
+	npx playwright test "tests/Production"
 translations:
 	npx playwright test payments.spec.js
 

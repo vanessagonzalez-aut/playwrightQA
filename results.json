@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 7
     },
     "preserveOutput": "always",
     "projects": [
@@ -20,7 +20,7 @@
         "repeatEach": 1,
         "retries": 1,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 7
         },
         "id": "setup",
         "name": "setup",
@@ -36,7 +36,7 @@
         "repeatEach": 1,
         "retries": 1,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 7
         },
         "id": "chromium",
         "name": "chromium",
@@ -89,17 +89,8 @@
           "tags": [],
           "tests": [
             {
-              "timeout": 270000,
-              "annotations": [
-                {
-                  "type": "slow",
-                  "location": {
-                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\auth.setup.ts",
-                    "line": 12,
-                    "column": 10
-                  }
-                }
-              ],
+              "timeout": 90000,
+              "annotations": [],
               "expectedStatus": "passed",
               "projectId": "setup",
               "projectName": "setup",
@@ -108,33 +99,14 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 59622,
+                  "duration": 288,
                   "errors": [],
-                  "stdout": [
-                    {
-                      "text": "[\u001b[95mpercy\u001b[39m] Percy is not running, disabling snapshots\n"
-                    }
-                  ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-05T16:49:00.386Z",
-                  "annotations": [
-                    {
-                      "type": "slow",
-                      "location": {
-                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\auth.setup.ts",
-                        "line": 12,
-                        "column": 10
-                      }
-                    }
-                  ],
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\auth.setup.ts-authenticate-setup\\video.webm"
-                    }
-                  ]
+                  "startTime": "2026-06-08T22:37:09.405Z",
+                  "annotations": [],
+                  "attachments": []
                 }
               ],
               "status": "expected"
@@ -142,19 +114,79 @@
           ],
           "id": "17e3fe6f4d9d8bd79c6b-60f085b113a677673906",
           "file": "auth.setup.ts",
-          "line": 10,
+          "line": 11,
           "column": 6
         }
       ]
     },
     {
-      "title": "Travel documents\\Top\\aruba.spec.js",
-      "file": "Travel documents/Top/aruba.spec.js",
+      "title": "Production\\antiguaBarbuda.spec.js",
+      "file": "Production/antiguaBarbuda.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Aruba ED Card",
+          "title": "Antigua Barbuda",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "location": {
+                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\antiguaBarbuda.spec.js",
+                    "line": 5,
+                    "column": 6
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:37:10.542Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\antiguaBarbuda.spec.js",
+                        "line": 5,
+                        "column": 6
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "a5fe011ac58a0152fbdb-9e77a8d2f0ec5a9fad65",
+          "file": "Production/antiguaBarbuda.spec.js",
+          "line": 5,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "Production\\aruba.spec.js",
+      "file": "Production/aruba.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Aruba",
           "ok": true,
           "tags": [],
           "tests": [
@@ -167,9 +199,9 @@
               "results": [
                 {
                   "workerIndex": 1,
-                  "parallelIndex": 0,
+                  "parallelIndex": 1,
                   "status": "timedOut",
-                  "duration": 92728,
+                  "duration": 108402,
                   "error": {
                     "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
                     "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
@@ -180,52 +212,52 @@
                     },
                     {
                       "location": {
-                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Travel documents\\Top\\aruba.spec.js",
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\aruba.spec.js",
                         "column": 14,
-                        "line": 32
+                        "line": 16
                       },
-                      "message": "Error: page.waitForURL: Test timeout of 90000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to \"https://deploy-20260608--c1e29646.visachinaonline.com/order/146/continue#step=contact_and_updates\" until \"load\"\n============================================================\n\n\u001b[0m \u001b[90m 30 |\u001b[39m   \u001b[36mawait\u001b[39m expect(next_btn)\u001b[33m.\u001b[39mtoBeEnabled()\n \u001b[90m 31 |\u001b[39m   \u001b[36mawait\u001b[39m next_btn\u001b[33m.\u001b[39mclick()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(deploy_url \u001b[33m+\u001b[39m \u001b[32m\"order/\"\u001b[39m \u001b[33m+\u001b[39m \u001b[33mOrder_num\u001b[39m \u001b[33m+\u001b[39m \u001b[32m\"/continue#step=contact_and_updates\"\u001b[39m)\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[36mawait\u001b[39m selectors\u001b[33m.\u001b[39mphoneNumber(page)\n \u001b[90m 34 |\u001b[39m   \u001b[36mconst\u001b[39m submit_post_payment \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=btnSubmitApplication'\u001b[39m)\n \u001b[90m 35 |\u001b[39m   \u001b[36mawait\u001b[39m expect(submit_post_payment)\u001b[33m.\u001b[39mtoBeEnabled()\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Travel documents\\Top\\aruba.spec.js:32:14\u001b[22m"
+                      "message": "Error: page.waitForURL: Test timeout of 90000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to \"**/aruba/apply-now/additional-info/0\" until \"domcontentloaded\"\n============================================================\n\n\u001b[0m \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/aruba/apply-now/address-details/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 15 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39mstep_3c(page\u001b[33m,\u001b[39m continue_sidebar)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/aruba/apply-now/additional-info/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39madditionalInfo(page\u001b[33m,\u001b[39m continue_sidebar)\n \u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/aruba/apply-now/traveler-review**\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m continue_sidebar\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\aruba.spec.js:16:14\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-05T16:50:06.475Z",
+                  "startTime": "2026-06-08T22:37:22.167Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Travel documents-Top-aruba-Aruba-ED-Card-chromium\\video.webm"
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-aruba-Aruba-chromium\\video.webm"
                     },
                     {
                       "name": "error-context",
                       "contentType": "text/markdown",
-                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Travel documents-Top-aruba-Aruba-ED-Card-chromium\\error-context.md"
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-aruba-Aruba-chromium\\error-context.md"
                     }
                   ]
                 },
                 {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
+                  "workerIndex": 10,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 92063,
+                  "duration": 90906,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2026-06-05T16:51:43.969Z",
+                  "startTime": "2026-06-08T22:39:32.777Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Travel documents-Top-aruba-Aruba-ED-Card-chromium-retry1\\video.webm"
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-aruba-Aruba-chromium-retry1\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Travel documents-Top-aruba-Aruba-ED-Card-chromium-retry1\\trace.zip"
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-aruba-Aruba-chromium-retry1\\trace.zip"
                     }
                   ]
                 }
@@ -233,9 +265,1500 @@
               "status": "flaky"
             }
           ],
-          "id": "c1425fadfe3242e40e61-86e4fb5216161cc4e41c",
-          "file": "Travel documents/Top/aruba.spec.js",
-          "line": 7,
+          "id": "2e6538f1b6dcf183d2ff-509de28f5f545391d96f",
+          "file": "Production/aruba.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\barbados.spec.js",
+      "file": "Production/barbados.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Barbados",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 73833,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:37:22.555Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-barbados-Barbados-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f7ffd0108d45144d6952-94f22462e472bc83db12",
+          "file": "Production/barbados.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\belize.spec.js",
+      "file": "Production/belize.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Belize",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 71408,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:37:16.746Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-belize-Belize-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8ba36880b32f97218b52-a236ad9090a4c40837b6",
+          "file": "Production/belize.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\brazilTouristEvisa.spec.js",
+      "file": "Production/brazilTouristEvisa.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Brazil Tourist Evisa",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
+                  "status": "timedOut",
+                  "duration": 90834,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\functions.js",
+                        "column": 60,
+                        "line": 221
+                      },
+                      "message": "Error: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@data-type=\"place\"]').first()\u001b[22m\n\n\n\u001b[90m   at \u001b[39mfunctions.js:221\n\n\u001b[0m \u001b[90m 219 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m\"Enter\"\u001b[39m)\n \u001b[90m 220 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m1000\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 221 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'//li[@data-type=\"place\"]'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\n \u001b[90m     |\u001b[39m                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 222 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m2000\u001b[39m)\n \u001b[90m 223 |\u001b[39m     \u001b[36mawait\u001b[39m expect(continue_sidebar)\u001b[33m.\u001b[39mtoBeEnabled()\n \u001b[90m 224 |\u001b[39m     \u001b[36mawait\u001b[39m continue_sidebar\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[2m    at Object.step_3c (C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\functions.js:221:60)\u001b[22m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\brazilTouristEvisa.spec.js:29:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:37:17.369Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-brazilTouristEvisa-Brazil-Tourist-Evisa-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-brazilTouristEvisa-Brazil-Tourist-Evisa-chromium\\error-context.md"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 4,
+                  "status": "timedOut",
+                  "duration": 120661,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\brazilTouristEvisa.spec.js",
+                        "column": 14,
+                        "line": 34
+                      },
+                      "message": "Error: page.waitForURL: Test timeout of 90000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to \"**/brazil/apply-now/contact-details\" until \"domcontentloaded\"\n  navigated to \"https://www.ivisa.com/brazil/apply-now/contact-details?partial_order=ac_c60506c805276545c8c8221da3a91314\"\n============================================================\n\n\u001b[0m \u001b[90m 32 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/brazil/apply-now/traveler-review**\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 33 |\u001b[39m   \u001b[36mawait\u001b[39m continue_sidebar\u001b[33m.\u001b[39mclick()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/brazil/apply-now/contact-details\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'[name=\"general.email\"]'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m 36 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[name=\"general.email\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(email_test)\n \u001b[90m 37 |\u001b[39m   \u001b[36mawait\u001b[39m continue_sidebar\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\brazilTouristEvisa.spec.js:34:14\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-06-08T22:39:10.097Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-brazilTouristEvisa-Brazil-Tourist-Evisa-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-brazilTouristEvisa-Brazil-Tourist-Evisa-chromium-retry1\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-brazilTouristEvisa-Brazil-Tourist-Evisa-chromium-retry1\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8c02d682cecd8f9f3965-2775935a9f304268536e",
+          "file": "Production/brazilTouristEvisa.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\britishVirginIslands.spec.js",
+      "file": "Production/britishVirginIslands.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "British Virgin Islands",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 5,
+                  "status": "timedOut",
+                  "duration": 105291,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\britishVirginIslands.spec.js",
+                        "column": 14,
+                        "line": 16
+                      },
+                      "message": "Error: page.waitForURL: Test timeout of 90000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to \"**/british-virgin-islands/apply-now/additional-info/0\" until \"domcontentloaded\"\n  navigated to \"https://www.ivisa.com/british-virgin-islands/apply-now/additional-info/0?partial_order=ac_d14fc4f7d6786fbf85e74077e110a820\"\n============================================================\n\n\u001b[0m \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/british-virgin-islands/apply-now/address-details/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 15 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39mstep_3c(page\u001b[33m,\u001b[39m continue_sidebar)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/british-virgin-islands/apply-now/additional-info/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39madditionalInfo(page\u001b[33m,\u001b[39m continue_sidebar)\n \u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/british-virgin-islands/apply-now/traveler-review**\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m continue_sidebar\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\britishVirginIslands.spec.js:16:14\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:37:22.505Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-britishVirginIslands-British-Virgin-Islands-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-britishVirginIslands-British-Virgin-Islands-chromium\\error-context.md"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 5,
+                  "status": "timedOut",
+                  "duration": 98221,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\functions.js",
+                        "column": 60,
+                        "line": 221
+                      },
+                      "message": "Error: locator.click: Test timeout of 90000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//li[@data-type=\"place\"]').first()\u001b[22m\n\n\n\u001b[90m   at \u001b[39mfunctions.js:221\n\n\u001b[0m \u001b[90m 219 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m\"Enter\"\u001b[39m)\n \u001b[90m 220 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m1000\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 221 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'//li[@data-type=\"place\"]'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mclick()\n \u001b[90m     |\u001b[39m                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 222 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m2000\u001b[39m)\n \u001b[90m 223 |\u001b[39m     \u001b[36mawait\u001b[39m expect(continue_sidebar)\u001b[33m.\u001b[39mtoBeEnabled()\n \u001b[90m 224 |\u001b[39m     \u001b[36mawait\u001b[39m continue_sidebar\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[2m    at Object.step_3c (C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\functions.js:221:60)\u001b[22m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\britishVirginIslands.spec.js:15:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-06-08T22:39:25.899Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-britishVirginIslands-British-Virgin-Islands-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-britishVirginIslands-British-Virgin-Islands-chromium-retry1\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-britishVirginIslands-British-Virgin-Islands-chromium-retry1\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "18e7d3651687a64bf645-6aca2e7387f8ab561340",
+          "file": "Production/britishVirginIslands.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\china.spec.js",
+      "file": "Production/china.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "China",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 6,
+                  "status": "timedOut",
+                  "duration": 107928,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\china.spec.js",
+                        "column": 14,
+                        "line": 16
+                      },
+                      "message": "Error: page.waitForURL: Test timeout of 90000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to \"**/china/apply-now/additional-info/0\" until \"domcontentloaded\"\n============================================================\n\n\u001b[0m \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/china/apply-now/address-details/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 15 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39mstep_3c(page\u001b[33m,\u001b[39m continue_sidebar)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/china/apply-now/additional-info/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39madditionalInfo(page\u001b[33m,\u001b[39m continue_sidebar\u001b[33m,\u001b[39m \u001b[36mtrue\u001b[39m)\n \u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/china/apply-now/traveler-review**\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m continue_sidebar\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\china.spec.js:16:14\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:37:16.802Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-china-China-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-china-China-chromium\\error-context.md"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 6,
+                  "status": "passed",
+                  "duration": 78346,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-06-08T22:39:33.805Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-china-China-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-china-China-chromium-retry1\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "flaky"
+            }
+          ],
+          "id": "76c0dc0afb012e83493b-a7bc87fa470e3a06b5ab",
+          "file": "Production/china.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\colombia.spec.js",
+      "file": "Production/colombia.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Colombia",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 112298,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\colombia.spec.js",
+                        "column": 14,
+                        "line": 14
+                      },
+                      "message": "Error: page.waitForURL: Test timeout of 90000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to \"**/colombia/apply-now/address-details/0\" until \"domcontentloaded\"\n  navigated to \"https://www.ivisa.com/colombia/apply-now/passport-details/0\"\n  navigated to \"https://www.ivisa.com/colombia/apply-now/additional-info/0\"\n  navigated to \"https://www.ivisa.com/colombia/apply-now/additional-info/0?partial_order=ac_9e20422bab2aac35fb915bf89f9fbf61\"\n  navigated to \"https://www.ivisa.com/colombia/apply-now/additional-info/0?partial_order=ac_9e20422bab2aac35fb915bf89f9fbf61\"\n============================================================\n\n\u001b[0m \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/colombia/apply-now/passport-details/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39mstep_2(page\u001b[33m,\u001b[39m continue_sidebar)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/colombia/apply-now/address-details/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39mstep_3c(page\u001b[33m,\u001b[39m continue_sidebar)\n \u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/colombia/apply-now/additional-info/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39madditionalInfo(page\u001b[33m,\u001b[39m continue_sidebar)\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\colombia.spec.js:14:14\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:37:22.394Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-colombia-Colombia-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-colombia-Colombia-chromium\\error-context.md"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 87125,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-06-08T22:39:37.915Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-colombia-Colombia-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-colombia-Colombia-chromium-retry1\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "flaky"
+            }
+          ],
+          "id": "5d89871d4ecb7e183f14-4c5b956e87a63f3dd0fa",
+          "file": "Production/colombia.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\curacao.spec.js",
+      "file": "Production/curacao.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Curacao",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 58645,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:38:29.303Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-curacao-Curacao-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "acba8b5f8d96d6839f5a-15a0ed2be0f75fafd4c4",
+          "file": "Production/curacao.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\dominicanRepublic.spec.js",
+      "file": "Production/dominicanRepublic.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Dominican Republic",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "timedOut",
+                  "duration": 109721,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\dominicanRepublic.spec.js",
+                        "column": 14,
+                        "line": 20
+                      },
+                      "message": "Error: page.waitForURL: Test timeout of 90000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to \"**/dominican-republic/apply-now/contact-details\" until \"domcontentloaded\"\n  navigated to \"https://www.ivisa.com/dominican-republic/apply-now/contact-details?partial_order=ac_7059fe93b13b7fd03afcdfdc973e86df\"\n  navigated to \"https://www.ivisa.com/dominican-republic/apply-now/contact-details?partial_order=ac_7059fe93b13b7fd03afcdfdc973e86df\"\n============================================================\n\n\u001b[0m \u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/dominican-republic/apply-now/traveler-review**\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m continue_sidebar\u001b[33m.\u001b[39mclick()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/dominican-republic/apply-now/contact-details\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'[name=\"general.email\"]'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[name=\"general.email\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(email_test)\n \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m continue_sidebar\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\dominicanRepublic.spec.js:20:14\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:38:37.217Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-dominicanRepublic-Dominican-Republic-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-dominicanRepublic-Dominican-Republic-chromium\\error-context.md"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 88373,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-06-08T22:40:58.360Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-dominicanRepublic-Dominican-Republic-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-dominicanRepublic-Dominican-Republic-chromium-retry1\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "flaky"
+            }
+          ],
+          "id": "43795bffe7162622d51f-76ffa6b2ed13e03d0645",
+          "file": "Production/dominicanRepublic.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\egypt.spec.js",
+      "file": "Production/egypt.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Egypt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 45764,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:39:28.005Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-egypt-Egypt-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ef9bccf8b52e59efe6f1-4788b2f957a5a9b73ad1",
+          "file": "Production/egypt.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\israel.spec.js",
+      "file": "Production/israel.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Israel",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 44768,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:40:13.830Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-israel-Israel-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4de9b3b77de91070e1dc-635f703d19d3143da6e2",
+          "file": "Production/israel.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\jamaica.spec.js",
+      "file": "Production/jamaica.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Jamaica",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 42027,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:40:58.673Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-jamaica-Jamaica-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9355b0672b8d15e1b30a-93218fedd845bed5117d",
+          "file": "Production/jamaica.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\kenyaETA.spec.js",
+      "file": "Production/kenyaETA.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Kenya ETA",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 6,
+                  "status": "passed",
+                  "duration": 49492,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:41:06.652Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-kenyaETA-Kenya-ETA-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5e11cf2191a940c91677-e722e2616120dfceb746",
+          "file": "Production/kenyaETA.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\mauritius.spec.js",
+      "file": "Production/mauritius.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Mauritius",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 1,
+                  "status": "timedOut",
+                  "duration": 105262,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\mauritius.spec.js",
+                        "column": 14,
+                        "line": 14
+                      },
+                      "message": "Error: page.waitForURL: Test timeout of 90000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to \"**/mauritius/apply-now/address-details/0\" until \"domcontentloaded\"\n  navigated to \"https://www.ivisa.com/mauritius/apply-now/passport-details/0\"\n  navigated to \"https://www.ivisa.com/mauritius/apply-now/additional-info/0\"\n  navigated to \"https://www.ivisa.com/mauritius/apply-now/additional-info/0?partial_order=ac_94d2d20a9e6e146691b8fcacbddac019\"\n  navigated to \"https://www.ivisa.com/mauritius/apply-now/additional-info/0?partial_order=ac_94d2d20a9e6e146691b8fcacbddac019\"\n============================================================\n\n\u001b[0m \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/mauritius/apply-now/passport-details/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39mstep_2(page\u001b[33m,\u001b[39m continue_sidebar)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/mauritius/apply-now/address-details/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39mstep_3c(page\u001b[33m,\u001b[39m continue_sidebar)\n \u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/mauritius/apply-now/additional-info/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39madditionalInfo(page\u001b[33m,\u001b[39m continue_sidebar)\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\mauritius.spec.js:14:14\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:41:21.073Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-mauritius-Mauritius-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-mauritius-Mauritius-chromium\\error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9b8719d40b90c44cd829-0f857fdf4f0d36053612",
+          "file": "Production/mauritius.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\nzEta.spec.js",
+      "file": "Production/nzEta.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "New Zealand ETA",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 104803,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\nzEta.spec.js",
+                        "column": 14,
+                        "line": 12
+                      },
+                      "message": "Error: page.waitForURL: Test timeout of 90000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation to \"**/new-zealand/apply-now/passport-details/0\" until \"domcontentloaded\"\n============================================================\n\n\u001b[0m \u001b[90m 10 |\u001b[39m   \u001b[36mconst\u001b[39m continue_sidebar \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m)\u001b[33m.\u001b[39mgetByText(\u001b[32m\"Continue\"\u001b[39m)\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m continue_sidebar\u001b[33m.\u001b[39mclick()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/new-zealand/apply-now/passport-details/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39mstep_2(page\u001b[33m,\u001b[39m continue_sidebar)\n \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/new-zealand/apply-now/address-details/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 15 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39mstep_3c(page\u001b[33m,\u001b[39m continue_sidebar)\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\nzEta.spec.js:12:14\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:41:21.435Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-nzEta-New-Zealand-ETA-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-nzEta-New-Zealand-ETA-chromium\\error-context.md"
+                    }
+                  ]
+                },
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 4,
+                  "status": "interrupted",
+                  "duration": 503,
+                  "error": {
+                    "message": "Error: browserContext.newPage: Target page, context or browser has been closed",
+                    "stack": "Error: browserContext.newPage: Target page, context or browser has been closed"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: browserContext.newPage: Target page, context or browser has been closed"
+                    },
+                    {
+                      "message": "Error: apiRequestContext._wrapApiCall: Target page, context or browser has been closed"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-06-08T22:43:06.589Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-nzEta-New-Zealand-ETA-chromium-retry1\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "29fb0bc68268788bf343-df193267ef34ada29771",
+          "file": "Production/nzEta.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\philipines.spec.js",
+      "file": "Production/philipines.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Philippines",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 5,
+                  "status": "passed",
+                  "duration": 57411,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:41:48.974Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-philipines-Philippines-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "70d530165e37c7572d55-d1009d40a21993319444",
+          "file": "Production/philipines.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\saintKittsNevis.spec.js",
+      "file": "Production/saintKittsNevis.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Saint Kitts and Nevis",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 49169,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:41:40.745Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-saintKittsNevis-Saint-Kitts-and-Nevis-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e3a505a4a1034010e2da-51ca4087cb09518e8629",
+          "file": "Production/saintKittsNevis.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\singapore.spec.js",
+      "file": "Production/singapore.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Singapore",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 4,
+                  "status": "passed",
+                  "duration": 55011,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:41:59.300Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\test-results\\Production-singapore-Singapore-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2e824a1daea46d6c5519-660f8b7f1da97e2bb034",
+          "file": "Production/singapore.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\sintMaarten.spec.js",
+      "file": "Production/sintMaarten.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Sint Maarten",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 6,
+                  "status": "interrupted",
+                  "duration": 70987,
+                  "error": {
+                    "message": "Error: page.waitForURL: Test ended.\n=========================== logs ===========================\nwaiting for navigation to \"**/sint-maarten/apply-now/address-details/0\" until \"domcontentloaded\"\n  navigated to \"https://www.ivisa.com/sint-maarten/apply-now/passport-details/0\"\n  navigated to \"https://www.ivisa.com/sint-maarten/apply-now/additional-info/0\"\n  navigated to \"https://www.ivisa.com/sint-maarten/apply-now/additional-info/0?partial_order=ac_a97787d33a94cd9090648c265d954b6c\"\n  navigated to \"https://www.ivisa.com/sint-maarten/apply-now/additional-info/0?partial_order=ac_a97787d33a94cd9090648c265d954b6c\"\n============================================================",
+                    "stack": "Error: page.waitForURL: Test ended.\n=========================== logs ===========================\nwaiting for navigation to \"**/sint-maarten/apply-now/address-details/0\" until \"domcontentloaded\"\n  navigated to \"https://www.ivisa.com/sint-maarten/apply-now/passport-details/0\"\n  navigated to \"https://www.ivisa.com/sint-maarten/apply-now/additional-info/0\"\n  navigated to \"https://www.ivisa.com/sint-maarten/apply-now/additional-info/0?partial_order=ac_a97787d33a94cd9090648c265d954b6c\"\n  navigated to \"https://www.ivisa.com/sint-maarten/apply-now/additional-info/0?partial_order=ac_a97787d33a94cd9090648c265d954b6c\"\n============================================================\n    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\sintMaarten.spec.js:14:14",
+                    "location": {
+                      "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\sintMaarten.spec.js",
+                      "column": 14,
+                      "line": 14
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/sint-maarten/apply-now/passport-details/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39mstep_2(page\u001b[33m,\u001b[39m continue_sidebar)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/sint-maarten/apply-now/address-details/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39mstep_3c(page\u001b[33m,\u001b[39m continue_sidebar)\n \u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/sint-maarten/apply-now/additional-info/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39madditionalInfo(page\u001b[33m,\u001b[39m continue_sidebar)\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\sintMaarten.spec.js",
+                        "column": 14,
+                        "line": 14
+                      },
+                      "message": "Error: page.waitForURL: Test ended.\n=========================== logs ===========================\nwaiting for navigation to \"**/sint-maarten/apply-now/address-details/0\" until \"domcontentloaded\"\n  navigated to \"https://www.ivisa.com/sint-maarten/apply-now/passport-details/0\"\n  navigated to \"https://www.ivisa.com/sint-maarten/apply-now/additional-info/0\"\n  navigated to \"https://www.ivisa.com/sint-maarten/apply-now/additional-info/0?partial_order=ac_a97787d33a94cd9090648c265d954b6c\"\n  navigated to \"https://www.ivisa.com/sint-maarten/apply-now/additional-info/0?partial_order=ac_a97787d33a94cd9090648c265d954b6c\"\n============================================================\n\n\u001b[0m \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/sint-maarten/apply-now/passport-details/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39mstep_2(page\u001b[33m,\u001b[39m continue_sidebar)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/sint-maarten/apply-now/address-details/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39mstep_3c(page\u001b[33m,\u001b[39m continue_sidebar)\n \u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/sint-maarten/apply-now/additional-info/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39madditionalInfo(page\u001b[33m,\u001b[39m continue_sidebar)\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\sintMaarten.spec.js:14:14\u001b[22m"
+                    },
+                    {
+                      "message": "Error: browserContext.close: Test ended.\nBrowser logs:\n\n[pid=19032][err] [0608/164113.479:INFO:CONSOLE:374] \"[***zaraz:track***] set_age [object Object]\", source: https://www.ivisa.com/kenya/apply-now (374)\n[pid=19032][err] [0608/164114.136:INFO:CONSOLE:406] \"[zaraz:set] product_country Kenya\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164114.137:INFO:CONSOLE:406] \"[zaraz:set] product_id 10116\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164114.137:INFO:CONSOLE:406] \"[zaraz:set] product_name Kenya ETA\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164114.137:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164114.137:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 18\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164114.137:INFO:CONSOLE:406] \"[zaraz:set] visa_classification eta\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164115.870:INFO:CONSOLE:374] \"[***zaraz:track***] set_age [object Object]\", source: https://www.ivisa.com/kenya/apply-now (374)\n[pid=19032][err] [0608/164115.960:INFO:CONSOLE:374] \"[***zaraz:track***] set_age [object Object]\", source: https://www.ivisa.com/kenya/apply-now (374)\n[pid=19032][err] [0608/164115.995:INFO:CONSOLE:374] \"[***zaraz:track***] set_age [object Object]\", source: https://www.ivisa.com/kenya/apply-now (374)\n[pid=19032][err] [0608/164116.411:INFO:CONSOLE:406] \"[zaraz:set] product_country Kenya\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164116.411:INFO:CONSOLE:406] \"[zaraz:set] product_id 10116\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164116.411:INFO:CONSOLE:406] \"[zaraz:set] product_name Kenya ETA\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164116.411:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164116.412:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 18\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164116.412:INFO:CONSOLE:406] \"[zaraz:set] visa_classification eta\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164120.531:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_passport\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164120.533:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/kenya/apply-now (374)\n[pid=19032][err] [0608/164121.080:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=19032][err] [0608/164121.224:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/kenya/apply-now/passport-details/0 (0)\n[pid=19032][err] [0608/164121.526:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=19032][err] [0608/164121.527:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=19032][err] [0608/164121.617:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=19032][err] [0608/164121.619:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=19032][err] [0608/164121.659:INFO:CONSOLE:374] \"[***zaraz:track***] add_passport_info_now [object Object]\", source: https://www.ivisa.com/kenya/apply-now (374)\n[pid=19032][err] [0608/164126.429:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_address\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164126.429:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/kenya/apply-now (374)\n[pid=19032][err] [0608/164127.279:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=19032][err] [0608/164127.320:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/kenya/apply-now/address-details/0?partial_order=ac_8a704e5e20242c438afbdd9352d5103a (0)\n[pid=19032][err] [0608/164127.542:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=19032][err] [0608/164127.542:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=19032][err] [0608/164127.744:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=19032][err] [0608/164127.921:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=19032][err] [0608/164134.559:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_additional_info\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164134.560:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/kenya/apply-now (374)\n[pid=19032][err] [0608/164134.988:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=19032][err] [0608/164135.015:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/kenya/apply-now/additional-info/0?partial_order=ac_8a704e5e20242c438afbdd9352d5103a (0)\n[pid=19032][err] [0608/164135.020:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=19032][err] [0608/164135.020:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=19032][err] [0608/164135.068:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=19032][err] [0608/164135.108:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=19032][err] [0608/164143.810:INFO:CONSOLE:406] \"[zaraz:set] step_slug traveler_review\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164143.810:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/kenya/apply-now (374)\n[pid=19032][err] [0608/164144.177:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=19032][err] [0608/164144.219:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/kenya/apply-now/traveler-review?partial_order=ac_8a704e5e20242c438afbdd9352d5103a (0)\n[pid=19032][err] [0608/164144.255:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=19032][err] [0608/164144.256:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=19032][err] [0608/164144.323:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=19032][err] [0608/164144.365:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=19032][err] [0608/164144.572:INFO:CONSOLE:406] \"[zaraz:set] step_slug contact_details\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164144.572:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/kenya/apply-now (374)\n[pid=19032][err] [0608/164144.982:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=19032][err] [0608/164145.028:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/kenya/apply-now/contact-details?partial_order=ac_8a704e5e20242c438afbdd9352d5103a (0)\n[pid=19032][err] [0608/164145.083:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=19032][err] [0608/164145.083:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=19032][err] [0608/164145.350:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=19032][err] [0608/164145.357:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=19032][err] [0608/164146.041:INFO:CONSOLE:3] \"AxiosError: Request failed with status code 429\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (3)\n[pid=19032][err] [0608/164146.077:INFO:CONSOLE:3] \"AxiosError: Request failed with status code 429\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (3)\n[pid=19032][err] [0608/164146.144:INFO:CONSOLE:3] \"AxiosError: Request failed with status code 429\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (3)\n[pid=19032][err] [0608/164146.310:INFO:CONSOLE:406] \"[zaraz:set] step_slug review\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164146.312:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/kenya/apply-now (374)\n[pid=19032][err] [0608/164146.347:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"split-payment-202604-86b8krtd8\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=19032][err] [0608/164146.354:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"processing_speed_prices\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=19032][err] [0608/164146.359:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"dest-pricing-202604-86b8ufz41\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=19032][err] [0608/164146.368:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"youth-disc-202605-86b9jff0r\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=19032][err] [0608/164146.405:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"denial-prot-copy-202604-86b8qpw5z\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=19032][err] [0608/164146.416:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"price-cta-202605-86ba4k2u4\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=19032][err] [0608/164146.417:INFO:CONSOLE:374] \"[***zaraz:track***] payment_methods_shown [object Object]\", source: https://www.ivisa.com/kenya/apply-now (374)\n[pid=19032][err] [0608/164146.426:INFO:CONSOLE:406] \"[zaraz:set] processing_speed standard\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164146.428:INFO:CONSOLE:406] \"[zaraz:set] processing_speed standard\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164146.860:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=19032][err] [0608/164146.892:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/kenya/apply-now/checkout?partial_order=ac_8a704e5e20242c438afbdd9352d5103a (0)\n[pid=19032][err] [0608/164146.905:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=19032][err] [0608/164146.905:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=19032][err] [0608/164146.939:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=19032][err] [0608/164147.023:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=19032][err] [0608/164147.058:INFO:CONSOLE:374] \"[***zaraz:track***] denial_protection_shown [object Object]\", source: https://www.ivisa.com/kenya/apply-now (374)\n[pid=19032][err] [0608/164147.232:INFO:CONSOLE:406] \"[zaraz:set] product_country Kenya\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164147.235:INFO:CONSOLE:406] \"[zaraz:set] product_id 10116\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164147.235:INFO:CONSOLE:406] \"[zaraz:set] product_name Kenya ETA\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164147.236:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164147.236:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 18\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164147.236:INFO:CONSOLE:406] \"[zaraz:set] visa_classification eta\", source: https://www.ivisa.com/kenya/apply-now (406)\n[pid=19032][err] [0608/164158.179:INFO:CONSOLE:406] \"[zaraz:set] domain www.ivisa.com\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164158.179:INFO:CONSOLE:406] \"[zaraz:set] product_country SX\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164158.179:INFO:CONSOLE:406] \"[zaraz:set] nationality MX\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164158.179:INFO:CONSOLE:406] \"[zaraz:set] product_id 11106\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164158.180:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164158.180:INFO:CONSOLE:406] \"[zaraz:set] travel_doc_classification arrival_card\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164158.180:INFO:CONSOLE:406] \"[zaraz:set] page_type application_page\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164158.180:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_personal\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164158.180:INFO:CONSOLE:406] \"[zaraz:set] customer_ivi hop-ijn-hp-ih\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164158.180:INFO:CONSOLE:406] \"[zaraz:set] ivu_pseudo_id ivu_i6dddvaum5ix5hcm\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164158.182:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/sint-maarten/apply-now (374)\n[pid=19032][err] [0608/164159.017:INFO:CONSOLE:406] \"[zaraz:set] nationality MX\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164201.125:INFO:CONSOLE:406] \"[zaraz:set] pp_app_version 1.0.0-JUP-2.0.0\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164201.127:INFO:CONSOLE:406] \"[zaraz:set] applied_experiments Test,Control,tstf,Control\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164201.264:INFO:CONSOLE:406] \"[zaraz:set] applicants_qty 1\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164201.392:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"aa_smoke_test\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=19032][err] [0608/164202.632:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=19032][err] [0608/164202.736:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/sint-maarten/apply-now/personal-details/0 (0)\n[pid=19032][err] [0608/164202.739:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=19032][err] [0608/164202.739:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=19032][err] [0608/164202.792:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=19032][err] [0608/164203.141:INFO:CONSOLE:374] \"[***zaraz:track***] visa_eligibility [object Object]\", source: https://www.ivisa.com/sint-maarten/apply-now (374)\n[pid=19032][err] [0608/164203.167:INFO:CONSOLE:406] \"[zaraz:set] product_country Sint Maarten\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164203.167:INFO:CONSOLE:406] \"[zaraz:set] product_id 11106\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164203.167:INFO:CONSOLE:406] \"[zaraz:set] product_name Sint Maarten ED Card\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164203.167:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164203.167:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 5614\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164203.167:INFO:CONSOLE:406] \"[zaraz:set] visa_classification arrival_card\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164203.171:INFO:CONSOLE:406] \"[zaraz:set] checkout_session_id 019ea966-6ed8-7339-9bc3-4973e0a2e75d\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164203.904:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=19032][err] [0608/164204.044:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"ocr-202605-86b9t78p2\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=19032][err] [0608/164204.044:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"email-202605-86b94nw4k\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=19032][err] [0608/164205.788:INFO:CONSOLE:374] \"[***zaraz:track***] set_age [object Object]\", source: https://www.ivisa.com/sint-maarten/apply-now (374)\n[pid=19032][err] [0608/164206.841:INFO:CONSOLE:406] \"[zaraz:set] product_country Sint Maarten\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164206.843:INFO:CONSOLE:406] \"[zaraz:set] product_id 11106\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164206.843:INFO:CONSOLE:406] \"[zaraz:set] product_name Sint Maarten ED Card\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164206.843:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164206.843:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 5614\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164206.843:INFO:CONSOLE:406] \"[zaraz:set] visa_classification arrival_card\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164209.147:INFO:CONSOLE:374] \"[***zaraz:track***] set_age [object Object]\", source: https://www.ivisa.com/sint-maarten/apply-now (374)\n[pid=19032][err] [0608/164209.237:INFO:CONSOLE:374] \"[***zaraz:track***] set_age [object Object]\", source: https://www.ivisa.com/sint-maarten/apply-now (374)\n[pid=19032][err] [0608/164209.360:INFO:CONSOLE:374] \"[***zaraz:track***] set_age [object Object]\", source: https://www.ivisa.com/sint-maarten/apply-now (374)\n[pid=19032][err] [0608/164209.825:INFO:CONSOLE:406] \"[zaraz:set] product_country Sint Maarten\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164209.826:INFO:CONSOLE:406] \"[zaraz:set] product_id 11106\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164209.826:INFO:CONSOLE:406] \"[zaraz:set] product_name Sint Maarten ED Card\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164209.826:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164209.827:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 5614\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164209.827:INFO:CONSOLE:406] \"[zaraz:set] visa_classification arrival_card\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164214.680:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_passport\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164214.682:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/sint-maarten/apply-now (374)\n[pid=19032][err] [0608/164214.965:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=19032][err] [0608/164214.995:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/sint-maarten/apply-now/passport-details/0 (0)\n[pid=19032][err] [0608/164215.018:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=19032][err] [0608/164215.018:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=19032][err] [0608/164215.386:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=19032][err] [0608/164215.417:INFO:CONSOLE:374] \"[***zaraz:track***] add_passport_info_now [object Object]\", source: https://www.ivisa.com/sint-maarten/apply-now (374)\n[pid=19032][err] [0608/164215.534:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=19032][err] [0608/164219.821:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"skip-address-202605-86b9yf4bv\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=19032][err] [0608/164220.300:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_additional_info\", source: https://www.ivisa.com/sint-maarten/apply-now (406)\n[pid=19032][err] [0608/164220.302:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/sint-maarten/apply-now (374)\n[pid=19032][err] [0608/164220.800:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=19032][err] [0608/164220.841:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/sint-maarten/apply-now/additional-info/0?partial_order=ac_a97787d33a94cd9090648c265d954b6c (0)\n[pid=19032][err] [0608/164220.928:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=19032][err] [0608/164220.928:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=19032][err] [0608/164221.183:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=19032][err] [0608/164221.739:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:41:56.250Z",
+                  "annotations": [],
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\sintMaarten.spec.js",
+                    "column": 14,
+                    "line": 14
+                  }
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "24d6a65466905b538911-7c6fd2114fa73425385d",
+          "file": "Production/sintMaarten.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\sriLanka.spec.js",
+      "file": "Production/sriLanka.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Sri Lanka",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 36903,
+                  "error": {
+                    "message": "Error: page.waitForTimeout: Target page, context or browser has been closed",
+                    "stack": "Error: page.waitForTimeout: Target page, context or browser has been closed\n    at Object.newPaymentCheckout (C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\functions.js:63:16)\n    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\sriLanka.spec.js:25:3",
+                    "location": {
+                      "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\functions.js",
+                      "column": 16,
+                      "line": 63
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mfunctions.js:63\n\n\u001b[0m \u001b[90m 61 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=cvv'\u001b[39m)\u001b[33m.\u001b[39mframeLocator(\u001b[32m'[title=\"CVV\"]'\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m'id=primer-hosted-input'\u001b[39m)\u001b[33m.\u001b[39mwaitFor({state\u001b[33m:\u001b[39m \u001b[32m'attached'\u001b[39m})\n \u001b[90m 62 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=cardFormName'\u001b[39m)\u001b[33m.\u001b[39mframeLocator(\u001b[32m'[title=\"Name on card\"]'\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m'id=primer-hosted-input'\u001b[39m)\u001b[33m.\u001b[39mwaitFor({state\u001b[33m:\u001b[39m \u001b[32m'attached'\u001b[39m})\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 63 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 64 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=cardNumber'\u001b[39m)\u001b[33m.\u001b[39mframeLocator(\u001b[32m'[title=\"Card number\"]'\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m'id=primer-hosted-input'\u001b[39m)\u001b[33m.\u001b[39mfill(creditCard)\n \u001b[90m 65 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=expiry'\u001b[39m)\u001b[33m.\u001b[39mframeLocator(\u001b[32m'[title=\"Expiry (MM/YY)\"]'\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m'id=primer-hosted-input'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'10/26'\u001b[39m)\n \u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=cvv'\u001b[39m)\u001b[33m.\u001b[39mframeLocator(\u001b[32m'[title=\"CVV\"]'\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m'id=primer-hosted-input'\u001b[39m)\u001b[33m.\u001b[39mfill(cvvNum)\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\functions.js",
+                        "column": 16,
+                        "line": 63
+                      },
+                      "message": "Error: page.waitForTimeout: Target page, context or browser has been closed\n\n\u001b[90m   at \u001b[39mfunctions.js:63\n\n\u001b[0m \u001b[90m 61 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=cvv'\u001b[39m)\u001b[33m.\u001b[39mframeLocator(\u001b[32m'[title=\"CVV\"]'\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m'id=primer-hosted-input'\u001b[39m)\u001b[33m.\u001b[39mwaitFor({state\u001b[33m:\u001b[39m \u001b[32m'attached'\u001b[39m})\n \u001b[90m 62 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=cardFormName'\u001b[39m)\u001b[33m.\u001b[39mframeLocator(\u001b[32m'[title=\"Name on card\"]'\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m'id=primer-hosted-input'\u001b[39m)\u001b[33m.\u001b[39mwaitFor({state\u001b[33m:\u001b[39m \u001b[32m'attached'\u001b[39m})\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 63 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 64 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=cardNumber'\u001b[39m)\u001b[33m.\u001b[39mframeLocator(\u001b[32m'[title=\"Card number\"]'\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m'id=primer-hosted-input'\u001b[39m)\u001b[33m.\u001b[39mfill(creditCard)\n \u001b[90m 65 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=expiry'\u001b[39m)\u001b[33m.\u001b[39mframeLocator(\u001b[32m'[title=\"Expiry (MM/YY)\"]'\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m'id=primer-hosted-input'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'10/26'\u001b[39m)\n \u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'id=cvv'\u001b[39m)\u001b[33m.\u001b[39mframeLocator(\u001b[32m'[title=\"CVV\"]'\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m'id=primer-hosted-input'\u001b[39m)\u001b[33m.\u001b[39mfill(cvvNum)\u001b[0m\n\u001b[2m    at Object.newPaymentCheckout (C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\functions.js:63:16)\u001b[22m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\sriLanka.spec.js:25:3\u001b[22m"
+                    },
+                    {
+                      "message": "Error: browserContext.close: Test ended.\nBrowser logs:\n\n[pid=42464][err] [0608/164220.627:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/saint-kitts-and-nevis/apply-now (374)\n[pid=42464][err] [0608/164221.097:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=42464][err] [0608/164221.141:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/saint-kitts-and-nevis/apply-now/contact-details?partial_order=ac_ff32023f41af3ece6dbe6081ca235023 (0)\n[pid=42464][err] [0608/164221.144:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=42464][err] [0608/164221.145:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=42464][err] [0608/164221.448:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=42464][err] [0608/164221.486:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=42464][err] [0608/164222.538:INFO:CONSOLE:3] \"AxiosError: Request failed with status code 429\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (3)\n[pid=42464][err] [0608/164222.610:INFO:CONSOLE:3] \"AxiosError: Request failed with status code 429\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (3)\n[pid=42464][err] [0608/164222.859:INFO:CONSOLE:3] \"AxiosError: Request failed with status code 429\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (3)\n[pid=42464][err] [0608/164223.406:INFO:CONSOLE:406] \"[zaraz:set] step_slug review\", source: https://www.ivisa.com/saint-kitts-and-nevis/apply-now (406)\n[pid=42464][err] [0608/164223.406:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/saint-kitts-and-nevis/apply-now (374)\n[pid=42464][err] [0608/164223.496:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"split-payment-202604-86b8krtd8\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=42464][err] [0608/164223.503:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"processing_speed_prices\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=42464][err] [0608/164223.508:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"dest-pricing-202604-86b8ufz41\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=42464][err] [0608/164223.508:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"youth-disc-202605-86b9jff0r\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=42464][err] [0608/164223.546:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"denial-prot-copy-202604-86b8qpw5z\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=42464][err] [0608/164223.606:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"price-cta-202605-86ba4k2u4\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=42464][err] [0608/164223.608:INFO:CONSOLE:374] \"[***zaraz:track***] payment_methods_shown [object Object]\", source: https://www.ivisa.com/saint-kitts-and-nevis/apply-now (374)\n[pid=42464][err] [0608/164223.662:INFO:CONSOLE:406] \"[zaraz:set] processing_speed rush\", source: https://www.ivisa.com/saint-kitts-and-nevis/apply-now (406)\n[pid=42464][err] [0608/164223.663:INFO:CONSOLE:406] \"[zaraz:set] processing_speed rush\", source: https://www.ivisa.com/saint-kitts-and-nevis/apply-now (406)\n[pid=42464][err] [0608/164224.242:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=42464][err] [0608/164224.296:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/saint-kitts-and-nevis/apply-now/checkout?partial_order=ac_ff32023f41af3ece6dbe6081ca235023 (0)\n[pid=42464][err] [0608/164224.309:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=42464][err] [0608/164224.309:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=42464][err] [0608/164224.345:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=42464][err] [0608/164224.416:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=42464][err] [0608/164224.699:INFO:CONSOLE:406] \"[zaraz:set] product_country Saint Kitts and Nevis\", source: https://www.ivisa.com/saint-kitts-and-nevis/apply-now (406)\n[pid=42464][err] [0608/164224.699:INFO:CONSOLE:406] \"[zaraz:set] product_id 11114\", source: https://www.ivisa.com/saint-kitts-and-nevis/apply-now (406)\n[pid=42464][err] [0608/164224.699:INFO:CONSOLE:406] \"[zaraz:set] product_name Saint Kitts and Nevis ETA\", source: https://www.ivisa.com/saint-kitts-and-nevis/apply-now (406)\n[pid=42464][err] [0608/164224.699:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/saint-kitts-and-nevis/apply-now (406)\n[pid=42464][err] [0608/164224.699:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 5622\", source: https://www.ivisa.com/saint-kitts-and-nevis/apply-now (406)\n[pid=42464][err] [0608/164224.699:INFO:CONSOLE:406] \"[zaraz:set] visa_classification arrival_card\", source: https://www.ivisa.com/saint-kitts-and-nevis/apply-now (406)\n[pid=42464][err] [0608/164231.748:INFO:CONSOLE:406] \"[zaraz:set] domain www.ivisa.com\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164231.749:INFO:CONSOLE:406] \"[zaraz:set] product_country LK\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164231.749:INFO:CONSOLE:406] \"[zaraz:set] nationality MX\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164231.749:INFO:CONSOLE:406] \"[zaraz:set] product_id 10129\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164231.749:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164231.749:INFO:CONSOLE:406] \"[zaraz:set] travel_doc_classification eta\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164231.750:INFO:CONSOLE:406] \"[zaraz:set] page_type application_page\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164231.750:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_personal\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164231.750:INFO:CONSOLE:406] \"[zaraz:set] customer_ivi hop-ijn-hp-ih\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164231.750:INFO:CONSOLE:406] \"[zaraz:set] ivu_pseudo_id ivu_hqm8dccphuijwaes\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164231.751:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/sri-lanka/apply-now (374)\n[pid=42464][err] [0608/164232.255:INFO:CONSOLE:406] \"[zaraz:set] nationality MX\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164232.666:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"aa_smoke_test\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=42464][err] [0608/164232.671:INFO:CONSOLE:406] \"[zaraz:set] pp_app_version 1.0.0-JUP-2.0.0\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164232.672:INFO:CONSOLE:406] \"[zaraz:set] applied_experiments Control,Variant,tstf,Control\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164232.701:INFO:CONSOLE:406] \"[zaraz:set] applicants_qty 1\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164233.574:INFO:CONSOLE:406] \"[zaraz:set] checkout_session_id 019ea966-e55a-70f5-ad3a-cb1fcd95db69\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164233.746:INFO:CONSOLE:406] \"[zaraz:set] product_country Sri Lanka\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164233.746:INFO:CONSOLE:406] \"[zaraz:set] product_id 10129\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164233.748:INFO:CONSOLE:406] \"[zaraz:set] product_name Sri Lanka Tourist ETA\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164233.748:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164233.749:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 31\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164233.749:INFO:CONSOLE:406] \"[zaraz:set] visa_classification eta\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164233.984:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=42464][err] [0608/164233.992:INFO:CONSOLE:374] \"[***zaraz:track***] visa_eligibility [object Object]\", source: https://www.ivisa.com/sri-lanka/apply-now (374)\n[pid=42464][err] [0608/164234.079:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/sri-lanka/apply-now/personal-details/0 (0)\n[pid=42464][err] [0608/164234.086:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=42464][err] [0608/164234.086:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=42464][err] [0608/164234.109:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"ocr-202605-86b9t78p2\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=42464][err] [0608/164234.111:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"email-202605-86b94nw4k\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=42464][err] [0608/164234.205:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=42464][err] [0608/164234.234:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=42464][err] [0608/164234.715:INFO:CONSOLE:374] \"[***zaraz:track***] set_age [object Object]\", source: https://www.ivisa.com/sri-lanka/apply-now (374)\n[pid=42464][err] [0608/164235.236:INFO:CONSOLE:406] \"[zaraz:set] product_country Sri Lanka\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164235.236:INFO:CONSOLE:406] \"[zaraz:set] product_id 10129\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164235.236:INFO:CONSOLE:406] \"[zaraz:set] product_name Sri Lanka Tourist ETA\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164235.237:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164235.237:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 31\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164235.237:INFO:CONSOLE:406] \"[zaraz:set] visa_classification eta\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164237.247:INFO:CONSOLE:374] \"[***zaraz:track***] set_age [object Object]\", source: https://www.ivisa.com/sri-lanka/apply-now (374)\n[pid=42464][err] [0608/164237.356:INFO:CONSOLE:374] \"[***zaraz:track***] set_age [object Object]\", source: https://www.ivisa.com/sri-lanka/apply-now (374)\n[pid=42464][err] [0608/164237.429:INFO:CONSOLE:374] \"[***zaraz:track***] set_age [object Object]\", source: https://www.ivisa.com/sri-lanka/apply-now (374)\n[pid=42464][err] [0608/164237.837:INFO:CONSOLE:406] \"[zaraz:set] product_country Sri Lanka\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164237.838:INFO:CONSOLE:406] \"[zaraz:set] product_id 10129\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164237.838:INFO:CONSOLE:406] \"[zaraz:set] product_name Sri Lanka Tourist ETA\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164237.838:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164237.839:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 31\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164237.839:INFO:CONSOLE:406] \"[zaraz:set] visa_classification eta\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164241.963:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_passport\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164241.964:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/sri-lanka/apply-now (374)\n[pid=42464][err] [0608/164242.277:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=42464][err] [0608/164242.302:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/sri-lanka/apply-now/passport-details/0 (0)\n[pid=42464][err] [0608/164242.623:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=42464][err] [0608/164242.625:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=42464][err] [0608/164242.887:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=42464][err] [0608/164242.979:INFO:CONSOLE:374] \"[***zaraz:track***] add_passport_info_now [object Object]\", source: https://www.ivisa.com/sri-lanka/apply-now (374)\n[pid=42464][err] [0608/164243.165:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=42464][err] [0608/164245.719:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_address\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164245.720:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/sri-lanka/apply-now (374)\n[pid=42464][err] [0608/164245.920:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=42464][err] [0608/164245.932:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/sri-lanka/apply-now/address-details/0?partial_order=ac_610dcf73b1678c0dc8751df5592acbfe (0)\n[pid=42464][err] [0608/164245.935:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=42464][err] [0608/164245.935:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=42464][err] [0608/164245.973:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=42464][err] [0608/164246.164:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=42464][err] [0608/164252.735:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_additional_info\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164252.735:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/sri-lanka/apply-now (374)\n[pid=42464][err] [0608/164253.469:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=42464][err] [0608/164253.523:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/sri-lanka/apply-now/additional-info/0?partial_order=ac_610dcf73b1678c0dc8751df5592acbfe (0)\n[pid=42464][err] [0608/164253.634:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=42464][err] [0608/164253.634:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=42464][err] [0608/164253.675:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=42464][err] [0608/164253.723:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=42464][err] [0608/164301.691:INFO:CONSOLE:406] \"[zaraz:set] step_slug traveler_review\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164301.692:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/sri-lanka/apply-now (374)\n[pid=42464][err] [0608/164301.841:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=42464][err] [0608/164301.851:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/sri-lanka/apply-now/traveler-review?partial_order=ac_610dcf73b1678c0dc8751df5592acbfe (0)\n[pid=42464][err] [0608/164301.853:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=42464][err] [0608/164301.853:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=42464][err] [0608/164301.913:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=42464][err] [0608/164301.963:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=42464][err] [0608/164302.162:INFO:CONSOLE:406] \"[zaraz:set] step_slug contact_details\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164302.164:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/sri-lanka/apply-now (374)\n[pid=42464][err] [0608/164302.320:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=42464][err] [0608/164302.334:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/sri-lanka/apply-now/contact-details?partial_order=ac_610dcf73b1678c0dc8751df5592acbfe (0)\n[pid=42464][err] [0608/164302.340:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=42464][err] [0608/164302.340:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=42464][err] [0608/164302.358:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=42464][err] [0608/164302.395:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=42464][err] [0608/164302.798:INFO:CONSOLE:3] \"AxiosError: Request failed with status code 429\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (3)\n[pid=42464][err] [0608/164302.828:INFO:CONSOLE:3] \"AxiosError: Request failed with status code 429\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (3)\n[pid=42464][err] [0608/164302.861:INFO:CONSOLE:3] \"AxiosError: Request failed with status code 429\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (3)\n[pid=42464][err] [0608/164302.921:INFO:CONSOLE:406] \"[zaraz:set] step_slug review\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164302.922:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/sri-lanka/apply-now (374)\n[pid=42464][err] [0608/164302.927:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"split-payment-202604-86b8krtd8\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=42464][err] [0608/164302.930:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"processing_speed_prices\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=42464][err] [0608/164302.932:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"dest-pricing-202604-86b8ufz41\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=42464][err] [0608/164302.933:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"youth-disc-202605-86b9jff0r\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=42464][err] [0608/164302.942:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"denial-prot-copy-202604-86b8qpw5z\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=42464][err] [0608/164302.946:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"price-cta-202605-86ba4k2u4\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=42464][err] [0608/164302.947:INFO:CONSOLE:374] \"[***zaraz:track***] payment_methods_shown [object Object]\", source: https://www.ivisa.com/sri-lanka/apply-now (374)\n[pid=42464][err] [0608/164302.952:INFO:CONSOLE:406] \"[zaraz:set] processing_speed standard\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164302.953:INFO:CONSOLE:406] \"[zaraz:set] processing_speed standard\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164303.112:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=42464][err] [0608/164303.132:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/sri-lanka/apply-now/checkout?partial_order=ac_610dcf73b1678c0dc8751df5592acbfe (0)\n[pid=42464][err] [0608/164303.135:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=42464][err] [0608/164303.135:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=42464][err] [0608/164303.165:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=42464][err] [0608/164303.204:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=42464][err] [0608/164303.427:INFO:CONSOLE:374] \"[***zaraz:track***] denial_protection_shown [object Object]\", source: https://www.ivisa.com/sri-lanka/apply-now (374)\n[pid=42464][err] [0608/164303.520:INFO:CONSOLE:406] \"[zaraz:set] product_country Sri Lanka\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164303.521:INFO:CONSOLE:406] \"[zaraz:set] product_id 10129\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164303.521:INFO:CONSOLE:406] \"[zaraz:set] product_name Sri Lanka Tourist ETA\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164303.522:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164303.522:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 31\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464][err] [0608/164303.522:INFO:CONSOLE:406] \"[zaraz:set] visa_classification eta\", source: https://www.ivisa.com/sri-lanka/apply-now (406)\n[pid=42464] <gracefully close start>"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:42:29.963Z",
+                  "annotations": [],
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\functions.js",
+                    "column": 16,
+                    "line": 63
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "21c96da9d3e7649e1b0e-e985cedb08edad9461f7",
+          "file": "Production/sriLanka.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\taiwan.spec.js",
+      "file": "Production/taiwan.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Taiwan",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 2,
+                  "status": "interrupted",
+                  "duration": 25940,
+                  "error": {
+                    "message": "Error: page.waitForURL: Test ended.\n=========================== logs ===========================\nwaiting for navigation to \"**/taiwan/apply-now/additional-info/0\" until \"domcontentloaded\"\n  navigated to \"https://www.ivisa.com/taiwan/apply-now/additional-info/0?partial_order=ac_a28bba369c87fff33385860cecf97dc6\"\n============================================================",
+                    "stack": "Error: page.waitForURL: Test ended.\n=========================== logs ===========================\nwaiting for navigation to \"**/taiwan/apply-now/additional-info/0\" until \"domcontentloaded\"\n  navigated to \"https://www.ivisa.com/taiwan/apply-now/additional-info/0?partial_order=ac_a28bba369c87fff33385860cecf97dc6\"\n============================================================\n    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\taiwan.spec.js:16:14",
+                    "location": {
+                      "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\taiwan.spec.js",
+                      "column": 14,
+                      "line": 16
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/taiwan/apply-now/address-details/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 15 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39mstep_3c(page\u001b[33m,\u001b[39m continue_sidebar)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/taiwan/apply-now/additional-info/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39madditionalInfo(page\u001b[33m,\u001b[39m continue_sidebar)\n \u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/taiwan/apply-now/traveler-review**\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m continue_sidebar\u001b[33m.\u001b[39mclick()\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\taiwan.spec.js",
+                        "column": 14,
+                        "line": 16
+                      },
+                      "message": "Error: page.waitForURL: Test ended.\n=========================== logs ===========================\nwaiting for navigation to \"**/taiwan/apply-now/additional-info/0\" until \"domcontentloaded\"\n  navigated to \"https://www.ivisa.com/taiwan/apply-now/additional-info/0?partial_order=ac_a28bba369c87fff33385860cecf97dc6\"\n============================================================\n\n\u001b[0m \u001b[90m 14 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/taiwan/apply-now/address-details/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 15 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39mstep_3c(page\u001b[33m,\u001b[39m continue_sidebar)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/taiwan/apply-now/additional-info/0\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   \u001b[36mawait\u001b[39m appFunctions\u001b[33m.\u001b[39madditionalInfo(page\u001b[33m,\u001b[39m continue_sidebar)\n \u001b[90m 18 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForURL(\u001b[32m\"**/taiwan/apply-now/traveler-review**\"\u001b[39m\u001b[33m,\u001b[39m {waitUntil\u001b[33m:\u001b[39m \u001b[32m'domcontentloaded'\u001b[39m})\n \u001b[90m 19 |\u001b[39m   \u001b[36mawait\u001b[39m continue_sidebar\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\taiwan.spec.js:16:14\u001b[22m"
+                    },
+                    {
+                      "message": "Error: browserContext.close: Test ended.\nBrowser logs:\n\n[pid=41252][err] [0608/164118.351:INFO:CONSOLE:406] \"[zaraz:set] product_name Dominican Republic eTicket\", source: https://www.ivisa.com/dominican-republic/apply-now (406)\n[pid=41252][err] [0608/164118.351:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/dominican-republic/apply-now (406)\n[pid=41252][err] [0608/164118.351:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 5165\", source: https://www.ivisa.com/dominican-republic/apply-now (406)\n[pid=41252][err] [0608/164118.351:INFO:CONSOLE:406] \"[zaraz:set] visa_classification arrival_card\", source: https://www.ivisa.com/dominican-republic/apply-now (406)\n[pid=41252][err] [0608/164123.518:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_passport\", source: https://www.ivisa.com/dominican-republic/apply-now (406)\n[pid=41252][err] [0608/164123.519:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/dominican-republic/apply-now (374)\n[pid=41252][err] [0608/164124.192:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=41252][err] [0608/164124.199:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/dominican-republic/apply-now/passport-details/0 (0)\n[pid=41252][err] [0608/164124.200:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=41252][err] [0608/164124.200:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=41252][err] [0608/164124.327:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=41252][err] [0608/164124.581:INFO:CONSOLE:374] \"[***zaraz:track***] add_passport_info_now [object Object]\", source: https://www.ivisa.com/dominican-republic/apply-now (374)\n[pid=41252][err] [0608/164124.665:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=41252][err] [0608/164133.263:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"skip-address-202605-86b9yf4bv\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=41252][err] [0608/164133.881:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_address\", source: https://www.ivisa.com/dominican-republic/apply-now (406)\n[pid=41252][err] [0608/164133.881:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/dominican-republic/apply-now (374)\n[pid=41252][err] [0608/164134.496:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=41252][err] [0608/164134.529:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/dominican-republic/apply-now/address-details/0?partial_order=ac_d0dfc9f912e75c810b381895ac71a4ce (0)\n[pid=41252][err] [0608/164134.535:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=41252][err] [0608/164134.535:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=41252][err] [0608/164134.683:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=41252][err] [0608/164134.775:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=41252][err] [0608/164142.287:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_additional_info\", source: https://www.ivisa.com/dominican-republic/apply-now (406)\n[pid=41252][err] [0608/164142.288:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/dominican-republic/apply-now (374)\n[pid=41252][err] [0608/164142.819:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=41252][err] [0608/164142.866:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/dominican-republic/apply-now/additional-info/0?partial_order=ac_d0dfc9f912e75c810b381895ac71a4ce (0)\n[pid=41252][err] [0608/164142.874:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=41252][err] [0608/164142.874:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=41252][err] [0608/164143.013:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=41252][err] [0608/164143.169:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=41252][err] [0608/164153.377:INFO:CONSOLE:406] \"[zaraz:set] step_slug traveler_review\", source: https://www.ivisa.com/dominican-republic/apply-now (406)\n[pid=41252][err] [0608/164153.377:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/dominican-republic/apply-now (374)\n[pid=41252][err] [0608/164153.657:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=41252][err] [0608/164153.665:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/dominican-republic/apply-now/traveler-review?partial_order=ac_d0dfc9f912e75c810b381895ac71a4ce (0)\n[pid=41252][err] [0608/164153.667:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=41252][err] [0608/164153.667:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=41252][err] [0608/164153.746:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=41252][err] [0608/164153.812:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=41252][err] [0608/164154.609:INFO:CONSOLE:406] \"[zaraz:set] step_slug contact_details\", source: https://www.ivisa.com/dominican-republic/apply-now (406)\n[pid=41252][err] [0608/164154.609:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/dominican-republic/apply-now (374)\n[pid=41252][err] [0608/164155.045:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=41252][err] [0608/164155.078:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/dominican-republic/apply-now/contact-details?partial_order=ac_d0dfc9f912e75c810b381895ac71a4ce (0)\n[pid=41252][err] [0608/164155.101:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=41252][err] [0608/164155.101:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=41252][err] [0608/164155.108:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=41252][err] [0608/164155.281:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=41252][err] [0608/164156.191:INFO:CONSOLE:3] \"AxiosError: Request failed with status code 429\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (3)\n[pid=41252][err] [0608/164156.198:INFO:CONSOLE:3] \"AxiosError: Request failed with status code 429\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (3)\n[pid=41252][err] [0608/164156.207:INFO:CONSOLE:3] \"AxiosError: Request failed with status code 429\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (3)\n[pid=41252][err] [0608/164156.389:INFO:CONSOLE:406] \"[zaraz:set] step_slug review\", source: https://www.ivisa.com/dominican-republic/apply-now (406)\n[pid=41252][err] [0608/164156.389:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/dominican-republic/apply-now (374)\n[pid=41252][err] [0608/164156.395:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"split-payment-202604-86b8krtd8\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=41252][err] [0608/164156.400:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"processing_speed_prices\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=41252][err] [0608/164156.402:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"dest-pricing-202604-86b8ufz41\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=41252][err] [0608/164156.404:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"youth-disc-202605-86b9jff0r\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=41252][err] [0608/164156.422:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"denial-prot-copy-202604-86b8qpw5z\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=41252][err] [0608/164156.428:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"price-cta-202605-86ba4k2u4\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=41252][err] [0608/164156.430:INFO:CONSOLE:374] \"[***zaraz:track***] payment_methods_shown [object Object]\", source: https://www.ivisa.com/dominican-republic/apply-now (374)\n[pid=41252][err] [0608/164156.451:INFO:CONSOLE:406] \"[zaraz:set] processing_speed rush\", source: https://www.ivisa.com/dominican-republic/apply-now (406)\n[pid=41252][err] [0608/164156.453:INFO:CONSOLE:406] \"[zaraz:set] processing_speed rush\", source: https://www.ivisa.com/dominican-republic/apply-now (406)\n[pid=41252][err] [0608/164156.811:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=41252][err] [0608/164156.857:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/dominican-republic/apply-now/checkout?partial_order=ac_d0dfc9f912e75c810b381895ac71a4ce (0)\n[pid=41252][err] [0608/164156.872:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=41252][err] [0608/164156.872:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=41252][err] [0608/164156.943:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=41252][err] [0608/164157.057:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=41252][err] [0608/164157.206:INFO:CONSOLE:406] \"[zaraz:set] product_country Dominican Republic\", source: https://www.ivisa.com/dominican-republic/apply-now (406)\n[pid=41252][err] [0608/164157.206:INFO:CONSOLE:406] \"[zaraz:set] product_id 10509\", source: https://www.ivisa.com/dominican-republic/apply-now (406)\n[pid=41252][err] [0608/164157.206:INFO:CONSOLE:406] \"[zaraz:set] product_name Dominican Republic eTicket\", source: https://www.ivisa.com/dominican-republic/apply-now (406)\n[pid=41252][err] [0608/164157.206:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/dominican-republic/apply-now (406)\n[pid=41252][err] [0608/164157.206:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 5165\", source: https://www.ivisa.com/dominican-republic/apply-now (406)\n[pid=41252][err] [0608/164157.207:INFO:CONSOLE:406] \"[zaraz:set] visa_classification arrival_card\", source: https://www.ivisa.com/dominican-republic/apply-now (406)\n[pid=41252][err] [0608/164207.580:INFO:CONSOLE:374] \"[***zaraz:track***] checkout_currency_mismatch_eligible [object Object]\", source: https://www.ivisa.com/dominican-republic/apply-now (374)\n[pid=41252][err] [0608/164207.607:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"currency-swap-202604-86b8yn4w1\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=41252][err] [0608/164242.654:INFO:CONSOLE:406] \"[zaraz:set] domain www.ivisa.com\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164242.655:INFO:CONSOLE:406] \"[zaraz:set] product_country TW\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164242.656:INFO:CONSOLE:406] \"[zaraz:set] nationality MX\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164242.656:INFO:CONSOLE:406] \"[zaraz:set] product_id 11120\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164242.656:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164242.658:INFO:CONSOLE:406] \"[zaraz:set] travel_doc_classification evisa\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164242.658:INFO:CONSOLE:406] \"[zaraz:set] page_type application_page\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164242.658:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_personal\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164242.659:INFO:CONSOLE:406] \"[zaraz:set] customer_ivi hop-ijn-hp-ih\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164242.659:INFO:CONSOLE:406] \"[zaraz:set] ivu_pseudo_id ivu_n70vzhxeiplyvkag\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164242.659:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/taiwan/apply-now (374)\n[pid=41252][err] [0608/164243.051:INFO:CONSOLE:406] \"[zaraz:set] nationality MX\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164243.484:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"aa_smoke_test\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=41252][err] [0608/164243.487:INFO:CONSOLE:406] \"[zaraz:set] pp_app_version 1.0.0-JUP-2.0.0\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164243.487:INFO:CONSOLE:406] \"[zaraz:set] applied_experiments Variant,Distance Pricing\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164243.501:INFO:CONSOLE:406] \"[zaraz:set] applicants_qty 1\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164244.204:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=41252][err] [0608/164244.252:INFO:CONSOLE:406] \"[zaraz:set] checkout_session_id 019ea967-0ee3-7392-be47-ee31dce3f65d\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164244.302:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"ocr-202605-86b9t78p2\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=41252][err] [0608/164244.304:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"email-202605-86b94nw4k\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=41252][err] [0608/164244.514:INFO:CONSOLE:406] \"[zaraz:set] product_country Taiwan\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164244.514:INFO:CONSOLE:406] \"[zaraz:set] product_id 10131\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164244.514:INFO:CONSOLE:406] \"[zaraz:set] product_name Taiwan eVisa\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164244.514:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164244.514:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 33\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164244.514:INFO:CONSOLE:406] \"[zaraz:set] visa_classification evisa\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164244.545:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/taiwan/apply-now/personal-details/0 (0)\n[pid=41252][err] [0608/164244.554:INFO:CONSOLE:374] \"[***zaraz:track***] visa_eligibility [object Object]\", source: https://www.ivisa.com/taiwan/apply-now (374)\n[pid=41252][err] [0608/164244.585:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=41252][err] [0608/164244.585:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=41252][err] [0608/164244.652:INFO:CONSOLE:374] \"[***zaraz:track***] visa_eligibility [object Object]\", source: https://www.ivisa.com/taiwan/apply-now (374)\n[pid=41252][err] [0608/164244.678:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=41252][err] [0608/164244.692:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=41252][err] [0608/164244.944:INFO:CONSOLE:374] \"[***zaraz:track***] set_age [object Object]\", source: https://www.ivisa.com/taiwan/apply-now (374)\n[pid=41252][err] [0608/164245.287:INFO:CONSOLE:406] \"[zaraz:set] product_country Taiwan\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164245.287:INFO:CONSOLE:406] \"[zaraz:set] product_id 11120\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164245.287:INFO:CONSOLE:406] \"[zaraz:set] product_name Taiwan Arrival Card\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164245.287:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164245.287:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 5628\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164245.288:INFO:CONSOLE:406] \"[zaraz:set] visa_classification arrival_card\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164247.607:INFO:CONSOLE:374] \"[***zaraz:track***] set_age [object Object]\", source: https://www.ivisa.com/taiwan/apply-now (374)\n[pid=41252][err] [0608/164247.821:INFO:CONSOLE:374] \"[***zaraz:track***] set_age [object Object]\", source: https://www.ivisa.com/taiwan/apply-now (374)\n[pid=41252][err] [0608/164247.876:INFO:CONSOLE:374] \"[***zaraz:track***] set_age [object Object]\", source: https://www.ivisa.com/taiwan/apply-now (374)\n[pid=41252][err] [0608/164248.195:INFO:CONSOLE:406] \"[zaraz:set] product_country Taiwan\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164248.196:INFO:CONSOLE:406] \"[zaraz:set] product_id 11120\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164248.196:INFO:CONSOLE:406] \"[zaraz:set] product_name Taiwan Arrival Card\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164248.196:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164248.196:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 5628\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164248.196:INFO:CONSOLE:406] \"[zaraz:set] visa_classification arrival_card\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164253.005:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_passport\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164253.005:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/taiwan/apply-now (374)\n[pid=41252][err] [0608/164253.648:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=41252][err] [0608/164253.677:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/taiwan/apply-now/passport-details/0 (0)\n[pid=41252][err] [0608/164253.927:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=41252][err] [0608/164253.927:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=41252][err] [0608/164254.009:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=41252][err] [0608/164254.041:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=41252][err] [0608/164254.050:INFO:CONSOLE:374] \"[***zaraz:track***] add_passport_info_now [object Object]\", source: https://www.ivisa.com/taiwan/apply-now (374)\n[pid=41252][err] [0608/164256.842:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"skip-address-202605-86b9yf4bv\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=41252][err] [0608/164256.972:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_address\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164256.972:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/taiwan/apply-now (374)\n[pid=41252][err] [0608/164257.332:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=41252][err] [0608/164257.384:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/taiwan/apply-now/address-details/0?partial_order=ac_a28bba369c87fff33385860cecf97dc6 (0)\n[pid=41252][err] [0608/164257.434:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=41252][err] [0608/164257.436:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=41252][err] [0608/164257.679:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=41252][err] [0608/164257.722:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=41252][err] [0608/164304.310:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_additional_info\", source: https://www.ivisa.com/taiwan/apply-now (406)\n[pid=41252][err] [0608/164304.310:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/taiwan/apply-now (374)\n[pid=41252][err] [0608/164304.327:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"prev-sub-202605-86b8ufyh8\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=41252][err] [0608/164304.450:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=41252][err] [0608/164304.461:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/taiwan/apply-now/additional-info/0?partial_order=ac_a28bba369c87fff33385860cecf97dc6 (0)\n[pid=41252][err] [0608/164304.467:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=41252][err] [0608/164304.467:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=41252][err] [0608/164304.484:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=41252][err] [0608/164304.535:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:42:40.958Z",
+                  "annotations": [],
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\taiwan.spec.js",
+                    "column": 14,
+                    "line": 16
+                  }
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "7dc3f3dd12b768a0592e-8bbd5babfde4493b894b",
+          "file": "Production/taiwan.spec.js",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "Production\\ukEta.spec.js",
+      "file": "Production/ukEta.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "UK ETA",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "fixme",
+                  "location": {
+                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\ukEta.spec.js",
+                    "line": 5,
+                    "column": 6
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:42:46.933Z",
+                  "annotations": [
+                    {
+                      "type": "fixme",
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\ukEta.spec.js",
+                        "line": 5,
+                        "column": 6
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ade91a2a17e6e0d782e0-abc2cafe78c5391f9ee2",
+          "file": "Production/ukEta.spec.js",
+          "line": 5,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "Production\\usEsta.spec.js",
+      "file": "Production/usEsta.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "US ESTA",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 5,
+                  "status": "interrupted",
+                  "duration": 20027,
+                  "error": {
+                    "message": "Error: locator.selectOption: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('[name=\"applicant.0.dob.day\"]')\u001b[22m\n",
+                    "stack": "Error: locator.selectOption: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('[name=\"applicant.0.dob.day\"]')\u001b[22m\n\n    at Object.step_1 (C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\functions.js:171:19)\n    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\usEsta.spec.js:14:22",
+                    "location": {
+                      "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\functions.js",
+                      "column": 19,
+                      "line": 171
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mfunctions.js:171\n\n\u001b[0m \u001b[90m 169 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m step_1(page\u001b[33m,\u001b[39m subscription){\n \u001b[90m 170 |\u001b[39m     \u001b[36mconst\u001b[39m dob_day \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[name=\"applicant.0.dob.day\"]'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 171 |\u001b[39m     \u001b[36mawait\u001b[39m dob_day\u001b[33m.\u001b[39mselectOption(\u001b[32m'13'\u001b[39m)\n \u001b[90m     |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 172 |\u001b[39m\n \u001b[90m 173 |\u001b[39m     \u001b[36mconst\u001b[39m dob_month \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[name=\"applicant.0.dob.month\"]'\u001b[39m)\n \u001b[90m 174 |\u001b[39m     \u001b[36mawait\u001b[39m dob_month\u001b[33m.\u001b[39mselectOption(\u001b[32m'7'\u001b[39m)\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\functions.js",
+                        "column": 19,
+                        "line": 171
+                      },
+                      "message": "Error: locator.selectOption: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('[name=\"applicant.0.dob.day\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39mfunctions.js:171\n\n\u001b[0m \u001b[90m 169 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m step_1(page\u001b[33m,\u001b[39m subscription){\n \u001b[90m 170 |\u001b[39m     \u001b[36mconst\u001b[39m dob_day \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[name=\"applicant.0.dob.day\"]'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 171 |\u001b[39m     \u001b[36mawait\u001b[39m dob_day\u001b[33m.\u001b[39mselectOption(\u001b[32m'13'\u001b[39m)\n \u001b[90m     |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 172 |\u001b[39m\n \u001b[90m 173 |\u001b[39m     \u001b[36mconst\u001b[39m dob_month \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[name=\"applicant.0.dob.month\"]'\u001b[39m)\n \u001b[90m 174 |\u001b[39m     \u001b[36mawait\u001b[39m dob_month\u001b[33m.\u001b[39mselectOption(\u001b[32m'7'\u001b[39m)\u001b[0m\n\u001b[2m    at Object.step_1 (C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\functions.js:171:19)\u001b[22m\n\u001b[2m    at C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\Production\\usEsta.spec.js:14:22\u001b[22m"
+                    },
+                    {
+                      "message": "Error: browserContext.close: Test ended.\nBrowser logs:\n\n[pid=2272][err] [0608/164151.137:INFO:CONSOLE:406] \"[zaraz:set] ivu_pseudo_id ivu_yrqh0dvl66e6p9cs\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164151.137:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/philippines/apply-now (374)\n[pid=2272][err] [0608/164151.517:INFO:CONSOLE:406] \"[zaraz:set] nationality MX\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164152.017:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"aa_smoke_test\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=2272][err] [0608/164152.021:INFO:CONSOLE:406] \"[zaraz:set] pp_app_version 1.0.0-JUP-2.0.0\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164152.023:INFO:CONSOLE:406] \"[zaraz:set] applied_experiments Control,Control,Control\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164152.041:INFO:CONSOLE:406] \"[zaraz:set] applicants_qty 1\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164152.914:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=2272][err] [0608/164152.924:INFO:CONSOLE:406] \"[zaraz:set] checkout_session_id 019ea966-4633-73b1-b9fb-91f43c1ebd6b\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164153.562:INFO:CONSOLE:406] \"[zaraz:set] product_country Philippines\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164153.562:INFO:CONSOLE:406] \"[zaraz:set] product_id 10507\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164153.563:INFO:CONSOLE:406] \"[zaraz:set] product_name Philippines eTravel Registration\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164153.563:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164153.564:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 5163\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164153.564:INFO:CONSOLE:406] \"[zaraz:set] visa_classification arrival_card\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164153.593:INFO:CONSOLE:374] \"[***zaraz:track***] visa_eligibility [object Object]\", source: https://www.ivisa.com/philippines/apply-now (374)\n[pid=2272][err] [0608/164153.599:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/philippines/apply-now/personal-details/0 (0)\n[pid=2272][err] [0608/164153.782:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=2272][err] [0608/164153.783:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=2272][err] [0608/164153.811:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"ocr-202605-86b9t78p2\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=2272][err] [0608/164153.817:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"email-202605-86b94nw4k\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=2272][err] [0608/164153.965:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=2272][err] [0608/164153.999:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=2272][err] [0608/164155.601:INFO:CONSOLE:374] \"[***zaraz:track***] set_age [object Object]\", source: https://www.ivisa.com/philippines/apply-now (374)\n[pid=2272][err] [0608/164155.999:INFO:CONSOLE:406] \"[zaraz:set] product_country Philippines\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164156.001:INFO:CONSOLE:406] \"[zaraz:set] product_id 10507\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164156.001:INFO:CONSOLE:406] \"[zaraz:set] product_name Philippines eTravel Registration\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164156.001:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164156.001:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 5163\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164156.001:INFO:CONSOLE:406] \"[zaraz:set] visa_classification arrival_card\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164158.227:INFO:CONSOLE:374] \"[***zaraz:track***] set_age [object Object]\", source: https://www.ivisa.com/philippines/apply-now (374)\n[pid=2272][err] [0608/164158.280:INFO:CONSOLE:374] \"[***zaraz:track***] set_age [object Object]\", source: https://www.ivisa.com/philippines/apply-now (374)\n[pid=2272][err] [0608/164158.866:INFO:CONSOLE:406] \"[zaraz:set] product_country Philippines\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164158.867:INFO:CONSOLE:406] \"[zaraz:set] product_id 10507\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164158.867:INFO:CONSOLE:406] \"[zaraz:set] product_name Philippines eTravel Registration\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164158.868:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164158.868:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 5163\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164158.868:INFO:CONSOLE:406] \"[zaraz:set] visa_classification arrival_card\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164159.133:INFO:CONSOLE:374] \"[***zaraz:track***] set_age [object Object]\", source: https://www.ivisa.com/philippines/apply-now (374)\n[pid=2272][err] [0608/164159.583:INFO:CONSOLE:406] \"[zaraz:set] product_country Philippines\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164159.583:INFO:CONSOLE:406] \"[zaraz:set] product_id 10507\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164159.583:INFO:CONSOLE:406] \"[zaraz:set] product_name Philippines eTravel Registration\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164159.584:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164159.584:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 5163\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164159.585:INFO:CONSOLE:406] \"[zaraz:set] visa_classification arrival_card\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164206.833:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_passport\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164206.835:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/philippines/apply-now (374)\n[pid=2272][err] [0608/164211.112:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=2272][err] [0608/164211.369:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/philippines/apply-now/passport-details/0?partial_order=ac_86c1a0224fe0200fecaabe0eed2539d6 (0)\n[pid=2272][err] [0608/164212.455:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=2272][err] [0608/164212.456:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=2272][err] [0608/164212.639:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=2272][err] [0608/164212.673:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=2272][err] [0608/164212.684:INFO:CONSOLE:374] \"[***zaraz:track***] add_passport_info_now [object Object]\", source: https://www.ivisa.com/philippines/apply-now (374)\n[pid=2272][err] [0608/164215.843:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"skip-address-202605-86b9yf4bv\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=2272][err] [0608/164217.264:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_address\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164217.265:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/philippines/apply-now (374)\n[pid=2272][err] [0608/164218.020:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=2272][err] [0608/164218.193:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/philippines/apply-now/address-details/0?partial_order=ac_86c1a0224fe0200fecaabe0eed2539d6 (0)\n[pid=2272][err] [0608/164218.947:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=2272][err] [0608/164218.948:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=2272][err] [0608/164219.548:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=2272][err] [0608/164219.554:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=2272][err] [0608/164227.161:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_additional_info\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164227.162:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/philippines/apply-now (374)\n[pid=2272][err] [0608/164227.336:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=2272][err] [0608/164227.347:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/philippines/apply-now/additional-info/0?partial_order=ac_86c1a0224fe0200fecaabe0eed2539d6 (0)\n[pid=2272][err] [0608/164227.352:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=2272][err] [0608/164227.353:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=2272][err] [0608/164227.413:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=2272][err] [0608/164227.433:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=2272][err] [0608/164236.317:INFO:CONSOLE:406] \"[zaraz:set] step_slug traveler_review\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164236.318:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/philippines/apply-now (374)\n[pid=2272][err] [0608/164236.722:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=2272][err] [0608/164236.762:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=2272][err] [0608/164236.763:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=2272][err] [0608/164236.766:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/philippines/apply-now/traveler-review?partial_order=ac_86c1a0224fe0200fecaabe0eed2539d6 (0)\n[pid=2272][err] [0608/164236.955:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=2272][err] [0608/164237.439:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=2272][err] [0608/164237.541:INFO:CONSOLE:406] \"[zaraz:set] step_slug contact_details\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164237.541:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/philippines/apply-now (374)\n[pid=2272][err] [0608/164237.846:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=2272][err] [0608/164237.875:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/philippines/apply-now/contact-details?partial_order=ac_86c1a0224fe0200fecaabe0eed2539d6 (0)\n[pid=2272][err] [0608/164237.877:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=2272][err] [0608/164237.877:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=2272][err] [0608/164238.269:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=2272][err] [0608/164238.376:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=2272][err] [0608/164239.279:INFO:CONSOLE:3] \"AxiosError: Request failed with status code 429\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (3)\n[pid=2272][err] [0608/164239.284:INFO:CONSOLE:3] \"AxiosError: Request failed with status code 429\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (3)\n[pid=2272][err] [0608/164239.341:INFO:CONSOLE:3] \"AxiosError: Request failed with status code 429\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (3)\n[pid=2272][err] [0608/164239.419:INFO:CONSOLE:406] \"[zaraz:set] step_slug review\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164239.419:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/philippines/apply-now (374)\n[pid=2272][err] [0608/164239.424:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"split-payment-202604-86b8krtd8\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=2272][err] [0608/164239.434:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"processing_speed_prices\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=2272][err] [0608/164239.435:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"dest-pricing-202604-86b8ufz41\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=2272][err] [0608/164239.437:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"youth-disc-202605-86b9jff0r\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=2272][err] [0608/164239.457:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"denial-prot-copy-202604-86b8qpw5z\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=2272][err] [0608/164239.458:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"price-cta-202605-86ba4k2u4\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=2272][err] [0608/164239.458:INFO:CONSOLE:374] \"[***zaraz:track***] payment_methods_shown [object Object]\", source: https://www.ivisa.com/philippines/apply-now (374)\n[pid=2272][err] [0608/164239.467:INFO:CONSOLE:406] \"[zaraz:set] processing_speed rush\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164239.469:INFO:CONSOLE:406] \"[zaraz:set] processing_speed rush\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164239.691:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=2272][err] [0608/164239.708:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/philippines/apply-now/checkout?partial_order=ac_86c1a0224fe0200fecaabe0eed2539d6 (0)\n[pid=2272][err] [0608/164239.729:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=2272][err] [0608/164239.729:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=2272][err] [0608/164239.794:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=2272][err] [0608/164240.096:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=2272][err] [0608/164240.343:INFO:CONSOLE:406] \"[zaraz:set] product_country Philippines\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164240.343:INFO:CONSOLE:406] \"[zaraz:set] product_id 10507\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164240.343:INFO:CONSOLE:406] \"[zaraz:set] product_name Philippines eTravel Registration\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164240.343:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164240.343:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 5163\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164240.344:INFO:CONSOLE:406] \"[zaraz:set] visa_classification arrival_card\", source: https://www.ivisa.com/philippines/apply-now (406)\n[pid=2272][err] [0608/164249.472:INFO:CONSOLE:406] \"[zaraz:set] domain www.ivisa.com\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164249.473:INFO:CONSOLE:406] \"[zaraz:set] product_country US\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164249.474:INFO:CONSOLE:406] \"[zaraz:set] nationality MX\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164249.474:INFO:CONSOLE:406] \"[zaraz:set] product_id 10724\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164249.474:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164249.474:INFO:CONSOLE:406] \"[zaraz:set] travel_doc_classification eta\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164249.474:INFO:CONSOLE:406] \"[zaraz:set] page_type application_page\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164249.474:INFO:CONSOLE:406] \"[zaraz:set] step_slug t0_personal\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164249.474:INFO:CONSOLE:406] \"[zaraz:set] customer_ivi hop-ijn-hp-ih\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164249.475:INFO:CONSOLE:406] \"[zaraz:set] ivu_pseudo_id ivu_anhuy57nsyux0bsh\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164249.477:INFO:CONSOLE:374] \"[***zaraz:track***] page_view [object Object]\", source: https://www.ivisa.com/usa/apply-now (374)\n[pid=2272][err] [0608/164249.900:INFO:CONSOLE:406] \"[zaraz:set] nationality MX\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164250.581:INFO:CONSOLE:406] \"[zaraz:set] pp_app_version 1.0.0-JUP-2.0.0\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164250.583:INFO:CONSOLE:406] \"[zaraz:set] applied_experiments Control,Variant,Distance Pricing\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164250.604:INFO:CONSOLE:406] \"[zaraz:set] applicants_qty 1\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164250.867:INFO:CONSOLE:1] \"[statsig] Exposure logged for experiment \"aa_smoke_test\"\", source: https://www.ivisa.com/build/assets/affiliate-link-generator-BbxPyLJc-a3ba1a40.js (1)\n[pid=2272][err] [0608/164251.476:ERROR:gpu\\command_buffer\\service\\webgpu_decoder_impl.cc:1711] Failed to query ID3D11Device from ANGLE.\n[pid=2272][err] [0608/164251.490:INFO:CONSOLE:406] \"[zaraz:set] checkout_session_id 019ea967-2b92-716b-b6b4-0b0468b66456\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164251.676:INFO:CONSOLE:406] \"[zaraz:set] product_country United States\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164251.677:INFO:CONSOLE:406] \"[zaraz:set] product_id 10141\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164251.677:INFO:CONSOLE:406] \"[zaraz:set] product_name United States ESTA\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164251.678:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164251.678:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 43\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164251.678:INFO:CONSOLE:406] \"[zaraz:set] visa_classification eta\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164251.691:INFO:CONSOLE:0] \"No available adapters.\", source: https://www.ivisa.com/usa/apply-now/personal-details/0 (0)\n[pid=2272][err] [0608/164251.772:INFO:CONSOLE:374] \"[***zaraz:track***] visa_eligibility [object Object]\", source: https://www.ivisa.com/usa/apply-now (374)\n[pid=2272][err] [0608/164251.799:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=2272][err] [0608/164251.799:ERROR:content\\public\\browser\\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.\n[pid=2272][err] [0608/164251.884:INFO:CONSOLE:374] \"[***zaraz:track***] visa_eligibility [object Object]\", source: https://www.ivisa.com/usa/apply-now (374)\n[pid=2272][err] [0608/164251.892:ERROR:gpu\\ipc\\service\\gles2_command_buffer_stub.cc:99] ContextResult::kFatalFailure: fail_if_major_perf_caveat + software gl\n[pid=2272][err] [0608/164252.001:ERROR:services\\network\\p2p\\socket_manager.cc:137] Failed to resolve address for ec2-52-23-111-175.compute-1.amazonaws.com., errorcode: -105\n[pid=2272][err] [0608/164252.580:INFO:CONSOLE:406] \"[zaraz:set] product_country United States\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164252.589:INFO:CONSOLE:406] \"[zaraz:set] product_id 10724\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164252.589:INFO:CONSOLE:406] \"[zaraz:set] product_name United States B1/B2 Visa\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164252.589:INFO:CONSOLE:406] \"[zaraz:set] product_classification visa\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164252.589:INFO:CONSOLE:406] \"[zaraz:set] visa_type_id 5353\", source: https://www.ivisa.com/usa/apply-now (406)\n[pid=2272][err] [0608/164252.589:INFO:CONSOLE:406] \"[zaraz:set] visa_classification guided_entry\", source: https://www.ivisa.com/usa/apply-now (406)"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-08T22:42:46.945Z",
+                  "annotations": [],
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "C:\\Users\\vanei\\OneDrive\\Desktop\\Playwright\\tests\\functions.js",
+                    "column": 19,
+                    "line": 171
+                  }
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "2522995a45eb8a018f47-31fa8a75456aa62b74a9",
+          "file": "Production/usEsta.spec.js",
+          "line": 5,
           "column": 1
         }
       ]
@@ -243,11 +1766,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-06-05T16:48:56.646Z",
-    "duration": 268481.56799999997,
-    "expected": 1,
-    "skipped": 0,
-    "unexpected": 0,
-    "flaky": 1
+    "startTime": "2026-06-08T22:37:03.090Z",
+    "duration": 367550.378,
+    "expected": 11,
+    "skipped": 5,
+    "unexpected": 5,
+    "flaky": 4
   }
 }

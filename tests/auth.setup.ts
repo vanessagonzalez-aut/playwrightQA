@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import test, { test as setup, expect } from '@playwright/test';
 import {deploy_url, email_test} from './urls'
 const percySnapshot = require('@percy/playwright');
@@ -8,6 +9,14 @@ import path from 'path';
 const authFile = path.join(__dirname, '../.auth/user.json');
 
 setup('authenticate', async ({ page, context }) => {
+  const testing_type = process.env.TESTING_TYPE;
+  if (testing_type === "production") {
+    if (!fs.existsSync(authFile)) {
+      fs.mkdirSync(path.dirname(authFile), { recursive: true });
+      fs.writeFileSync(authFile, JSON.stringify({ cookies: [], origins: [] }));
+    }
+    return;
+  }
   if(!fs.existsSync(authFile)){
     test.slow()
     await context.addCookies([
@@ -27,10 +36,8 @@ setup('authenticate', async ({ page, context }) => {
         url: deploy_url
       }
     ]);
-
     await page.goto(`${deploy_url}turkey/apply-now`);
     await appFunctions.step_1(page);
-    await appFunctions.step_1(page)
     await page.waitForTimeout(2000)
     await percySnapshot(page, 'Step1Application')
     const continue_sidebar = page.getByRole("button").getByText("Continue")

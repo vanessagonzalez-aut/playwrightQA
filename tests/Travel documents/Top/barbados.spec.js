@@ -14,6 +14,7 @@ test('Barbados ED Card', async ({ page }) => {
   await continue_sidebar.click()
   await page.waitForURL("**/barbados/apply-now/contact-details")
   await continue_sidebar.click() 
+  
   await appFunctions.newPaymentCheckout(page, '6011 1111 1111 1117', '123')
   const payment_btn = page.locator('id=btnSubmitPayment')
   await expect(payment_btn).toBeVisible()

@@ -40,7 +40,11 @@ jobs:
         run: |
           set -e
 
-          if [ "$TESTING_TYPE" = "fav" ]; then
+          if [ "$TESTING_TYPE" = "production" ]; then
+            npx playwright test \
+                "tests/Production" \
+                --workers 4
+          elif [ "$TESTING_TYPE" = "fav" ]; then
             npx percy exec -- \
               npx playwright test \
                 "tests/Travel documents/" \
@@ -57,7 +61,7 @@ jobs:
                 "tests/Mobile/" \
                 "tests/visual/" \
                 "/tests/wolf-tests" \
-                --workers 4 
+                --workers 4
           fi
 
       - name: Get latest Percy build ID

@@ -219,16 +219,21 @@ async function step_3c(page,continue_sidebar){
     await page.keyboard.press("Enter")
     await page.waitForTimeout(1000)
     await page.locator('//li[@data-type="place"]').first().click()
-    await page.waitForTimeout(1000)
+    await page.waitForTimeout(2000)
     await expect(continue_sidebar).toBeEnabled()
     await continue_sidebar.click()
 }
-async function additionalInfo(page,continue_sidebar){
+async function additionalInfo(page,continue_sidebar, skipEmploymentQuestion){
     await page.waitForTimeout(2000)
-    await page.locator('[name="applicant.0.are_employed"]').getByTestId("option-false").click()
-    await page.waitForTimeout(2000)
-    await page.locator('[name="applicant.0.criminal_offence"]').getByTestId("option-false").click()
-    await page.waitForTimeout(2000)
+    if(skipEmploymentQuestion){
+        await page.locator('[name="applicant.0.chinese_visa"]').getByTestId('option-true').click()
+    }
+    if(!skipEmploymentQuestion){
+        await page.locator('[name="applicant.0.are_employed"]').getByTestId("option-false").click()
+        await page.waitForTimeout(2000)
+        await page.locator('[name="applicant.0.criminal_offence"]').getByTestId("option-false").click()
+        await page.waitForTimeout(2000)
+    }
     await page.locator('[name="applicant.0.specific_travel_plans"]').getByTestId("option-false").click()
     await page.waitForTimeout(2000)
     await page.getByTestId("dropdown-applicant.0.reason_for_travel").selectOption({value: "Tourism"})

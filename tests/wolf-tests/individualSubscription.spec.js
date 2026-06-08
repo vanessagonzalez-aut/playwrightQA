@@ -157,6 +157,7 @@ await page.getByRole("radio").nth(0).click()
   if (duplicate){
     await page.locator('id=btnDisclaimerNext').click()
   }
+  await page.waitForTimeout(2000)
   await page.getByTestId("processing-standard").click()
 
   await expect(payment_btn).toBeVisible()

@@ -1,4 +1,3 @@
-require('dotenv').config();
 const { test, expect } = require('@playwright/test');
 const appFunctions = require('../../functions')
 const selectors = require('../../selectors')
