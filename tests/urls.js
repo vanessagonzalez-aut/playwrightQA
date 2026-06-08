@@ -1,7 +1,7 @@
-const deploy_url = "https://kenrick-maestro-86ba5pef4--11ebf682.visachinaonline.com/"
-const general_url = "https://kenrick-maestro-86ba5pef4--11ebf682."  
-const email_test = "qatest@testing.col"
-const requester = "Carol"
+const deploy_url = "https://deploy-20260609--5a4b763e.visachinaonline.com/"
+const general_url = "https://deploy-20260609--5a4b763e."  
+const email_test = "malamado@gmail.com"
+const requester = "Alejandro"
 let Orders = [] 
 module.exports = {deploy_url,  email_test, Orders, general_url, requester}
 
