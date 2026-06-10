@@ -1,4 +1,4 @@
-const deploy_url = "ivisa.com/"
+const deploy_url = "https://ivisa.com/"
 const general_url = ""  
 const email_test = "fgertwe@mailinator.com"
 const requester = "Vanessa"
