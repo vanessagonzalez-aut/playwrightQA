@@ -1,5 +1,5 @@
-const deploy_url = "https://andee-lang-rule-86baecd1x--85475b76.visachinaonline.com/"
-const general_url = "https://andee-lang-rule-86baecd1x--85475b76."  
+const deploy_url = "https://andee-travel-doc-86badxjmf--03e279e3.visachinaonline.com/"
+const general_url = "https://andee-travel-doc-86badxjmf--03e279e3."  
 const email_test = "automations@ivisa.com"
 const requester = "Vanessa"
 let Orders = [] 
