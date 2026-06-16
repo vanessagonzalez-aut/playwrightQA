@@ -1,5 +1,5 @@
-const deploy_url = "https://andee-blade-es2020-86baecd1r--4458f3b4.visachinaonline.com/"
-const general_url = "https://andee-blade-es2020-86baecd1r--4458f3b4."  
+const deploy_url = "https://andee-app-common-chunk-86baerbtx--5e04e5b7.visachinaonline.com/"
+const general_url = "https://andee-app-common-chunk-86baerbtx--5e04e5b7."  
 const email_test = "carotest@prior.col"
 const requester = "Carol"
 let Orders = [] 
