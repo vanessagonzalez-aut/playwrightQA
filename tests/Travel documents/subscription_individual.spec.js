@@ -91,11 +91,13 @@ test('Individual subscription purchase', async ({ page }) => {
   await percySnapshot(page, 'Purchase Subscription modal');
   await page.getByTestId("purchase-subscription-button").click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/purchase_addons/new_mop?subscription=true")
-  await page.locator('id=cardNumber').frameLocator('[title="Card number"]').locator('id=primer-hosted-input').fill('4111 1111 1111 1111')
-  await page.locator('id=expiry').frameLocator('[title="Expiry (MM/YY)"]').locator('id=primer-hosted-input').fill('10/26')
-  await page.locator('id=cvv').frameLocator('[title="CVV"]').locator('id=primer-hosted-input').fill('123')
-  await page.locator('id=cardFormName').frameLocator('[title="Name on card"]').locator('id=primer-hosted-input').fill('Jhon')
-  await page.locator('.billing-address-form').locator("input").fill('12345')
+  await page.locator('[name="number"]').fill('4111111111111111');
+  const expiration_month = page.locator('[name="mmyy"]')
+  await expiration_month.fill('10/26')
+  const cvv = page.locator('[name="cvv"]')
+  await cvv.fill('123')
+  const cardholder_name = page.locator('[name="full_name"]')
+  await cardholder_name.fill('John Smith')
   await page.locator('id=btnSubmitPayment').click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "?subscription=true")
 

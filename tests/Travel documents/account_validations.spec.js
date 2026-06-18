@@ -36,7 +36,7 @@ test('Magic login link', async ({ browser }) => {
     const iframe = email.frameLocator('iframe');
     const [newTab] = await Promise.all([
       email.context().waitForEvent('page'),
-      iframe.getByRole('link', { name: 'Log in', exact: true }).click(),
+      iframe.getByRole('row', { name: 'Log in', exact: true }).getByRole('link').click(),
     ]);
 
     await newTab.waitForLoadState()

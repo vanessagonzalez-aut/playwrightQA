@@ -4,7 +4,7 @@ import automationsInfo from './tests/urls.js'
 async function sendReportToN8N(percy_url, testsType){
     const report = await fs.readFile('./results.json')
 
-    const response = await fetch('https://n8n-service-donk.onrender.com/webhook/receive-report', {
+    const response = await fetch('https://little-server.vercel.app/receive-report', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

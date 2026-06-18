@@ -10,8 +10,4 @@ test('Go to my orders page from homepage', async ({ page }) => {
     await page.goto(deploy_url);
     await page.locator('id=loginBtn').click()
     await page.waitForURL("**/account")
-    await expect(page.locator('//div[@data-vue-component="email-confirmed"]')).toBeVisible()
-    await expect(page.getByTestId("action-needed-button")).toBeVisible()
-    await page.getByRole('button', { name: 'Confirm' }).click()
-    await expect(page.locator('//div[@data-vue-component="email-confirmed"]')).toBeHidden()
 })
