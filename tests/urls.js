@@ -1,5 +1,5 @@
-const deploy_url = "https://deploy-20260623--67e5040f.visachinaonline.com/"
-const general_url = "https://deploy-20260623--67e5040f."  
+const deploy_url = "https://da-order-item-page--5f3da9b5.visachinaonline.com/"
+const general_url = "https://da-order-item-page--5f3da9b5."  
 const email_test = "test@test.com"
 const requester = "Maria"
 let Orders = [] 
