@@ -90,7 +90,5 @@ test.fixme('Saint Kitts and Nevis ETA ', async ({ page }) => {
     await page.locator('id=skip-recommendation-button').click()    
   }
   
-   
-  
   await page.waitForURL(deploy_url + "order/" + Order_num)
 })
