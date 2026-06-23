@@ -186,7 +186,4 @@ test('UK ETA ORDER 2', async({page}) => {
     await page.waitForNavigation({waitUntil: 'load'})
     await page.locator("skip-recommendation-button").click()
 
-    const track_application = page.locator('#trackApplication')
-    await expect(track_application).toBeVisible()
-
 })

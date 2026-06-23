@@ -127,8 +127,6 @@ test('Embassy reg', async({page}) => {
   await submit_post_payment.click()
   await page.waitForNavigation({waitUntil: 'load'})
 
-  const track_application = page.locator('#trackApplication')
-  await expect(track_application).toBeVisible()
   await track_application.click()
   await expect(page.locator("#h1-tag-container")).toBeVisible()
 

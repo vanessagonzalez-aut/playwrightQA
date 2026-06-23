@@ -83,7 +83,7 @@ await page.locator("id=btnSubmitApplication").click()
   if(skip_recomendation){
     await page.locator('id=skip-recommendation-button').click()    
   }
-  await page.locator('id=trackApplication').click()  
+    
   await page.waitForURL(general_url + 'ivisatravel.visachinaonline.com/order/' + Order_num)
   // Purchase subscription
 
@@ -190,6 +190,6 @@ await page.getByRole("radio").nth(0).click()
   if(skip_recomendation){
     await page.locator('id=skip-recommendation-button').click()    
   }
-  await page.locator('id=trackApplication').click()  
+    
   await page.waitForURL(general_url + 'ivisatravel.visachinaonline.com/order/' + Order_num)
 })

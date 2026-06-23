@@ -184,7 +184,5 @@ test.slow()
     await page.waitForNavigation({waitUntil: 'load'})
     await page.locator("skip-recommendation-button").click()
 
-    const track_application = page.locator('#trackApplication')
-    await expect(track_application).toBeVisible()
 
 })

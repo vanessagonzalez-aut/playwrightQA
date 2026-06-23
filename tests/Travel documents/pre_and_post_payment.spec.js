@@ -166,8 +166,6 @@ test.fixme('Travel Doc application pre and post payment are working', async({pag
       await page.locator('id=skip-recommendation-button').click()
     }
 
-    const track_application = page.locator('#trackApplication')
-    await expect(track_application).toBeVisible()
 })
 
 

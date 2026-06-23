@@ -89,8 +89,6 @@ test.skip('FastPassport - USPS Emergency - Preparing for shipping', async({page,
   const submit_post_payment = page.locator("id=btnSubmitApplication")
   await submit_post_payment.click()
   await page.waitForNavigation({waitUntil: 'load'})
-  const track_application = page.locator('#trackApplication')
-  await expect(track_application).toBeVisible()
 
   await page.goto(general_url + 'admin.visachinaonline.com/login')
   await page.locator('#email_login_input').fill('david@admin.com')

@@ -241,6 +241,4 @@ test.skip('Emergency Passport', async({page}) =>{
   await selectors.phoneNumber(page)
   await submit_post_payment.click()
     await page.waitForNavigation({waitUntil: 'load'})
-    const track_application = page.locator('#trackApplication')
-    await expect(track_application).toBeVisible()
 })

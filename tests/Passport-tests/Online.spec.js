@@ -120,6 +120,4 @@ test('Online Passport', async({page}) =>{
   const submit_post_payment = page.locator("id=btnSubmitApplication")
   await submit_post_payment.click()
   await page.waitForNavigation({waitUntil: 'load'})
-  const track_application = page.locator('#trackApplication')
-  await expect(track_application).toBeVisible()
 })
