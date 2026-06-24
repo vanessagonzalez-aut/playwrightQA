@@ -1,6 +1,6 @@
-const deploy_url = "https://andee-prepay-aa-86ba65mmd--43cdec61.visachinaonline.com/"
-const general_url = "https://andee-prepay-aa-86ba65mmd--43cdec61."  
-const email_test = "test@test.com"
-const requester = "Maria"
+const deploy_url = "https://am-reskin-admin--1c3d4ade.visachinaonline.com/"
+const general_url = "https://am-reskin-admin--1c3d4ade."  
+const email_test = "test.analia@mail.com"
+const requester = "Analia"
 let Orders = [] 
 module.exports = {deploy_url,  email_test, Orders, general_url, requester}
