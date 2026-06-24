@@ -67,7 +67,7 @@ test('Israel ETA', async ({ page }) => {
     await page.locator('id=skip-recommendation-button').click()    
   }
   
-  await page.locator('id=trackApplication').click()
+   
   
   await page.waitForURL(deploy_url + "order/" + Order_num)
 })
