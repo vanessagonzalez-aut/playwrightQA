@@ -131,7 +131,7 @@ async function autofillExisting(page, url, nationality, subscription) {
     await page.waitForTimeout(2000)
     await page.locator('[name="applicant.0.criminal_offence"]').getByTestId("option-false").click()
     await page.waitForTimeout(2000)
-    await page.locator('[name=" general.specific_travel_plans"]').getByTestId("option-false").click()
+    await page.locator('[name="general.specific_travel_plans"]').getByTestId("option-false").click()
     await page.waitForTimeout(2000)
     await page.getByTestId("dropdown-applicant.0.reason_for_travel").selectOption({value: "Tourism"})
     const continue_sidebar = page.getByRole("button").getByText("Continue")
@@ -205,7 +205,7 @@ async function additionalInfo(page,continue_sidebar, skipEmploymentQuestion){
         await page.locator('[name="applicant.0.criminal_offence"]').getByTestId("option-false").click()
         await page.waitForTimeout(2000)
     }
-    await page.locator('[name=" general.specific_travel_plans"]').getByTestId("option-false").click()
+    await page.locator('[name="general.specific_travel_plans"]').getByTestId("option-false").click()
     await page.waitForTimeout(2000)
     await page.getByTestId("dropdown-applicant.0.reason_for_travel").selectOption({value: "Tourism"})
     await expect(continue_sidebar).toBeEnabled()
