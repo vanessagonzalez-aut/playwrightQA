@@ -87,7 +87,7 @@ await page.locator("id=btnSubmitApplication").click()
   await page.waitForURL(general_url + 'ivisatravel.visachinaonline.com/order/' + Order_num)
   // Purchase subscription
 
-  await page.getByText("View plans").click()
+  await page.getByText("View discounts").click()
   await expect(page.locator("id=iVisaPlusContent")).toBeVisible()
 
   await expect(page.getByTestId("purchase-subscription-button")).toContainText(" Subscribe for $79.99 $29.99")

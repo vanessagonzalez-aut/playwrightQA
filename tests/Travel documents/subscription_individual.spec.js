@@ -82,7 +82,7 @@ test('Individual subscription purchase', async ({ page }) => {
   await page.waitForURL(deploy_url + "order/" + Order_num)
   // Purchase subscription
 
-  await page.getByText("View plans").click()
+  await page.getByText("View discounts").click()
   await expect(page.locator("id=iVisaPlusContent")).toBeVisible()
 
   await expect(page.getByTestId("purchase-subscription-button")).toContainText(" Subscribe for $79.99 $29.99")
