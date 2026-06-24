@@ -146,7 +146,7 @@ await page.getByRole("radio").nth(0).click()
   await page.waitForTimeout(2000)
   await page.locator('[name="applicant.0.criminal_offence"]').getByTestId("option-false").click()
   await page.waitForTimeout(2000)
-  await page.locator('[name="applicant.0.specific_travel_plans"]').getByTestId("option-false").click()
+  await page.locator('[name=" general.specific_travel_plans"]').getByTestId("option-false").click()
   await page.waitForTimeout(2000)
   await page.getByTestId("dropdown-applicant.0.reason_for_travel").selectOption({value: "Tourism"})
 
