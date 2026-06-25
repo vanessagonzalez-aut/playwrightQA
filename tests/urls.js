@@ -1,6 +1,6 @@
-const deploy_url = "https://avni-php-86bak7bmw--93f3579d.visachinaonline.com/"
-const general_url = "https://avni-php-86bak7bmw--93f3579d."  
-const email_test = "payments@test.col"
-const requester = "Carol"
+const deploy_url = "https://deploy-20260625--290e8303.visachinaonline.com/"
+const general_url = "https://deploy-20260625--290e8303."  
+const email_test = "malamado@gmail.com"
+const requester = "Alejandro"
 let Orders = [] 
 module.exports = {deploy_url,  email_test, Orders, general_url, requester}
