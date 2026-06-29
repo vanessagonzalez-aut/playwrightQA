@@ -47,7 +47,7 @@ test('Extra Order', async ({ page, browser }) => {
   await page.waitForTimeout(1000)
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
-  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=continue#step=trav0_travel")
+  await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_travel")
   await selectors.booleanOptions(page, "applicant.0.specific_travel_plans", "option-No, my plans are flexible")
   await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
