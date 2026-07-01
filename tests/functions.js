@@ -232,16 +232,20 @@ async function additionalInfo(page,continue_sidebar, countryCode){
             await page.waitForTimeout(2000)
             await page.locator('[name="applicant.0.pakistan_parents"]').getByTestId("option-false").click()
             await page.waitForTimeout(2000)
-        case "TW": 
+            break
+        case "TW":
             await page.waitForTimeout(1000)
+            break
         case "US":
             await page.waitForTimeout(1000)
+            break
         case "UK":
             await page.waitForTimeout(2000)
             await page.locator('[name="applicant.0.dual_nationality"]').getByTestId("option-false").click()
             await page.waitForTimeout(2000)
             await page.locator('[name="applicant.0.convicted_of_offence"]').getByTestId("option-false").click()
             await page.waitForTimeout(2000)
+            break
         default:
             await page.locator('[name="applicant.0.are_employed"]').getByTestId("option-false").click()
             await page.waitForTimeout(2000)
