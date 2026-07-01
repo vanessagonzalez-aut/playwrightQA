@@ -140,12 +140,12 @@ async function autofillExisting(page, url, nationality, subscription, countryCod
             await page.waitForTimeout(2000)
             await page.locator('[name="applicant.0.dual_nationality"]').getByTestId("option-false").click()
             await page.waitForTimeout(2000)
-            await page.locator('[name="applicant.0.criminal_offence"]').getByTestId("option-false").click()
+            await page.locator('[name="applicant.0.convicted_of_offence"]').getByTestId("option-false").click()
             await page.waitForTimeout(2000)
         case "TW": 
-            break
+            await page.waitForTimeout(1000)
         case "US":
-            break
+            await page.waitForTimeout(1000)
         default:
             await page.locator('[name="applicant.0.are_employed"]').getByTestId("option-false").click()
             await page.waitForTimeout(2000)
@@ -232,15 +232,15 @@ async function additionalInfo(page,continue_sidebar, countryCode){
             await page.waitForTimeout(2000)
             await page.locator('[name="applicant.0.pakistan_parents"]').getByTestId("option-false").click()
             await page.waitForTimeout(2000)
-        case "US":
-            break
         case "TW": 
-            break
+            await page.waitForTimeout(1000)
+        case "US":
+            await page.waitForTimeout(1000)
         case "UK":
             await page.waitForTimeout(2000)
             await page.locator('[name="applicant.0.dual_nationality"]').getByTestId("option-false").click()
             await page.waitForTimeout(2000)
-            await page.locator('[name="applicant.0.criminal_offence"]').getByTestId("option-false").click()
+            await page.locator('[name="applicant.0.convicted_of_offence"]').getByTestId("option-false").click()
             await page.waitForTimeout(2000)
         default:
             await page.locator('[name="applicant.0.are_employed"]').getByTestId("option-false").click()
