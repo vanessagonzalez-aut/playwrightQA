@@ -99,12 +99,8 @@ test.skip('FastPassport - USPS Emergency - Complete', async({page, context}) => 
   await page.locator('#password_login_input').fill('testivisa5!')
   await page.locator('#log_in_button').click()
   await page.waitForURL('**/admin')
-  await page.waitForTimeout(3000)
-  page.on('dialog', async (dialog) => {
-      await dialog.accept(Order_num);
-  });
-  const search_order = page.locator('//li[@onclick="searchOrderID();"]');
-  await search_order.click()
+  await page.getByTestId('admin-search-input').fill(Order_num)
+  await page.getByTestId('admin-search-submit').click()
   await page.locator('[name="change-status"]').selectOption('prepare_for_shipping')
   await expect(page.getByTestId('submitChangeStatus')).toBeEnabled()
   await page.getByTestId('submitChangeStatus').click()

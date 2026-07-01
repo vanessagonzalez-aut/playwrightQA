@@ -86,13 +86,8 @@ test('Send order to WOG', async ({page}) => {
   await page.locator('#password_login_input').fill('testivisa5!')
   await page.locator('#log_in_button').click()
   await page.waitForURL('**/admin')
-  await page.waitForTimeout(3000)
-  page.on('dialog', async (dialog) => {
-      await dialog.accept(Order_num);
-  });
-  const search_order = page.locator('//li[@onclick="searchOrderID();"]');
-  await search_order.click()
-  await page.waitForTimeout(3000)
+  await page.getByTestId('admin-search-input').fill(Order_num)
+  await page.getByTestId('admin-search-submit').click()
   await page.getByTestId('applicant-details').click()
   await page.getByTestId("show-docs-applicant-0").click()
   await page.locator("div").getByText("Passport Personal Details Scan").first().click()

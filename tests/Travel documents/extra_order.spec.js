@@ -64,12 +64,8 @@ test('Extra Order', async ({ page, browser }) => {
   await page.locator('#password_login_input').fill('testivisa5!')
   await page.locator('#log_in_button').click()
   await page.waitForURL(general_url + 'admin.visachinaonline.com/admin')
-  await page.waitForTimeout(3000)
-  page.on('dialog', async (dialog) => {
-      await dialog.accept(Order_num);
-  });
-  const search_order = page.locator('//li[@onclick="searchOrderID();"]');
-  await search_order.click()
+  await page.getByTestId('admin-search-input').fill(Order_num)
+  await page.getByTestId('admin-search-submit').click()
   await page.getByTestId("dropdown-other-actions").selectOption("additional_payment")
   await page.getByTestId("dropdown-charge-type").selectOption("visa_cost")
   await page.locator('[name="amount"]').fill("10")

@@ -11,9 +11,6 @@ test.fixme('Scheduled', async({browser}) => {
     await context.clearCookies();
 
     const page = await context.newPage();
-    page.on('dialog', async (dialog) => {
-        await dialog.accept(Order.Scheduling);
-    });
 
     await page.goto(deploy_url + 'login')
     await page.locator('#email_login_input').fill('david@admin.com')
@@ -23,8 +20,9 @@ test.fixme('Scheduled', async({browser}) => {
     await page.locator('#log_in_button').click()
 
     await page.waitForURL('**/admin')
-    const search_order = page.locator('//li[@onclick="searchOrderID();"]')
-    await search_order.click()
+    await page.getByTestId('admin-search-input').fill(Order_num)
+  await page.getByTestId('admin-search-submit').click()
+    await page.getByTestId('admin-search-submit').click()
     // Change to reviewed status
     await page.locator('[name="change-status"]').selectOption('reviewed')
     await expect(page.getByTestId("submitChangeStatus")).toBeEnabled()

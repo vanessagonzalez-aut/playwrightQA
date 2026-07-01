@@ -155,11 +155,8 @@ test('FastPassport - Online Passport and MIN status', async({page, context}) =>{
   await page.locator('#log_in_button').click()
   await page.waitForURL('**/admin')
   await page.waitForTimeout(3000)
-  page.on('dialog', async (dialog) => {
-      await dialog.accept(Order_num);
-  });
-  const search_order = page.locator('//li[@onclick="searchOrderID();"]');
-  await search_order.click()
+  await page.getByTestId('admin-search-input').fill(Order_num)
+  await page.getByTestId('admin-search-submit').click()
   await page.getByTestId('applicant-details').click()
   urlOrder = page.url()
   await page.getByTestId('min_checkbox_birth_city').first().click()

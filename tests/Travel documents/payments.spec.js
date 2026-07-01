@@ -42,12 +42,8 @@ test('Payment with VISA and Cancelled order Status', async({page}) => {
   await page.waitForURL('**/admin/users')
 
   await page.goto(general_url + 'admin.visachinaonline.com/admin')
-  await page.waitForTimeout(3000)
-  page.on('dialog', async (dialog) => {
-      await dialog.accept(Order_num);
-  });
-  const search_order = page.locator('//li[@onclick="searchOrderID();"]');
-  await search_order.click()
+  await page.getByTestId('admin-search-input').fill(Order_num)
+  await page.getByTestId('admin-search-submit').click()
 
   await page.getByTestId("dl-manage-order-title").click()
   await page.locator('[name="change-status"]').selectOption('cancelled')
