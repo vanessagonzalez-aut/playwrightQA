@@ -14,7 +14,7 @@ test('File upload checker', async({page}) => {
     const date1 = datepicker_date.getDate();
 
     await page.goto(deploy_url + 'india/apply-now')
-    await appFunctions.autofillExisting(page, "india/apply-now/edit-traveler/0")
+    await appFunctions.autofillExisting(page, "india/apply-now/edit-traveler/0", '', false, 'IN')
     await page.waitForURL("**/india/apply-now/traveler-review**")
     const continue_sidebar = page.getByRole("button").getByText("Continue")
     await continue_sidebar.click()

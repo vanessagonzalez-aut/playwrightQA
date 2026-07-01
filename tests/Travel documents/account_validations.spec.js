@@ -41,7 +41,7 @@ test('Magic login link', async ({ browser }) => {
 
     await newTab.waitForLoadState()
     const new_tab_user = newTab.locator('id=loggedInUserContainer')
-    await expect(new_tab_user).toBeVisible()
+    await new_tab_user.click()
     await page.waitForTimeout(5000)
 })
 test('Password set and test', async ({ page }) => {

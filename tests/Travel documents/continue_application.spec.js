@@ -4,7 +4,7 @@ const percySnapshot = require('@percy/playwright');
 const appFunctions = require('../functions')
 test('Continue with your application banner', async({page}) => {
   await page.goto(deploy_url + 'united-kingdom/apply-now')
-  await appFunctions.autofillExisting(page, "united-kingdom/apply-now/edit-traveler/0")
+  await appFunctions.autofillExisting(page, "united-kingdom/apply-now/edit-traveler/0", '', false, 'UK')
   await page.waitForURL("**/united-kingdom/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()

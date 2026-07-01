@@ -14,7 +14,7 @@ test('China', async ({ page }) => {
   await page.waitForURL("**/china/apply-now/address-details/0", {waitUntil: 'domcontentloaded'})
   await appFunctions.step_3c(page, continue_sidebar)
   await page.waitForURL("**/china/apply-now/additional-info/0", {waitUntil: 'domcontentloaded'})
-  await appFunctions.additionalInfo(page, continue_sidebar, true)
+  await appFunctions.additionalInfo(page, continue_sidebar, "CH")
   await page.waitForURL("**/china/apply-now/traveler-review**", {waitUntil: 'domcontentloaded'})
   await continue_sidebar.click()
   await page.waitForURL("**/china/apply-now/contact-details", {waitUntil: 'domcontentloaded'})

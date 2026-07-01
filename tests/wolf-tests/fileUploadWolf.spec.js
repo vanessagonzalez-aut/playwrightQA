@@ -29,7 +29,7 @@ test('File upload - Wolf', async({page, context}) =>{
   await page.waitForURL("**/a/india/address-details/0")
   await appFunctions.step_3c(page, continue_sidebar)
   await page.waitForURL("**/a/india/additional-info/0")
-  await appFunctions.additionalInfo(page, continue_sidebar)
+  await appFunctions.additionalInfo(page, continue_sidebar, '', false, 'IN')
   await page.waitForURL("**/a/india/traveler-review")
   await continue_sidebar.click() 
   await page.locator("[name='general.email']").fill(wolfEmail)

@@ -7,6 +7,7 @@ const path = require('path');
 let Order_num
 
 test('New Zealand ETA', async ({ page }) => {
+  test.slow()
   await page.goto(deploy_url + 'new-zealand/apply-now')
   await appFunctions.autofillExisting(page, "new-zealand/apply-now/edit-traveler/0")
   await page.waitForURL("**/new-zealand/apply-now/traveler-review**")

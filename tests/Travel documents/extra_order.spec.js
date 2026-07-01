@@ -66,6 +66,7 @@ test('Extra Order', async ({ page, browser }) => {
   await page.waitForURL(general_url + 'admin.visachinaonline.com/admin')
   await page.getByTestId('admin-search-input').fill(Order_num)
   await page.getByTestId('admin-search-submit').click()
+  await page.waitForTimeout(3000)
   await page.getByTestId("dropdown-other-actions").selectOption("additional_payment")
   await page.getByTestId("dropdown-charge-type").selectOption("visa_cost")
   await page.locator('[name="amount"]').fill("10")

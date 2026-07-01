@@ -7,7 +7,7 @@ let Order_num
 
 test('Taiwan Arrival Card Application', async ({ page }) => {
   await page.goto(deploy_url + 'taiwan/apply-now')
-  await appFunctions.autofillExisting(page, "taiwan/apply-now/edit-traveler/0")
+  await appFunctions.autofillExisting(page, "taiwan/apply-now/edit-traveler/0", "", false, "TW")
   await page.waitForURL("**/taiwan/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
