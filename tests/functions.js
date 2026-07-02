@@ -136,16 +136,20 @@ async function autofillExisting(page, url, nationality, subscription, countryCod
             await page.waitForTimeout(2000)
             await page.locator('[name="applicant.0.pakistan_parents"]').getByTestId("option-false").click()
             await page.waitForTimeout(2000)
+            break
         case "UK":
             await page.waitForTimeout(2000)
             await page.locator('[name="applicant.0.dual_nationality"]').getByTestId("option-false").click()
             await page.waitForTimeout(2000)
             await page.locator('[name="applicant.0.convicted_of_offence"]').getByTestId("option-false").click()
             await page.waitForTimeout(2000)
+            break
         case "TW": 
             await page.waitForTimeout(1000)
+            break
         case "US":
             await page.waitForTimeout(1000)
+            break
         default:
             await page.locator('[name="applicant.0.are_employed"]').getByTestId("option-false").click()
             await page.waitForTimeout(2000)
@@ -254,9 +258,7 @@ async function additionalInfo(page,continue_sidebar, countryCode){
     }
     await page.locator('[name="general.specific_travel_plans"]').getByTestId("option-false").click()
     await page.waitForTimeout(2000)
-    if(countryCode !== 'US'){
-        await page.getByTestId("dropdown-applicant.0.reason_for_travel").selectOption({value: "Tourism"})
-    }
+    await page.getByTestId("dropdown-applicant.0.reason_for_travel").selectOption({value: "Tourism"})
     await expect(continue_sidebar).toBeEnabled()
     await continue_sidebar.click()
 }

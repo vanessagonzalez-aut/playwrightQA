@@ -72,8 +72,9 @@ test('File upload - Wolf', async({page, context}) =>{
     const select_country = page.getByTestId('dropdown-general.ten_years_countries.0.country_where_boarded');
     await select_country.fill('united states');
     await page.getByRole("option", {name: 'United States flag United States'}).click()
-
-
+    await next_btn.click()
+    await page.waitForURL(general_url + 'ivisatravel.visachinaonline.com/' + "order/" + Order_num + "/continue#step=trav0_step_3a") 
+    await selectors.booleanOptions(page, "applicant.0.are_employed", "option-Retired")
     await next_btn.click()
     await page.waitForURL(general_url + 'ivisatravel.visachinaonline.com/' + "order/" + Order_num + "/continue#step=trav0_personal")    
     await page.waitForTimeout(3000)
