@@ -60,7 +60,7 @@ test('File upload checker', async({page}) => {
 
 
     await next_btn.click()
-    await page.waitForURL(general_url + 'ivisatravel.visachinaonline.com/' + "order/" + Order_num + "/continue#step=trav0_step_3a") 
+    await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_step_3a") 
     await selectors.booleanOptions(page, "applicant.0.are_employed", "option-Retired")
     await next_btn.click()
     await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_personal")    

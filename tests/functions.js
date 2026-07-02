@@ -148,7 +148,12 @@ async function autofillExisting(page, url, nationality, subscription, countryCod
             await page.waitForTimeout(1000)
             break
         case "US":
-            await page.waitForTimeout(1000)
+            await page.locator('[name="applicant.0.birth_country"]').waitFor({state: 'attached'})
+            await page.locator('[name="applicant.0.birth_country"]').click()
+            await page.getByTestId('down-applicant.0.birth_country').waitFor({state: 'visible'})
+            await page.getByTestId('down-applicant.0.birth_country').fill('australia')
+            await page.locator('[name="applicant.0.birth_country"]').getByRole('option', {value: 'AU'}).click()
+            await page.waitForTimeout(2000)
             break
         default:
             await page.locator('[name="applicant.0.are_employed"]').getByTestId("option-false").click()
@@ -241,7 +246,12 @@ async function additionalInfo(page,continue_sidebar, countryCode){
             await page.waitForTimeout(1000)
             break
         case "US":
-            await page.waitForTimeout(1000)
+            await page.locator('[name="applicant.0.birth_country"]').waitFor({state: 'attached'})
+            await page.locator('[name="applicant.0.birth_country"]').click()
+            await page.getByTestId('down-applicant.0.birth_country').waitFor({state: 'visible'})
+            await page.getByTestId('down-applicant.0.birth_country').fill('australia')
+            await page.locator('[name="applicant.0.birth_country"]').getByRole('option', {value: 'AU'}).click()
+            await page.waitForTimeout(2000)
             break
         case "UK":
             await page.waitForTimeout(2000)
