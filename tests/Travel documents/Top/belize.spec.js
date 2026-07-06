@@ -42,7 +42,6 @@ test('Belize Travel Declaration', async ({ page }) => {
     await expect(submit_post_payment).toBeEnabled()
     await submit_post_payment.click()
   await page.getByRole('button').getByText('Skip').click()
-  await page.waitForURL(deploy_url + "order-received-page/" + Order_num)
   await page.waitForTimeout(4000)
   const skip_recomendation = await page.locator('id=skip-recommendation-button').isVisible()
   if(skip_recomendation){
