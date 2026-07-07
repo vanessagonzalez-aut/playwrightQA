@@ -76,15 +76,8 @@ test('Individual subscription purchase - Wolf', async ({ page, context }) => {
   await next_btn.click()
   await page.waitForURL(general_url + "ivisatravel.visachinaonline.com/order/" + Order_num + "/continue#step=contact_and_updates")
   await selectors.phoneNumber(page)  
-await page.locator("id=btnSubmitApplication").click()
-  await page.waitForURL(general_url + "ivisatravel.visachinaonline.com/order-received-page/" + Order_num)
-  await page.waitForTimeout(4000)
-  const skip_recomendation = await page.locator('id=skip-recommendation-button').isVisible()
-  if(skip_recomendation){
-    await page.locator('id=skip-recommendation-button').click()    
-  }
-    
-  await page.waitForURL(general_url + 'ivisatravel.visachinaonline.com/order/' + Order_num)
+  await page.locator("id=btnSubmitApplication").click()
+  await page.getByRole('button').getByText('Skip').click()
   // Purchase subscription
 
   await page.getByText("View discounts").click()
@@ -185,11 +178,5 @@ await page.getByRole("radio").nth(0).click()
   await page.waitForURL(general_url + "ivisatravel.visachinaonline.com/order/" + Order_num + "/continue#step=contact_and_updates")
   await selectors.phoneNumber(page)  
   await page.locator("id=btnSubmitApplication").click()
-  await page.waitForURL(general_url + "ivisatravel.visachinaonline.com/order-received-page/" + Order_num)
-  await page.waitForTimeout(4000)
-  if(skip_recomendation){
-    await page.locator('id=skip-recommendation-button').click()    
-  }
-    
-  await page.waitForURL(general_url + 'ivisatravel.visachinaonline.com/order/' + Order_num)
+  await page.getByRole('button').getByText('Skip').click()
 })

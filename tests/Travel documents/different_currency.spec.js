@@ -80,8 +80,6 @@ test('Different currency', async ({ page }) => {
   await page.waitForTimeout(1000)
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
-  await selectors.booleanOptions(page, "applicant.0.specific_travel_plans", "option-No, my plans are flexible")
-  await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
   await selectors.phoneNumber(page)
   const submit_post_payment = page.locator('id=btnSubmitApplication')

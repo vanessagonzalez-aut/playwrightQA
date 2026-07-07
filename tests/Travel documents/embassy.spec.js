@@ -165,6 +165,6 @@ test('Fix Min', async ({page}) =>{
   await page.getByTestId("min-splash-button").click()
   await page.locator('[name="applicant.0.first_name"]').fill("Test")
   await page.locator("id=btnSubmitApplication").click()
-  await page.waitForURL(deploy_url + "order/" + Order_num)
+  await page.waitForURL(deploy_url + "order/" + Order_num + '?submitting=true')
   await page.waitForTimeout(3000)
 })
