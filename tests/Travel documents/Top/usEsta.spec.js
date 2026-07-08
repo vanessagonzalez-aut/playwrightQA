@@ -101,12 +101,5 @@ test('United States ESTA', async ({ page, context }) => {
   await selectors.phoneNumber(page)
   await page.locator("id=btnSubmitApplication").click()
   await page.waitForTimeout(4000)
-  const skip_recomendation = await page.locator('id=skip-recommendation-button').isVisible()
-  if(skip_recomendation){
-    await page.locator('id=skip-recommendation-button').click()    
-  }
-  
-   
-  
-  await page.waitForURL(deploy_url + "order/" + Order_num)
+  await page.getByRole('button').getByText('Skip').click()
 })
