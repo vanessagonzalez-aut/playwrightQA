@@ -32,9 +32,9 @@ test('United States ESTA', async ({ page, context }) => {
   await appFunctions.additionalInfo(page, continue_sidebar, "US")
   await page.waitForURL("**/usa/apply-now/traveler-review**")
   await continue_sidebar.click()
-  await page.waitForURL("**/usa/apply-now/contact-details")
+  await page.waitForURL("**/usa/apply-now/contact-details**")
   await continue_sidebar.click()
-  await page.waitForURL("**/usa/apply-now/checkout")
+  await page.waitForURL("**/usa/apply-now/checkout**")
   await page.waitForTimeout(2000)
   const duplicate = await page.isVisible('id=btnDisclaimerNext')
   if (duplicate){
