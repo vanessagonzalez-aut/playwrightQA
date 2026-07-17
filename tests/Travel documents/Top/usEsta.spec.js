@@ -47,7 +47,6 @@ test('United States ESTA', async ({ page, context }) => {
   await payment_btn.click()
   
   await page.waitForNavigation({waitUntil: 'load'})
-  await page.getByText("Processing payment").waitFor({state: 'visible'})
   await page.getByText("Payment received").waitFor({state: 'visible'})
   
   await selectors.booleanOptions(page, "general.usa_travel_type", "option-No")

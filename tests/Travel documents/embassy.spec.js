@@ -122,13 +122,15 @@ test('Embassy reg', async({page}) => {
   await page.waitForNavigation({waitUntil: 'load'})
   await page.getByText("Payment received").waitFor({state: 'visible'})
   Order_num = page.url().split("/")[4] 
+  const next_btn = page.locator('id=btnContinueUnderSection')
+  await page.waitForTimeout(1000)
+  await expect(next_btn).toBeEnabled()
+  await next_btn.click()
   await selectors.phoneNumber(page)
   const submit_post_payment = page.locator('id=btnSubmitApplication')
   await submit_post_payment.click()
   await page.waitForNavigation({waitUntil: 'load'})
   await expect(page.locator("#h1-tag-container")).toBeVisible()
-
-
 })
 
 test('Send order to MIN', async ({page}) => {

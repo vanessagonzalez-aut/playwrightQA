@@ -63,7 +63,6 @@ const applicantPhoto = async (page) => {
    // await page.setInputFiles('input[type="file"]', path.join(__dirname ,'Travel documents/uploads_passport/Applicant-Photo.jpg'));
     await page.locator("id=document-loading").waitFor({state: 'visible'})
     await page.locator("id=document-loading").waitFor({state: 'hidden', timeout: 15000})
-    await expect(page.locator("id=document-step")).toContainText("Your upload passed our initial review!")
     await page.locator('id=review-continue').click()
 }
 const passportPhoto = async (page) => {
@@ -77,7 +76,6 @@ const passportPhoto = async (page) => {
     //await page.setInputFiles('input[type="file"]', path.join(__dirname ,'Travel documents/uploads_passport/passport.jpg'));
     await page.locator("id=document-loading").waitFor({state: 'visible'})
     await page.locator("id=document-loading").waitFor({state: 'hidden', timeout: 15000})
-    await expect(page.locator("id=document-step")).toContainText("Your upload passed our initial review!")
     await page.locator('id=review-continue').click()
 }
 

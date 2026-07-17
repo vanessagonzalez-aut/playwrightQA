@@ -39,25 +39,8 @@ test('UK ETA', async({page}) => {
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_documents")
-  
-  await page.locator('id=instructions-continue').click()
-  await page.getByTestId("try-another-way-button").click()
-  await page.setInputFiles('input[type="file"]', path.join(__dirname, '..' ,'uploads_passport/2.jpg'));
-  await expect(page.locator("id=document-loading")).toBeVisible()
-  await page.waitForTimeout(14000)
-  await expect(page.locator("id=document-loading")).toBeHidden()
-  await page.locator('id=review-continue').click()
-  // Confirm instructions appear Passport photo
-  // Upload wrong file Passport photo
-  await page.locator('id=instructions-continue').click()
-  
-  // Upload Correct Photo
-  await page.getByTestId("try-another-way-button").click()
-  await page.setInputFiles('input[type="file"]', path.join(__dirname, '..' ,'uploads_passport/passport.jpg'));
-  await expect(page.locator("id=document-loading")).toBeVisible()
-  await page.waitForTimeout(10000)
-  await expect(page.locator("id=document-loading")).toBeHidden()
-  await page.locator('id=review-continue').click()
+  await selectors.applicantPhoto(page)
+  await selectors.passportPhoto(page)
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_ocr_review")
   await page.waitForTimeout(4000)
   const passportPostPaymentModal = await page.getByText("Use selected details").isVisible()

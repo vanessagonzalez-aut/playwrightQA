@@ -113,6 +113,8 @@ test('FastPassport - Online Passport and MIN status', async({page, context}) =>{
   await page.waitForNavigation({waitUntil: 'load'})
   await page.getByText("Payment received").waitFor({state: 'visible'})
   let Order_num = page.url().split("/")[4] 
+  const next_btn = page.locator('id=btnContinueUnderSection')
+  await next_btn.click()
   await page.waitForURL(general_url + 'fastpassport.visachinaonline.com/order/' + Order_num + '/continue#step=trav0_personal')
   await selectors.dropdownSelector(page, "applicant.0.state_of_birth", "dropdown-applicant.0.state_of_birth", 'alaska', 'AK - ALASKA')
   await selectors.inputText(page,'applicant.0.birth_city', "test")
@@ -122,7 +124,7 @@ test('FastPassport - Online Passport and MIN status', async({page, context}) =>{
   await page.locator("id=inches-applicant.0.height_fsr").fill('5')
   await selectors.dropdownOptions(page, "dropdown-applicant.0.occupation", "self-employed")
   await page.waitForTimeout(1000)
-  const next_btn = page.locator('id=btnContinueUnderSection')
+  
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
   await page.waitForURL(general_url + 'fastpassport.visachinaonline.com/order/' + Order_num + '/continue#step=trav0_ssn_number')
