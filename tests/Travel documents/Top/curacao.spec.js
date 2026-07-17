@@ -21,7 +21,7 @@ test('Curacao Immigration Card + Passenger Locator Card', async ({ page }) => {
   await payment_btn.click()
   
   await page.waitForNavigation({waitUntil: 'load'})
-  await page.getByTestId("transition-page-button").click()
+  await page.getByText("Payment received").waitFor({state: 'visible'})
   
   await selectors.dropdownSelector(page,"general.destination_location_name", "dropdown-general.destination_location_name", "abc", "ABC Apartments")
   await selectors.arrival_date(page)

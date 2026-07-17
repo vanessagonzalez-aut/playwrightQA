@@ -47,7 +47,9 @@ test('United States ESTA', async ({ page, context }) => {
   await payment_btn.click()
   
   await page.waitForNavigation({waitUntil: 'load'})
-  await page.getByTestId("transition-page-button").click()
+  await page.getByText("Processing payment").waitFor({state: 'visible'})
+  await page.getByText("Payment received").waitFor({state: 'visible'})
+  
   await selectors.booleanOptions(page, "general.usa_travel_type", "option-No")
   Order_num = page.url().split("/")[4] 
   const next_btn = page.locator('id=btnContinueUnderSection')

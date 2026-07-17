@@ -45,7 +45,7 @@ test('FastPassport - United Kingdom', async({page, context}) =>{
   
   // Post Payment
   await page.waitForNavigation({waitUntil: 'load'})
-  await page.getByTestId("transition-page-button").click()
+  await page.getByText("Payment received").waitFor({state: 'visible'})
   await selectors.inputText(page, "general.passport_num", "12345")
   const next_btn = page.locator('id=btnContinueUnderSection')
   await page.waitForTimeout(1000)

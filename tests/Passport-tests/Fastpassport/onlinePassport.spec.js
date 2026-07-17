@@ -47,7 +47,7 @@ test('Fastpassport - Account creation, logging and password creation', async ({p
   await expect(payment_btn).toBeEnabled()
   await payment_btn.click()
   await page.waitForNavigation({waitUntil: 'load'})
-  await page.getByTestId("transition-page-button").click()
+  await page.getByText("Payment received").waitFor({state: 'visible'})
   await expect(page.locator("id=save-and-exit-button")).toBeEnabled()
   await page.locator("id=save-and-exit-button").click()
   await page.getByTestId('confirmExitModalBtn').click()
@@ -111,7 +111,7 @@ test('FastPassport - Online Passport and MIN status', async({page, context}) =>{
   
   // Post Payment
   await page.waitForNavigation({waitUntil: 'load'})
-  await page.getByTestId("transition-page-button").click()
+  await page.getByText("Payment received").waitFor({state: 'visible'})
   let Order_num = page.url().split("/")[4] 
   await page.waitForURL(general_url + 'fastpassport.visachinaonline.com/order/' + Order_num + '/continue#step=trav0_personal')
   await selectors.dropdownSelector(page, "applicant.0.state_of_birth", "dropdown-applicant.0.state_of_birth", 'alaska', 'AK - ALASKA')

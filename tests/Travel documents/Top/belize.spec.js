@@ -21,7 +21,7 @@ test('Belize Travel Declaration', async ({ page }) => {
   await payment_btn.click()
   
   await page.waitForNavigation({waitUntil: 'load'})
-  await page.getByTestId("transition-page-button").click()
+  await page.getByText("Payment received").waitFor({state: 'visible'})
   await selectors.arrival_date(page)
   Order_num = page.url().split("/")[4] 
   const next_btn = page.locator('id=btnContinueUnderSection')

@@ -43,7 +43,7 @@ test.skip('FastPassport - USPS Emergency - Preparing for shipping', async({page,
   
   // Post Payment
   await page.waitForNavigation({waitUntil: 'load'})
-  await page.getByTestId("transition-page-button").click()
+  await page.getByText("Payment received").waitFor({state: 'visible'})
   let Order_num = page.url().split("/")[4] 
   const next_btn = page.locator('id=btnContinueUnderSection')
   await page.waitForTimeout(1000)

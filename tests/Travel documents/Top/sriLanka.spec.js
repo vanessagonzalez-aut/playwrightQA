@@ -22,7 +22,7 @@ test('Sri Lanka Tourist ETA', async ({ page }) => {
   
   
   await page.waitForNavigation({waitUntil: 'load'})
-  await page.getByTestId("transition-page-button").click()
+  await page.getByText("Payment received").waitFor({state: 'visible'})
   await selectors.arrival_date(page)
   Order_num = page.url().split("/")[4] 
   const next_btn = page.locator('id=btnContinueUnderSection')

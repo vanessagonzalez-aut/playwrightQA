@@ -95,7 +95,7 @@ test('Check translations US ESTA korean', async ({ page }) => {
     await translations(page.locator('id=post-payment-sidebar'), "h4", "post_payment", us_esta_ko)
     await translations(page.locator('id=post-payment-sidebar'), "h3", "post_payment", us_esta_ko)
 
-    await page.getByTestId("transition-page-button").click()
+    await page.getByText("Payment received").waitFor({state: 'visible'})
     Order_num = page.url().split("/")[5] 
     await page.getByPlaceholder('202 555 0173').fill('11111111')
 

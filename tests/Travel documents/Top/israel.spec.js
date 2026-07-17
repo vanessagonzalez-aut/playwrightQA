@@ -21,7 +21,7 @@ test('Israel ETA', async ({ page }) => {
   await payment_btn.click()
   
   await page.waitForNavigation({waitUntil: 'load'})
-  await page.getByTestId("transition-page-button").click()
+  await page.getByText("Payment received").waitFor({state: 'visible'})
   
   await selectors.arrival_date(page)
   await selectors.departure_date(page, 'general.departure_date')

@@ -21,7 +21,7 @@ test('Jamaica C5-Form Application', async ({ page }) => {
   await payment_btn.click()
   
   await page.waitForNavigation({waitUntil: 'load'})
-  await page.getByTestId("transition-page-button").click()
+  await page.getByText("Payment received").waitFor({state: 'visible'})
   
   await selectors.arrival_date(page)
   await selectors.dropdownSelector(page, "general.arrival_flight_airline", "dropdown-general.arrival_flight_airline","Aerogaviota", "Aerogaviota")

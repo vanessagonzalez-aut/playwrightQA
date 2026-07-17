@@ -52,7 +52,7 @@ test('Different currency', async ({ page }) => {
 
   
   await page.waitForNavigation({waitUntil: 'load'})
-  await page.getByTestId("transition-page-button").click()
+  await page.getByText("Payment received").waitFor({state: 'visible'})
   let Order_num = page.url().split("/")[4];
 
   

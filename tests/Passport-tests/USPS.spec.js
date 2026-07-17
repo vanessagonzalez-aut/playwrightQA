@@ -40,7 +40,7 @@ test.skip('USPS Passport', async({page}) =>{
     
     // Post Payment
     await page.waitForNavigation({waitUntil: 'load'})
-    await page.getByTestId("transition-page-button").click()
+    await page.getByText("Payment received").waitFor({state: 'visible'})
 
     
     await page.getByTestId('option-Standard — 28 pages').dispatchEvent('click')

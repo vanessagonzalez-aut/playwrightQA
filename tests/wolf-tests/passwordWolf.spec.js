@@ -38,7 +38,7 @@ test('Password Creation and login - Wolf', async({page, context}) =>{
   await expect(payment_btn).toBeEnabled()
   await payment_btn.click()
   await page.waitForNavigation({waitUntil: 'load'})
-  await page.getByTestId("transition-page-button").click()
+  await page.getByText("Payment received").waitFor({state: 'visible'})
   let Order_num = page.url().split("/")[4];
   await page.goto(general_url + 'ivisatravel.visachinaonline.com/account/settings/security')
   const password_set = page.locator('id=new_password')

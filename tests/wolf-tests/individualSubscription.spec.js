@@ -46,7 +46,7 @@ test('Individual subscription purchase - Wolf', async ({ page, context }) => {
     await payment_btn.click()
     
     await page.waitForNavigation({waitUntil: 'load'})
-    await page.getByTestId("transition-page-button").click()
+    await page.getByText("Payment received").waitFor({state: 'visible'})
 
     return
   }
@@ -58,7 +58,7 @@ test('Individual subscription purchase - Wolf', async ({ page, context }) => {
   await payment_btn.click()
   
   await page.waitForNavigation({waitUntil: 'load'})
-  await page.getByTestId("transition-page-button").click()
+  await page.getByText("Payment received").waitFor({state: 'visible'})
   await selectors.arrival_date(page)
   await selectors.departure_date(page, "general.departure_date")
 
@@ -161,7 +161,7 @@ await page.getByRole("radio").nth(0).click()
   
   await page.waitForNavigation({waitUntil: 'load'})
 
-  await page.getByTestId("transition-page-button").click()
+  await page.getByText("Payment received").waitFor({state: 'visible'})
   await selectors.arrival_date(page)
   await selectors.departure_date(page, "general.departure_date")
   await selectors.booleanOptions(page, "general.flight_reservation", "option-No")

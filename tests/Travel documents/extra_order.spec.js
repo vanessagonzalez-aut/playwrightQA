@@ -19,7 +19,7 @@ test('Extra Order', async ({ page, browser }) => {
   await payment_btn.click()  
   await page.waitForNavigation({waitUntil: 'load'})
   await page.waitForTimeout(1000)
-  await page.getByTestId("transition-page-button").click()
+  await page.getByText("Payment received").waitFor({state: 'visible'})
   let Order_num = page.url().split("/")[4];
 
   

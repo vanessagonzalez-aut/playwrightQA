@@ -65,7 +65,7 @@ test('Different currency payment - Wolf and CC update', async({page, context}) =
   await page.frameLocator(".challenge-iframe").getByText('Pass challenge').click()
   
   await page.waitForNavigation({waitUntil: 'load'})
-  await page.getByTestId("transition-page-button").click()
+  await page.getByText("Payment received").waitFor({state: 'visible'})
   let Order_num = page.url().split("/")[4];
 
 

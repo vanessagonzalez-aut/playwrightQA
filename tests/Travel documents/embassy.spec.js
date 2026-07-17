@@ -120,7 +120,7 @@ test('Embassy reg', async({page}) => {
   await payment_btn.click()
 
   await page.waitForNavigation({waitUntil: 'load'})
-  await page.getByTestId("transition-page-button").click()
+  await page.getByText("Payment received").waitFor({state: 'visible'})
   Order_num = page.url().split("/")[4] 
   await selectors.phoneNumber(page)
   const submit_post_payment = page.locator('id=btnSubmitApplication')

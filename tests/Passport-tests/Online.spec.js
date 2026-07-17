@@ -34,7 +34,7 @@ test('Online Passport', async({page}) =>{
   
   // Post Payment
   await page.waitForNavigation({waitUntil: 'load'})
-  await page.getByTestId("transition-page-button").click()
+  await page.getByText("Payment received").waitFor({state: 'visible'})
   
   await page.waitForTimeout(2000)
   let Order_num = page.url().split("/")[4] 
