@@ -40,16 +40,7 @@ test('New Zealand ETA', async ({ page }) => {
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_documents")
-  await page.locator('id=instructions-continue').click()
-
-  await page.getByTestId("try-another-way-button").click()
-  await page.setInputFiles('input[type="file"]', path.join(__dirname, '..' ,'uploads_passport/Applicant-Photo.jpg'));
-  await expect(page.locator("id=document-loading")).toBeVisible()
-  await page.waitForTimeout(14000)
-  await expect(page.locator("id=document-loading")).toBeHidden()
-  await expect(page.locator("id=document-step")).toContainText("Your upload passed our initial review!", "One of our experts will do a final review to ensure it meets all requirements. If it doesn't, we’ll contact you. ", "Don't like it? ", "You can take a new one")
-  
-  await page.locator('id=review-continue').click()
+  await selectors.applicantPhoto(page)
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
   await page.waitForTimeout(2000)
   await selectors.phoneNumber(page)

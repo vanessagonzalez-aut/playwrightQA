@@ -54,21 +54,30 @@ const inputText = async (page, name, customText) => {
 }
 
 const applicantPhoto = async (page) => {
-    await page.locator('id=instructions-continue').click()
-    await page.getByTestId("try-another-way-button").click()
-    await page.setInputFiles('input[type="file"]', path.join(__dirname ,'Travel documents/uploads_passport/Applicant-Photo.jpg'));
+    const [fileChooser] = await Promise.all([
+        page.waitForEvent('filechooser'),
+        page.locator('id=instructions-continue').click()
+    ]);
+    await fileChooser.setFiles(path.join(__dirname ,'Travel documents/uploads_passport/Applicant-Photo.jpg'));
+    //await page.getByTestId("try-another-way-button").click()
+   // await page.setInputFiles('input[type="file"]', path.join(__dirname ,'Travel documents/uploads_passport/Applicant-Photo.jpg'));
     await page.locator("id=document-loading").waitFor({state: 'visible'})
     await page.locator("id=document-loading").waitFor({state: 'hidden', timeout: 15000})
-    await expect(page.locator("id=document-step")).toContainText("Your upload passed our initial review!", "One of our experts will do a final review to ensure it meets all requirements. If it doesn't, we’ll contact you. ", "Don't like it? ", "You can take a new one")
+    await expect(page.locator("id=document-step")).toContainText("Your upload passed our initial review!")
     await page.locator('id=review-continue').click()
 }
 const passportPhoto = async (page) => {
-    await page.locator('id=instructions-continue').click()
-    await page.getByTestId("try-another-way-button").click()
-    await page.setInputFiles('input[type="file"]', path.join(__dirname ,'Travel documents/uploads_passport/passport.jpg'));
+    const [fileChooser] = await Promise.all([
+        page.waitForEvent('filechooser'),
+        page.locator('id=instructions-continue').click()
+    ]);
+    await fileChooser.setFiles(path.join(__dirname ,'Travel documents/uploads_passport/passport.jpg'));
+
+    //await page.getByTestId("try-another-way-button").click()
+    //await page.setInputFiles('input[type="file"]', path.join(__dirname ,'Travel documents/uploads_passport/passport.jpg'));
     await page.locator("id=document-loading").waitFor({state: 'visible'})
     await page.locator("id=document-loading").waitFor({state: 'hidden', timeout: 15000})
-    await expect(page.locator("id=document-step")).toContainText("Your upload passed our initial review!", "One of our experts will do a final review to ensure it meets all requirements. If it doesn't, we’ll contact you. ", "Don't like it? ", "You can take a new one")
+    await expect(page.locator("id=document-step")).toContainText("Your upload passed our initial review!")
     await page.locator('id=review-continue').click()
 }
 
