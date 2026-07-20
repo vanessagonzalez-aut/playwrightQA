@@ -1,6 +1,6 @@
-const deploy_url = "https://carlos-fix-dark-mode-bug--db819710.visachinaonline.com/"
-const general_url = "https://carlos-fix-dark-mode-bug--db819710."  
-const email_test = "testttt@test.com"
-const requester = "Maria"
+const deploy_url = "https://deploy-20260721--ac711ff5.visachinaonline.com/"
+const general_url = "https://deploy-20260721--ac711ff5."  
+const email_test = "malamado@gmail.com"
+const requester = "Alejandro"
 let Orders = [] 
 module.exports = {deploy_url,  email_test, Orders, general_url, requester}
