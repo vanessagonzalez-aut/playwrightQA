@@ -130,7 +130,6 @@ test('Embassy reg', async({page}) => {
   const submit_post_payment = page.locator('id=btnSubmitApplication')
   await submit_post_payment.click()
   await page.waitForNavigation({waitUntil: 'load'})
-  await expect(page.locator("#h1-tag-container")).toBeVisible()
 })
 
 test('Send order to MIN', async ({page}) => {

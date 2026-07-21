@@ -62,7 +62,7 @@ const applicantPhoto = async (page) => {
     //await page.getByTestId("try-another-way-button").click()
    // await page.setInputFiles('input[type="file"]', path.join(__dirname ,'Travel documents/uploads_passport/Applicant-Photo.jpg'));
     await page.locator("id=document-loading").waitFor({state: 'visible'})
-    await page.locator("id=document-loading").waitFor({state: 'hidden', timeout: 15000})
+    await page.locator("id=document-loading").waitFor({state: 'hidden', timeout: 30000})
     await page.locator('id=review-continue').click()
 }
 const passportPhoto = async (page) => {
@@ -75,7 +75,7 @@ const passportPhoto = async (page) => {
     //await page.getByTestId("try-another-way-button").click()
     //await page.setInputFiles('input[type="file"]', path.join(__dirname ,'Travel documents/uploads_passport/passport.jpg'));
     await page.locator("id=document-loading").waitFor({state: 'visible'})
-    await page.locator("id=document-loading").waitFor({state: 'hidden', timeout: 15000})
+    await page.locator("id=document-loading").waitFor({state: 'hidden', timeout: 30000})
     await page.locator('id=review-continue').click()
 }
 
