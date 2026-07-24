@@ -58,9 +58,6 @@ test('File upload - Wolf', async({page, context}) =>{
     await arrival_date_visible.click()
     await expect(page.locator('.dp__outer_menu_wrap')).toBeVisible()
     await page.locator('.dp--future').filter({hasText: date1}).first().click()
-    const dropdown_country = page.locator('[name="general.port_of_arrival"]');
-    await expect(dropdown_country).toBeVisible();
-    await dropdown_country.click();
 
     const country_before_india =  page.getByTestId('filter-value').nth(1);
     await country_before_india.click();

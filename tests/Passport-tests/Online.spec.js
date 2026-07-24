@@ -80,17 +80,8 @@ test('Online Passport', async({page}) =>{
   await page.waitForTimeout(1000)
   await next_btn.click()
   await page.waitForNavigation({waitUntil: 'load'})
-  await page.locator('id=instructions-continue').click()
-  await page.getByTestId("try-another-way-button").click()
-  await page.setInputFiles('input[type="file"]', path.join(__dirname, 'uploads_passport/Applicant-Photo.jpg'));
-  await page.waitForTimeout(8000)
-  await page.locator('id=review-continue').click()
-  await page.locator('id=instructions-continue').click()
-  await page.getByTestId("try-another-way-button").click()
-  await page.setInputFiles('input[type="file"]', path.join(__dirname, 'uploads_passport/passport.jpg'));
-  await page.waitForTimeout(8000)
-  await page.locator('id=review-continue').click()
-  await page.waitForTimeout(4000)
+  await selectors.applicantPhoto(page)
+  await selectors.passportPhoto(page)
   const passportPostPaymentModal = await page.getByText("Use selected details").isVisible()
   if (passportPostPaymentModal){
     await page.getByText("Use selected details").click()
