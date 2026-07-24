@@ -18,7 +18,7 @@ test('File upload checker', async({page}) => {
     await page.waitForURL("**/india/apply-now/traveler-review**")
     const continue_sidebar = page.getByRole("button").getByText("Continue")
     await continue_sidebar.click()
-    await page.waitForURL("**/india/apply-now/contact-details")
+    await page.waitForURL("**/india/apply-now/contact-details**")
     await continue_sidebar.click() 
     await appFunctions.newPaymentCheckout(page, '6011 1111 1111 1117', '123')
     const payment_btn = page.locator('id=btnSubmitPayment')
@@ -57,8 +57,7 @@ test('File upload checker', async({page}) => {
     const select_country = page.getByTestId('dropdown-general.ten_years_countries.0.country_where_boarded');
     await select_country.fill('united states');
     await page.getByRole("option", {name: 'United States flag United States'}).click()
-
-
+    
     await next_btn.click()
     await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_step_3a") 
     await selectors.booleanOptions(page, "applicant.0.are_employed", "option-Retired")

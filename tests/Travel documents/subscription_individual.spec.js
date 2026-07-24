@@ -21,7 +21,7 @@ test('Individual subscription purchase', async ({ page }) => {
   await appFunctions.additionalInfo(page, continue_sidebar)
   await page.waitForURL("**/malaysia/apply-now/traveler-review**")
   await continue_sidebar.click()
-  await page.waitForURL("**/malaysia/apply-now/contact-details")
+  await page.waitForURL("**/malaysia/apply-now/contact-details**")
   await continue_sidebar.click()
   await page.waitForURL("**/malaysia/apply-now/checkout")
   await page.waitForTimeout(2000)

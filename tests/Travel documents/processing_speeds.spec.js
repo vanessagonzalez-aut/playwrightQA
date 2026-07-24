@@ -8,7 +8,7 @@ test('Processing speeds appear and work', async({page}) => {
   await page.waitForURL("**/india/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
-  await page.waitForURL("**/india/apply-now/contact-details")
+  await page.waitForURL("**/india/apply-now/contact-details**")
   await continue_sidebar.click() 
   await page.waitForTimeout(4000)
   const duplicate = await page.isVisible('id=btnDisclaimerNext')

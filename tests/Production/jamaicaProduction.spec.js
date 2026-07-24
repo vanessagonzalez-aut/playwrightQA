@@ -17,7 +17,7 @@ test('Jamaica', async ({ page }) => {
   await appFunctions.additionalInfo(page, continue_sidebar)
   await page.waitForURL("**/jamaica/apply-now/traveler-review**", {waitUntil: 'domcontentloaded'})
   await continue_sidebar.click()
-  await page.waitForURL("**/jamaica/apply-now/contact-details", {waitUntil: 'domcontentloaded'})
+  await page.waitForURL("**/jamaica/apply-now/contact-details**", {waitUntil: 'domcontentloaded'})
   await expect(page.locator('[name="general.email"]')).toBeVisible()
   await page.locator('[name="general.email"]').fill(email_test)
   await continue_sidebar.click()

@@ -39,7 +39,7 @@ test('Different currency', async ({ page }) => {
   
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
-  await page.waitForURL("**/turkey/apply-now/contact-details")
+  await page.waitForURL("**/turkey/apply-now/contact-details**")
   await continue_sidebar.click() 
   await appFunctions.newPaymentCheckout(page, '4111 1111 1111 1111', '123')
 

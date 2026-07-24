@@ -10,7 +10,7 @@ test('Payment with VISA and Cancelled order Status', async({page}) => {
   await page.waitForURL("**/thailand/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
-  await page.waitForURL("**/thailand/apply-now/contact-details")
+  await page.waitForURL("**/thailand/apply-now/contact-details**")
   await continue_sidebar.click() 
   const duplicate = await page.locator('id=btnDisclaimerNext').isVisible()
   if (duplicate){
@@ -64,7 +64,7 @@ test('Payment with Master Card', async({page}) => {
   await page.waitForURL("**/thailand/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
-  await page.waitForURL("**/thailand/apply-now/contact-details")
+  await page.waitForURL("**/thailand/apply-now/contact-details**")
   await continue_sidebar.click() 
   const duplicate = await page.locator('id=btnDisclaimerNext').isVisible()
   if (duplicate){
@@ -84,7 +84,7 @@ test('Payment with Amex', async({page}) => {
   await page.waitForURL("**/thailand/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
-  await page.waitForURL("**/thailand/apply-now/contact-details")
+  await page.waitForURL("**/thailand/apply-now/contact-details**")
   await continue_sidebar.click() 
   const duplicate = await page.locator('id=btnDisclaimerNext').isVisible()
   if (duplicate){
@@ -105,7 +105,7 @@ test('Payment with Discover', async({page}) => {
   await page.waitForURL("**/thailand/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
-  await page.waitForURL("**/thailand/apply-now/contact-details")
+  await page.waitForURL("**/thailand/apply-now/contact-details**")
   await continue_sidebar.click() 
     await appFunctions.newPaymentCheckout(page,'6011 1111 1111 1117', '123')
     const payment_btn = page.locator('id=btnSubmitPayment')

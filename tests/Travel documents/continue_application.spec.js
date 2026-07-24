@@ -8,7 +8,7 @@ test('Continue with your application banner', async({page}) => {
   await page.waitForURL("**/united-kingdom/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
-  await page.waitForURL("**/united-kingdom/apply-now/contact-details")
+  await page.waitForURL("**/united-kingdom/apply-now/contact-details**")
   await continue_sidebar.click() 
   await page.goto(deploy_url)
   await page.goto(deploy_url + 'thailand/apply-now')

@@ -61,11 +61,6 @@ test('File upload - Wolf', async({page, context}) =>{
     const dropdown_country = page.locator('[name="general.port_of_arrival"]');
     await expect(dropdown_country).toBeVisible();
     await dropdown_country.click();
-    const input_country = page.getByTestId('dropdown-general.port_of_arrival');
-
-    await expect(input_country).toBeVisible();
-    await input_country.fill('Ahmedabad Airport - Ahmedabad - AMD');
-    await page.locator('//div[@value="Ahmedabad Airport - Ahmedabad - AMD"]').click()
 
     const country_before_india =  page.getByTestId('filter-value').nth(1);
     await country_before_india.click();

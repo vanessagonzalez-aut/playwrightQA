@@ -12,7 +12,7 @@ test('Philippines eArrival Card', async ({ page }) => {
   await page.waitForURL("**/philippines/apply-now/traveler-review**")
   const continue_sidebar = page.getByRole("button").getByText("Continue")
   await continue_sidebar.click()
-  await page.waitForURL("**/philippines/apply-now/contact-details")
+  await page.waitForURL("**/philippines/apply-now/contact-details**")
   await continue_sidebar.click() 
   await appFunctions.newPaymentCheckout(page, '6011 1111 1111 1117', '123')
   const payment_btn = page.locator('id=btnSubmitPayment')

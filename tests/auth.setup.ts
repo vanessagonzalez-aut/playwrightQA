@@ -54,7 +54,7 @@ setup('authenticate', async ({ page, context }) => {
     await page.waitForURL("**/turkey/apply-now/traveler-review**", {waitUntil: 'domcontentloaded'})
     await percySnapshot(page, 'Step5Application')
     await continue_sidebar.click()
-    await page.waitForURL("**/turkey/apply-now/contact-details", {waitUntil: 'domcontentloaded'})
+    await page.waitForURL("**/turkey/apply-now/contact-details**", {waitUntil: 'domcontentloaded'})
     await percySnapshot(page, 'Step6Application')
     await expect(page.locator('[name="general.email"]')).toBeVisible()
     await page.locator('[name="general.email"]').fill(email_test)

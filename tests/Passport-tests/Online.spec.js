@@ -38,6 +38,10 @@ test('Online Passport', async({page}) =>{
   
   await page.waitForTimeout(2000)
   let Order_num = page.url().split("/")[4] 
+  const next_btn = page.locator('id=btnContinueUnderSection')
+  await page.waitForTimeout(1000)
+  await expect(next_btn).toBeEnabled()
+  await next_btn.click()
   const birth_country = page.locator('[name="applicant.0.state_of_birth"]');
   await expect(birth_country).toBeVisible();
   await birth_country.click()
@@ -63,8 +67,6 @@ test('Online Passport', async({page}) =>{
   await page.locator("id=feet-applicant.0.height_fsr").fill('5')
   await page.locator("id=inches-applicant.0.height_fsr").fill('5')
   await page.getByTestId('dropdown-applicant.0.occupation').selectOption('self-employed')
-  await page.waitForTimeout(1000)
-  const next_btn = page.locator('id=btnContinueUnderSection')
   await page.waitForTimeout(1000)
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
