@@ -44,7 +44,7 @@ test('File upload checker', async({page}) => {
     await expect(page.locator('.dp__outer_menu_wrap')).toBeVisible()
     await page.locator('.dp--future').filter({hasText: date1}).first().click()
 
-    const country_before_india =  page.getByTestId('filter-value').nth(1);
+    const country_before_india =  page.locator('[name="general.ten_years_countries.0.country_where_boarded"]')
     await country_before_india.click();
     const select_country = page.getByTestId('dropdown-general.ten_years_countries.0.country_where_boarded');
     await select_country.fill('united states');
