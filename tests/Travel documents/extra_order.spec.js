@@ -6,6 +6,8 @@ const selectors = require('../selectors')
 
 test('Extra Order', async ({ page, browser }) => {
   test.slow()
+  page.on('dialog', dialog => dialog.accept());
+
   await page.goto(deploy_url + 'turkey/apply-now')
   await appFunctions.autofillExisting(page, "turkey/apply-now/edit-traveler/0**")
   await page.waitForURL("**/turkey/apply-now/traveler-review**")
