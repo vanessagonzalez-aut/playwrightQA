@@ -25,7 +25,10 @@ test('Aruba ED Card', async ({ page }) => {
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=trav0_passport_after_payment")
+  await page.waitForTimeout(2000)
   await selectors.dropdownSelector(page, "applicant.0.birth_country", "dropdown-applicant.0.birth_country", "mexico", "MX")
+  await page.waitForTimeout(2000)
+
   await expect(next_btn).toBeEnabled()
   await next_btn.click()
   await page.waitForURL(deploy_url + "order/" + Order_num + "/continue#step=contact_and_updates")
